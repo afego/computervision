@@ -1,1 +1,1 @@
-# computervision
+my studies on computer vision algorithms
