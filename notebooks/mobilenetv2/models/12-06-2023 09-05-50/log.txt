@@ -1,0 +1,122 @@
+
+Epoch 1/25
+----------
+train Loss: 0.2505 Acc: 0.9040
+val Loss: 0.5926 Acc: 0.6743
+
+Epoch 2/25
+----------
+train Loss: 0.2058 Acc: 0.9220
+val Loss: 0.6637 Acc: 0.6707
+
+Epoch 3/25
+----------
+train Loss: 0.1984 Acc: 0.9251
+val Loss: 0.6339 Acc: 0.6679
+
+Epoch 4/25
+----------
+train Loss: 0.1944 Acc: 0.9259
+val Loss: 0.6267 Acc: 0.6798
+
+Epoch 5/25
+----------
+train Loss: 0.1981 Acc: 0.9240
+val Loss: 1.0100 Acc: 0.5627
+
+Epoch 6/25
+----------
+train Loss: 0.1949 Acc: 0.9249
+val Loss: 0.7326 Acc: 0.6336
+
+Epoch 7/25
+----------
+train Loss: 0.1948 Acc: 0.9245
+val Loss: 0.5789 Acc: 0.7206
+
+Epoch 8/25
+----------
+train Loss: 0.1902 Acc: 0.9267
+val Loss: 0.5900 Acc: 0.7204
+
+Epoch 9/25
+----------
+
+Epoch 9/25
+----------
+train Loss: 0.1909 Acc: 0.9269
+val Loss: 0.8586 Acc: 0.6036
+
+Epoch 10/25
+----------
+train Loss: 0.1950 Acc: 0.9240
+val Loss: 0.7428 Acc: 0.6562
+
+Epoch 11/25
+----------
+
+Epoch 11/25
+----------
+train Loss: 0.1906 Acc: 0.9254
+val Loss: 0.7468 Acc: 0.6546
+
+Epoch 12/25
+----------
+train Loss: 0.1923 Acc: 0.9267
+val Loss: 1.0366 Acc: 0.5701
+
+Epoch 13/25
+----------
+train Loss: 0.1929 Acc: 0.9263
+val Loss: 0.6385 Acc: 0.6766
+
+Epoch 14/25
+----------
+train Loss: 0.1894 Acc: 0.9263
+val Loss: 0.8127 Acc: 0.6280
+
+Epoch 15/25
+----------
+train Loss: 0.1942 Acc: 0.9241
+val Loss: 0.7350 Acc: 0.6467
+
+Epoch 16/25
+----------
+train Loss: 0.1925 Acc: 0.9259
+val Loss: 0.7807 Acc: 0.6261
+
+Epoch 17/25
+----------
+train Loss: 0.1942 Acc: 0.9252
+val Loss: 0.8215 Acc: 0.6189
+
+Epoch 18/25
+----------
+train Loss: 0.1868 Acc: 0.9274
+val Loss: 0.6287 Acc: 0.6807
+
+Epoch 19/25
+----------
+
+Epoch 19/25
+----------
+train Loss: 0.1921 Acc: 0.9252
+val Loss: 0.7361 Acc: 0.6426
+
+Epoch 20/25
+----------
+train Loss: 0.1924 Acc: 0.9265
+val Loss: 0.5903 Acc: 0.7288
+
+Epoch 21/25
+----------
+train Loss: 0.1950 Acc: 0.9248
+val Loss: 0.9363 Acc: 0.5777
+
+Epoch 22/25
+----------
+train Loss: 0.1920 Acc: 0.9263
+val Loss: 0.8893 Acc: 0.5905
+
+Epoch 23/25
+----------
