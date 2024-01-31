@@ -1,0 +1,21 @@
+
+Epoch 1/25
+----------
+train Loss: 0.7130 Acc: 0.5176
+val Loss: 0.6622 Acc: 0.5422
+Epoch duration: 4 m 8s
+
+Epoch 2/25
+----------
+train Loss: 0.6607 Acc: 0.6125
+val Loss: 0.6318 Acc: 0.6000
+Epoch duration: 8 m 44s
+
+Epoch 3/25
+----------
+train Loss: 0.6273 Acc: 0.6624
+val Loss: 0.6090 Acc: 0.6711
+Epoch duration: 11 m 15s
+
+Epoch 4/25
+----------

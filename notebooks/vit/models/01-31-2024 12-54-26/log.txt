@@ -1,0 +1,152 @@
+
+Epoch 1/25
+----------
+train Loss: 0.6949 Acc: 0.5375
+val Loss: 0.7797 Acc: 0.4844
+Epoch duration: 0 m 52s
+
+Epoch 2/25
+----------
+train Loss: 0.6567 Acc: 0.5979
+val Loss: 0.7422 Acc: 0.5600
+Epoch duration: 0 m 31s
+
+Epoch 3/25
+----------
+train Loss: 0.6260 Acc: 0.6565
+val Loss: 0.7110 Acc: 0.5911
+Epoch duration: 0 m 38s
+
+Epoch 4/25
+----------
+train Loss: 0.6006 Acc: 0.6893
+val Loss: 0.6894 Acc: 0.6222
+Epoch duration: 0 m 37s
+
+Epoch 5/25
+----------
+train Loss: 0.5798 Acc: 0.7140
+val Loss: 0.6685 Acc: 0.6400
+Epoch duration: 0 m 38s
+
+Epoch 6/25
+----------
+train Loss: 0.5609 Acc: 0.7309
+val Loss: 0.6541 Acc: 0.6533
+Epoch duration: 0 m 39s
+
+Epoch 7/25
+----------
+train Loss: 0.5482 Acc: 0.7392
+val Loss: 0.6435 Acc: 0.6578
+Epoch duration: 0 m 38s
+
+Epoch 8/25
+----------
+train Loss: 0.5388 Acc: 0.7479
+val Loss: 0.6427 Acc: 0.6578
+Epoch duration: 0 m 39s
+
+Epoch 9/25
+----------
+train Loss: 0.5379 Acc: 0.7526
+val Loss: 0.6419 Acc: 0.6622
+Epoch duration: 0 m 38s
+
+Epoch 10/25
+----------
+train Loss: 0.5354 Acc: 0.7556
+val Loss: 0.6411 Acc: 0.6711
+Epoch duration: 0 m 40s
+
+Epoch 11/25
+----------
+train Loss: 0.5345 Acc: 0.7462
+val Loss: 0.6402 Acc: 0.6711
+Epoch duration: 0 m 39s
+
+Epoch 12/25
+----------
+train Loss: 0.5333 Acc: 0.7550
+val Loss: 0.6394 Acc: 0.6756
+Epoch duration: 0 m 39s
+
+Epoch 13/25
+----------
+train Loss: 0.5325 Acc: 0.7509
+val Loss: 0.6386 Acc: 0.6800
+Epoch duration: 0 m 36s
+
+Epoch 14/25
+----------
+train Loss: 0.5307 Acc: 0.7538
+val Loss: 0.6379 Acc: 0.6800
+Epoch duration: 0 m 40s
+
+Epoch 15/25
+----------
+train Loss: 0.5283 Acc: 0.7544
+val Loss: 0.6378 Acc: 0.6800
+Epoch duration: 0 m 42s
+
+Epoch 16/25
+----------
+train Loss: 0.5311 Acc: 0.7503
+val Loss: 0.6377 Acc: 0.6800
+Epoch duration: 0 m 42s
+
+Epoch 17/25
+----------
+train Loss: 0.5289 Acc: 0.7532
+val Loss: 0.6376 Acc: 0.6800
+Epoch duration: 0 m 36s
+
+Epoch 18/25
+----------
+train Loss: 0.5303 Acc: 0.7509
+val Loss: 0.6376 Acc: 0.6800
+Epoch duration: 0 m 39s
+
+Epoch 19/25
+----------
+train Loss: 0.5291 Acc: 0.7538
+val Loss: 0.6375 Acc: 0.6800
+Epoch duration: 0 m 39s
+
+Epoch 20/25
+----------
+train Loss: 0.5295 Acc: 0.7538
+val Loss: 0.6374 Acc: 0.6800
+Epoch duration: 0 m 39s
+
+Epoch 21/25
+----------
+train Loss: 0.5303 Acc: 0.7509
+val Loss: 0.6373 Acc: 0.6800
+Epoch duration: 0 m 39s
+
+Epoch 22/25
+----------
+train Loss: 0.5297 Acc: 0.7544
+val Loss: 0.6373 Acc: 0.6800
+Epoch duration: 0 m 39s
+
+Epoch 23/25
+----------
+train Loss: 0.5296 Acc: 0.7556
+val Loss: 0.6373 Acc: 0.6800
+Epoch duration: 0 m 38s
+
+Epoch 24/25
+----------
+train Loss: 0.5323 Acc: 0.7526
+val Loss: 0.6373 Acc: 0.6800
+Epoch duration: 0 m 39s
+
+Epoch 25/25
+----------
+train Loss: 0.5305 Acc: 0.7562
+val Loss: 0.6373 Acc: 0.6800
+Epoch duration: 0 m 38s
+Training complete in 16m 16s
+Best val Acc: 0.680000
