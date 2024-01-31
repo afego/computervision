@@ -56,8 +56,10 @@ class PytorchTraining:
 
         log_path = f"{self.output_directory}/log.txt"
         
-        run_info = 'Dataset {}\n'.format(self.dataset.directory)
-            
+        run_info = 'Dataset {}\nLearning Rate Epoch Schedule = {}\nLearning Rate Gamma = {}'.format(
+            self.dataset.directory, scheduler.step_size, scheduler.gamma
+            )
+        
         if not path.exists(log_path): 
             log = open(log_path,'x')
             log.writelines('=' * 10+'\n')
@@ -135,7 +137,7 @@ class PytorchTraining:
             epoch_duration_info = 'Epoch duration: {:.0f} m {:.0f}s'.format(epoch_end//60, epoch_end%60)
             with open(log_path,'a') as log:
                 log.writelines(epoch_duration_info+'\n')
-
+                log.writelines('-' * 15+'\n')
             print(epoch_duration_info)
             print()
         
