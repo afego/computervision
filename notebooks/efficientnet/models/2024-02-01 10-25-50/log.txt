@@ -1,0 +1,27 @@
+==========
+
+Dataset E:\Datasets\cor-splits\sgkf-8-1-1-4000
+Learning Rate Epoch Schedule = 10
+Learning Rate Gamma = 0.1
+==========
+
+Epoch 1/31
+----------
+train Loss: 0.6849 Acc: 0.5570
+Learning Rate = 0.001
+val Loss: 0.6775 Acc: 0.5967
+Learning Rate = 0.001
+Epoch duration: 2 m 49s
+---------------
+
+Epoch 2/31
+----------
+train Loss: 0.6482 Acc: 0.6504
+Learning Rate = 0.001
+val Loss: 0.6551 Acc: 0.6802
+Learning Rate = 0.001
+Epoch duration: 1 m 39s
+---------------
+
+Epoch 3/31
+----------

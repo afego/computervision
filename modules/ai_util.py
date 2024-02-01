@@ -123,7 +123,9 @@ class PytorchTraining:
                 loss_acc_info = '{} Loss: {:.4f} Acc: {:.4f}'.format(phase, epoch_loss, epoch_acc)
                 with open(log_path,'a') as log:
                     log.writelines(loss_acc_info+'\n')
+                    
                 print(loss_acc_info)
+                
                 
                 if epoch % epoch_save_interval == 0:
                     torch.save(model.state_dict(), f'{self.output_directory}/epoch_{epoch}.pth')
@@ -135,10 +137,13 @@ class PytorchTraining:
             
             epoch_end = time.time() - epoch_start
             epoch_duration_info = 'Epoch duration: {:.0f} m {:.0f}s'.format(epoch_end//60, epoch_end%60)
+            lr_info = 'Learning Rate = {}'.format(scheduler.get_last_lr()[0])
             with open(log_path,'a') as log:
                 log.writelines(epoch_duration_info+'\n')
+                log.writelines(lr_info+'\n')
                 log.writelines('-' * 15+'\n')
             print(epoch_duration_info)
+            print(lr_info)
             print()
         
         torch.save(model.state_dict(), f'{self.output_directory}/last.pth')

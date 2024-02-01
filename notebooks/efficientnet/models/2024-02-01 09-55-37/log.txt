@@ -1,0 +1,225 @@
+==========
+
+Dataset E:\Datasets\cor-splits\sgkf-8-1-1-2000
+Learning Rate Epoch Schedule = 10
+Learning Rate Gamma = 0.1
+==========
+
+Epoch 1/31
+----------
+train Loss: 0.6871 Acc: 0.5421
+val Loss: 0.6523 Acc: 0.6526
+Epoch duration: 1 m 22s
+---------------
+
+Epoch 2/31
+----------
+train Loss: 0.6604 Acc: 0.6114
+val Loss: 0.6278 Acc: 0.7113
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 3/31
+----------
+train Loss: 0.6397 Acc: 0.6710
+val Loss: 0.6068 Acc: 0.7606
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 4/31
+----------
+train Loss: 0.6246 Acc: 0.7063
+val Loss: 0.5906 Acc: 0.7700
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 5/31
+----------
+train Loss: 0.6066 Acc: 0.7338
+val Loss: 0.5781 Acc: 0.7700
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 6/31
+----------
+train Loss: 0.5927 Acc: 0.7599
+val Loss: 0.5655 Acc: 0.7958
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 7/31
+----------
+train Loss: 0.5792 Acc: 0.7605
+val Loss: 0.5517 Acc: 0.7864
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 8/31
+----------
+train Loss: 0.5676 Acc: 0.7730
+val Loss: 0.5425 Acc: 0.7958
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 9/31
+----------
+train Loss: 0.5589 Acc: 0.7694
+val Loss: 0.5360 Acc: 0.8028
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 10/31
+----------
+train Loss: 0.5475 Acc: 0.7931
+val Loss: 0.5263 Acc: 0.7981
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 11/31
+----------
+train Loss: 0.5422 Acc: 0.7905
+val Loss: 0.5264 Acc: 0.7911
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 12/31
+----------
+train Loss: 0.5412 Acc: 0.7922
+val Loss: 0.5262 Acc: 0.8028
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 13/31
+----------
+train Loss: 0.5407 Acc: 0.7878
+val Loss: 0.5247 Acc: 0.7934
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 14/31
+----------
+train Loss: 0.5390 Acc: 0.7946
+val Loss: 0.5223 Acc: 0.7911
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 15/31
+----------
+train Loss: 0.5408 Acc: 0.7908
+val Loss: 0.5226 Acc: 0.8052
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 16/31
+----------
+train Loss: 0.5365 Acc: 0.7946
+val Loss: 0.5266 Acc: 0.7934
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 17/31
+----------
+train Loss: 0.5342 Acc: 0.7976
+val Loss: 0.5223 Acc: 0.7981
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 18/31
+----------
+train Loss: 0.5369 Acc: 0.7946
+val Loss: 0.5183 Acc: 0.8075
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 19/31
+----------
+train Loss: 0.5374 Acc: 0.7922
+val Loss: 0.5225 Acc: 0.7934
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 20/31
+----------
+train Loss: 0.5349 Acc: 0.7979
+val Loss: 0.5189 Acc: 0.7887
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 21/31
+----------
+train Loss: 0.5340 Acc: 0.7993
+val Loss: 0.5201 Acc: 0.8052
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 22/31
+----------
+train Loss: 0.5366 Acc: 0.7857
+val Loss: 0.5193 Acc: 0.7958
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 23/31
+----------
+train Loss: 0.5344 Acc: 0.7934
+val Loss: 0.5184 Acc: 0.7981
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 24/31
+----------
+train Loss: 0.5304 Acc: 0.7993
+val Loss: 0.5198 Acc: 0.7958
+Epoch duration: 0 m 51s
+---------------
+
+Epoch 25/31
+----------
+train Loss: 0.5335 Acc: 0.8020
+val Loss: 0.5192 Acc: 0.7958
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 26/31
+----------
+train Loss: 0.5341 Acc: 0.8020
+val Loss: 0.5207 Acc: 0.7958
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 27/31
+----------
+train Loss: 0.5342 Acc: 0.7937
+val Loss: 0.5193 Acc: 0.7958
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 28/31
+----------
+train Loss: 0.5347 Acc: 0.7922
+val Loss: 0.5198 Acc: 0.7934
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 29/31
+----------
+train Loss: 0.5327 Acc: 0.7967
+val Loss: 0.5179 Acc: 0.8005
+Epoch duration: 0 m 52s
+---------------
+
+Epoch 30/31
+----------
+train Loss: 0.5328 Acc: 0.7943
+val Loss: 0.5177 Acc: 0.8052
+Epoch duration: 0 m 53s
+---------------
+
+Epoch 31/31
+----------
+train Loss: 0.5347 Acc: 0.7893
+val Loss: 0.5181 Acc: 0.7958
+Epoch duration: 0 m 52s
+---------------
+Training complete in 27m 8s
+Best val Acc: 0.807512
