@@ -24,10 +24,10 @@ class EfficientNet():
     ]),
     # probably shouldnt do this
     'test': transforms.Compose([
-        transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
-        transforms.CenterCrop(224),
+        #transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
+        #transforms.CenterCrop(224),
         transforms.ToTensor(),
-        transforms.Normalize(mean, std)
+        #transforms.Normalize(mean, std)
     ])
     }
         
@@ -40,5 +40,42 @@ class EfficientNet():
             nn.Linear(in_features=1280, out_features=2)
             )
 
+        model.load_state_dict(torch.load(weights_path))
+        return model
+
+class ViT():
+    # vit_b_16
+    mean = np.array([0.485, 0.456, 0.406])
+    std = np.array([0.229, 0.224, 0.225])
+
+    data_transforms = {
+        'train': transforms.Compose([
+            transforms.RandomHorizontalFlip(),
+            transforms.Resize(256, transforms.InterpolationMode('bilinear')),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(mean, std)
+        ]),
+        'val': transforms.Compose([
+            transforms.Resize(256, transforms.InterpolationMode('bilinear')),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(mean, std)
+        ]),
+        'test': transforms.Compose([
+            transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(mean, std)
+        ])
+    }
+    
+    def load(weights_path):
+        model = models.vit_b_16()
+        # model = models.vit_b_16(weights=ViT_B_16_Weights.DEFAULT)
+
+        model.heads = nn.Sequential(
+            nn.Linear(in_features=768, out_features=2)
+            )
         model.load_state_dict(torch.load(weights_path))
         return model
