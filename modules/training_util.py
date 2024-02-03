@@ -1,10 +1,21 @@
 import time
 import torch
+import os
 
-from os import path
 from copy import deepcopy
 from torch import utils
 from torchvision import datasets, models, transforms
+
+def makeDataloader(dataset_dir, data_transforms, batch_size=64):
+    dataset_splits = ['train','test','val']
+    dataset = {}
+    dataloader = {}
+    for split in dataset_splits:
+        curr_dir = os.path.join(dataset_dir, split)
+        if os.path.exists(curr_dir):
+            dataset[split] = datasets.ImageFolder(curr_dir, data_transforms[split])
+            dataloader[split] = utils.data.DataLoader(dataset[split], batch_size=batch_size, shuffle=True, num_workers=0)
+    return dataloader
 
 class PytorchDataset:
     '''
@@ -17,7 +28,7 @@ class PytorchDataset:
         self.training_phases = training_phases      # ['train','val']
         self.data_transforms = data_transforms
         
-        image_datasets = {x: datasets.ImageFolder(path.join(self.directory, x), self.data_transforms[x])
+        image_datasets = {x: datasets.ImageFolder(os.path.join(self.directory, x), self.data_transforms[x])
                         for x in self.training_phases}
         
         self.dataloaders = {x: utils.data.DataLoader(image_datasets[x], batch_size=batch_size, shuffle=True, num_workers=0)
@@ -60,7 +71,7 @@ class PytorchTraining:
             self.dataset.directory, scheduler.step_size, scheduler.gamma
             )
         
-        if not path.exists(log_path): 
+        if not os.path.exists(log_path): 
             log = open(log_path,'x')
             log.writelines('=' * 10+'\n')
             log.writelines('\n'+run_info+'\n')
