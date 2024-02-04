@@ -49,7 +49,36 @@ class PytorchDataset:
                         for x in self.training_phases}
            
         self.dataset_sizes = {x: len(image_datasets[x]) for x in self.training_phases}
+
+class EarlyStopping:
+    # https://stackoverflow.com/questions/71998978/early-stopping-in-pytorch
+    # https://www.youtube.com/watch?v=lS0vvIWiahU
+    def __init__(self, patience=5, delta=0, restore_best_weights=True):
+        self.patience = patience
+        self.delta = delta
+        self.epoch_counter = 0
+        self.min_val_loss = float('inf')
+        self.restore_best_weights = restore_best_weights
+        self.best_model = None
+        self.best_loss = None
+        self.message = ''
         
+    def __call__(self, model, val_loss):
+        if val_loss < self.min_val_loss:
+            self.min_val_loss = val_loss
+            self.best_model = deepcopy(model.state_dict())
+            self.epoch_counter = 0
+            self.message = f'Lower loss found, resetting patience counter'
+        elif val_loss > (self.min_val_loss + self.delta):
+            self.epoch_counter += 1
+            self.message = f'Loss didnt decrease. Increasing patience counter'
+            if self.epoch_counter >= self.patience:
+                self.message = f'Early stopping after {self.patience} epochs'
+                if self.restore_best_weights:
+                    model.load_state_dict(self.best_model)
+                return True
+        return False
+    
 class PytorchTraining:
     '''
     Generic training class for any pytorch model
@@ -59,16 +88,16 @@ class PytorchTraining:
         self.device = device                        # 
         self.output_directory = output_directory    # 
         self.dataset = pytorch_dataset
-       
-    def train_pytorch_model(self, model, criterion, optimizer, scheduler, start_epoch=1, num_epochs=25, epoch_save_interval=2):
+           
+    def train_pytorch_model(self, model, criterion, optimizer, scheduler, early_stopper, start_epoch=1, num_epochs=25, epoch_save_interval=2):
 
         best_model_wts = deepcopy(model.state_dict())
         best_acc = 0.0
 
         log_path = f"{self.output_directory}/log.txt"
         
-        run_info = 'Dataset {}\nLearning Rate Epoch Schedule = {}\nLearning Rate Gamma = {}'.format(
-            self.dataset.directory, scheduler.step_size, scheduler.gamma
+        run_info = 'Dataset {}\nLearning Rate Epoch Schedule = {}\nLearning Rate Gamma = {}\nOptimizer = {}'.format(
+            self.dataset.directory, scheduler.step_size, scheduler.gamma, type (optimizer).__name__
             )
         
         if not os.path.exists(log_path): 
@@ -79,8 +108,10 @@ class PytorchTraining:
             log.close() 
         
         since = time.time()
-        
-        for epoch in range(start_epoch, num_epochs+1):
+        done = False
+        epoch = start_epoch
+        while epoch < num_epochs and not done:
+        # for epoch in range(start_epoch, num_epochs+1):
             epoch_start = time.time()
             
             epoch_info = 'Epoch {}/{}'.format(epoch, num_epochs)
@@ -133,14 +164,16 @@ class PytorchTraining:
 
                 loss_acc_info = '{} Loss: {:.4f} Acc: {:.4f}'.format(phase, epoch_loss, epoch_acc)
                 with open(log_path,'a') as log:
-                    log.writelines(loss_acc_info+'\n')
-                    
+                    log.writelines(loss_acc_info+'\n')      
                 print(loss_acc_info)
                 
                 
                 if epoch % epoch_save_interval == 0:
                     torch.save(model.state_dict(), f'{self.output_directory}/epoch_{epoch}.pth')
-                    
+                
+                if early_stopper(model, epoch_loss):
+                    done = True
+                
                 # deep copy the model
                 if phase == 'val' and epoch_acc > best_acc:
                     best_acc = epoch_acc
@@ -152,11 +185,15 @@ class PytorchTraining:
             with open(log_path,'a') as log:
                 log.writelines(epoch_duration_info+'\n')
                 log.writelines(lr_info+'\n')
+                log.writelines(early_stopper.message)
                 log.writelines('-' * 15+'\n')
             print(epoch_duration_info)
             print(lr_info)
+            print(early_stopper.message)
             print()
-        
+
+            epoch += 1
+            
         torch.save(model.state_dict(), f'{self.output_directory}/last.pth')
         
         time_elapsed = time.time() - since
