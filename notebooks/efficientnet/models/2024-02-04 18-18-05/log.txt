@@ -1,0 +1,10 @@
+==========
+
+Dataset E:/Datasets/cor-splits/sgkf-8-1-1-2000
+Learning Rate Epoch Schedule = 10
+Learning Rate Gamma = 0.1
+Optimizer = Adamax
+==========
+
+Epoch 1/50
+----------

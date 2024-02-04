@@ -1,0 +1,50 @@
+==========
+
+Dataset E:/Datasets/cor-splits/sgkf-8-1-1-2000
+Learning Rate Epoch Schedule = 10
+Learning Rate Gamma = 0.1
+Optimizer = SGD
+==========
+
+Epoch 1/50
+----------
+train Loss: 0.6797 Acc: 0.5750
+val Loss: 0.6008 Acc: 0.7042
+Epoch duration: 6 m 8s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 2/50
+----------
+train Loss: 0.5372 Acc: 0.7801
+val Loss: 0.5275 Acc: 0.7723
+Epoch duration: 11 m 21s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 3/50
+----------
+train Loss: 0.4444 Acc: 0.8580
+val Loss: 0.4763 Acc: 0.7746
+Epoch duration: 7 m 57s
+Learning Rate = 0.001
+Loss didnt decrease. Increasing patience counter---------------
+
+Epoch 4/50
+----------
+train Loss: 0.3701 Acc: 0.8936
+val Loss: 0.4456 Acc: 0.7840
+Epoch duration: 11 m 17s
+Learning Rate = 0.001
+Loss didnt decrease. Increasing patience counter---------------
+
+Epoch 5/50
+----------
+train Loss: 0.3081 Acc: 0.9209
+val Loss: 0.4215 Acc: 0.7840
+Epoch duration: 11 m 6s
+Learning Rate = 0.001
+Loss didnt decrease. Increasing patience counter---------------
+
+Epoch 6/50
+----------

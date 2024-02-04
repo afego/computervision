@@ -1,0 +1,65 @@
+==========
+
+Dataset E:/Datasets/cor-splits/sgkf-8-1-1-even
+Learning Rate Epoch Schedule = 10
+Learning Rate Gamma = 0.1
+Optimizer = Adam
+==========
+
+Epoch 1/31
+----------
+train Loss: 1.3708 Acc: 0.4853
+val Loss: 0.6371 Acc: 0.6741
+Epoch duration: 1 m 28s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 2/31
+----------
+train Loss: 0.7237 Acc: 0.5098
+val Loss: 0.6354 Acc: 0.6741
+Epoch duration: 2 m 11s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 3/31
+----------
+train Loss: 0.6897 Acc: 0.5621
+val Loss: 0.6742 Acc: 0.6741
+Epoch duration: 2 m 9s
+Learning Rate = 0.001
+Loss didnt decrease. Increasing patience counter---------------
+
+Epoch 4/31
+----------
+train Loss: 0.6893 Acc: 0.5621
+val Loss: 0.6716 Acc: 0.6741
+Epoch duration: 1 m 58s
+Learning Rate = 0.001
+Loss didnt decrease. Increasing patience counter---------------
+
+Epoch 5/31
+----------
+train Loss: 0.7029 Acc: 0.4935
+val Loss: 0.6450 Acc: 0.6741
+Epoch duration: 2 m 1s
+Learning Rate = 0.001
+Loss didnt decrease. Increasing patience counter---------------
+
+Epoch 6/31
+----------
+train Loss: 0.6945 Acc: 0.5131
+val Loss: 0.6380 Acc: 0.6741
+Epoch duration: 2 m 0s
+Learning Rate = 0.001
+Loss didnt decrease. Increasing patience counter---------------
+
+Epoch 7/31
+----------
+train Loss: 0.6930 Acc: 0.5212
+val Loss: 0.6404 Acc: 0.6741
+Epoch duration: 2 m 0s
+Learning Rate = 0.001
+Early stopping after 10 epochs---------------
+Training complete in 13m 48s
+Best val Acc: 0.674074

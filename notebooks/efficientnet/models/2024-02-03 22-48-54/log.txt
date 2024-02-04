@@ -1,0 +1,169 @@
+==========
+
+Dataset E:/Datasets/cor-splits/sgkf-8-1-1-even
+Learning Rate Epoch Schedule = 10
+Learning Rate Gamma = 0.1
+Optimizer = SGD
+==========
+
+Epoch 1/31
+----------
+train Loss: 0.7101 Acc: 0.4918
+val Loss: 0.6548 Acc: 0.5778
+Epoch duration: 0 m 29s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 2/31
+----------
+train Loss: 0.6940 Acc: 0.5163
+val Loss: 0.6507 Acc: 0.6370
+Epoch duration: 0 m 28s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 3/31
+----------
+train Loss: 0.6854 Acc: 0.5588
+val Loss: 0.6498 Acc: 0.6222
+Epoch duration: 0 m 28s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 4/31
+----------
+train Loss: 0.6848 Acc: 0.5605
+val Loss: 0.6461 Acc: 0.6370
+Epoch duration: 0 m 28s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 5/31
+----------
+train Loss: 0.6777 Acc: 0.5801
+val Loss: 0.6409 Acc: 0.6593
+Epoch duration: 0 m 31s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 6/31
+----------
+train Loss: 0.6665 Acc: 0.5833
+val Loss: 0.6370 Acc: 0.6593
+Epoch duration: 0 m 33s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 7/31
+----------
+train Loss: 0.6570 Acc: 0.6275
+val Loss: 0.6325 Acc: 0.6815
+Epoch duration: 0 m 30s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 8/31
+----------
+train Loss: 0.6588 Acc: 0.6225
+val Loss: 0.6275 Acc: 0.6963
+Epoch duration: 0 m 29s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 9/31
+----------
+train Loss: 0.6513 Acc: 0.6307
+val Loss: 0.6236 Acc: 0.7037
+Epoch duration: 0 m 29s
+Learning Rate = 0.001
+Lower loss found, resetting patience counter---------------
+
+Epoch 10/31
+----------
+train Loss: 0.6376 Acc: 0.6601
+val Loss: 0.6180 Acc: 0.7111
+Epoch duration: 0 m 30s
+Learning Rate = 0.0001
+Lower loss found, resetting patience counter---------------
+
+Epoch 11/31
+----------
+train Loss: 0.6416 Acc: 0.6601
+val Loss: 0.6180 Acc: 0.7111
+Epoch duration: 0 m 29s
+Learning Rate = 0.0001
+Loss didnt decrease. Increasing patience counter---------------
+
+Epoch 12/31
+----------
+train Loss: 0.6425 Acc: 0.6422
+val Loss: 0.6177 Acc: 0.7037
+Epoch duration: 0 m 30s
+Learning Rate = 0.0001
+Lower loss found, resetting patience counter---------------
+
+Epoch 13/31
+----------
+train Loss: 0.6342 Acc: 0.6536
+val Loss: 0.6174 Acc: 0.7037
+Epoch duration: 0 m 29s
+Learning Rate = 0.0001
+Lower loss found, resetting patience counter---------------
+
+Epoch 14/31
+----------
+train Loss: 0.6364 Acc: 0.6634
+val Loss: 0.6169 Acc: 0.7037
+Epoch duration: 0 m 28s
+Learning Rate = 0.0001
+Lower loss found, resetting patience counter---------------
+
+Epoch 15/31
+----------
+train Loss: 0.6407 Acc: 0.6503
+val Loss: 0.6161 Acc: 0.7111
+Epoch duration: 0 m 30s
+Learning Rate = 0.0001
+Lower loss found, resetting patience counter---------------
+
+Epoch 16/31
+----------
+train Loss: 0.6323 Acc: 0.6716
+val Loss: 0.6156 Acc: 0.7111
+Epoch duration: 0 m 32s
+Learning Rate = 0.0001
+Lower loss found, resetting patience counter---------------
+
+Epoch 17/31
+----------
+train Loss: 0.6328 Acc: 0.6667
+val Loss: 0.6152 Acc: 0.7111
+Epoch duration: 0 m 30s
+Learning Rate = 0.0001
+Lower loss found, resetting patience counter---------------
+
+Epoch 18/31
+----------
+train Loss: 0.6345 Acc: 0.6536
+val Loss: 0.6162 Acc: 0.7111
+Epoch duration: 0 m 28s
+Learning Rate = 0.0001
+Loss didnt decrease. Increasing patience counter---------------
+
+Epoch 19/31
+----------
+train Loss: 0.6320 Acc: 0.6732
+val Loss: 0.6162 Acc: 0.7111
+Epoch duration: 0 m 27s
+Learning Rate = 0.0001
+Loss didnt decrease. Increasing patience counter---------------
+
+Epoch 20/31
+----------
+train Loss: 0.6312 Acc: 0.6765
+val Loss: 0.6152 Acc: 0.7111
+Epoch duration: 0 m 28s
+Learning Rate = 1e-05
+Early stopping after 5 epochs---------------
+Training complete in 9m 45s
+Best val Acc: 0.711111

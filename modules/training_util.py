@@ -53,15 +53,15 @@ class PytorchDataset:
 class EarlyStopping:
     # https://stackoverflow.com/questions/71998978/early-stopping-in-pytorch
     # https://www.youtube.com/watch?v=lS0vvIWiahU
-    def __init__(self, patience=5, delta=0, restore_best_weights=True):
+    def __init__(self, patience, delta=0, min_epoch=10, restore_best_weights=True):
         self.patience = patience
         self.delta = delta
         self.epoch_counter = 0
         self.min_val_loss = float('inf')
         self.restore_best_weights = restore_best_weights
         self.best_model = None
-        self.best_loss = None
         self.message = ''
+        self.min_epoch = min_epoch  # Number of epochs before initializing patience counter
         
     def __call__(self, model, val_loss):
         if val_loss < self.min_val_loss:
@@ -71,7 +71,7 @@ class EarlyStopping:
             self.message = f'Lower loss found, resetting patience counter'
         elif val_loss > (self.min_val_loss + self.delta):
             self.epoch_counter += 1
-            self.message = f'Loss didnt decrease. Increasing patience counter'
+            self.message = 'Loss didnt decrease from {:.4f}. Increasing patience counter'.format(self.min_val_loss)
             if self.epoch_counter >= self.patience:
                 self.message = f'Early stopping after {self.patience} epochs'
                 if self.restore_best_weights:
@@ -108,9 +108,9 @@ class PytorchTraining:
             log.close() 
         
         since = time.time()
-        done = False
+        early_stop = False
         epoch = start_epoch
-        while epoch < num_epochs and not done:
+        while epoch < num_epochs+1 and not early_stop:
         # for epoch in range(start_epoch, num_epochs+1):
             epoch_start = time.time()
             
@@ -148,10 +148,10 @@ class PytorchTraining:
 
                         # backward + optimize only if in training phase
                         if phase == 'train':
-                            optimizer.zero_grad()
                             loss.backward()
                             optimizer.step()
-
+                            optimizer.zero_grad()
+                        
                     # statistics
                     running_loss += loss.item() * inputs.size(0)
                     running_corrects += torch.sum(preds == labels.data)
@@ -167,12 +167,11 @@ class PytorchTraining:
                     log.writelines(loss_acc_info+'\n')      
                 print(loss_acc_info)
                 
-                
                 if epoch % epoch_save_interval == 0:
                     torch.save(model.state_dict(), f'{self.output_directory}/epoch_{epoch}.pth')
                 
-                if early_stopper(model, epoch_loss):
-                    done = True
+                if phase == 'val' and early_stopper(model, epoch_loss, epoch):
+                    early_stop = True
                 
                 # deep copy the model
                 if phase == 'val' and epoch_acc > best_acc:
