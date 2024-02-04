@@ -27,6 +27,7 @@ class PytorchDataset:
         self.directory = directory  # 'E:\Datasets\cor-splits\sgkf-8-1-1-4000'
         self.training_phases = training_phases      # ['train','val']
         self.data_transforms = data_transforms
+        self.batch_size = batch_size
         
         image_datasets = {x: datasets.ImageFolder(os.path.join(self.directory, x), self.data_transforms[x])
                         for x in self.training_phases}
@@ -63,7 +64,9 @@ class EarlyStopping:
         self.message = ''
         self.min_epoch = min_epoch  # Number of epochs before initializing patience counter
         
-    def __call__(self, model, val_loss):
+    def __call__(self, model, val_loss, epoch):
+        if epoch <= self.min_epoch:
+            return False
         if val_loss < self.min_val_loss:
             self.min_val_loss = val_loss
             self.best_model = deepcopy(model.state_dict())
@@ -96,8 +99,8 @@ class PytorchTraining:
 
         log_path = f"{self.output_directory}/log.txt"
         
-        run_info = 'Dataset {}\nLearning Rate Epoch Schedule = {}\nLearning Rate Gamma = {}\nOptimizer = {}'.format(
-            self.dataset.directory, scheduler.step_size, scheduler.gamma, type (optimizer).__name__
+        run_info = 'Dataset {}\nLearning Rate Epoch Schedule = {}\nLearning Rate Gamma = {}\nOptimizer = {}\nBatch Size = {}'.format(
+            self.dataset.directory, scheduler.step_size, scheduler.gamma, type (optimizer).__name__, self.dataset.batch_size
             )
         
         if not os.path.exists(log_path): 
@@ -123,7 +126,6 @@ class PytorchTraining:
             print(epoch_info)
             print('-' * 10)
             
-
             # Each epoch has a training and validation phase
             for phase in self.dataset.training_phases:
                 if phase == 'train':
@@ -146,11 +148,11 @@ class PytorchTraining:
                         _, preds = torch.max(outputs, 1)
                         loss = criterion(outputs, labels)
 
-                        # backward + optimize only if in training phase
                         if phase == 'train':
-                            loss.backward()
-                            optimizer.step()
                             optimizer.zero_grad()
+                            loss.backward()
+                            torch.nn.utils.clip_grad(model.parameters(), max_norm=1)    #gradient clipping
+                            optimizer.step()
                         
                     # statistics
                     running_loss += loss.item() * inputs.size(0)

@@ -27,7 +27,7 @@ class EfficientNet():
         #transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
         #transforms.CenterCrop(224),
         transforms.ToTensor(),
-        #transforms.Normalize(mean, std)
+        transforms.Normalize(mean, std)
     ])
     }
         
