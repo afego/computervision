@@ -151,7 +151,7 @@ class PytorchTraining:
                         if phase == 'train':
                             optimizer.zero_grad()
                             loss.backward()
-                            torch.nn.utils.clip_grad(model.parameters(), max_norm=1)    #gradient clipping
+                            torch.nn.utils.clip_grad.clip_grad_value_(model.parameters(), clip_value=1) # gradient clipping
                             optimizer.step()
                         
                     # statistics

@@ -109,7 +109,7 @@ class VGG19():
         ])
     }
     
-    def load(weights_path=None):
+    def load(self, weights_path:str=None):
         model = models.vgg19(weights=models.VGG19_Weights.DEFAULT)
         
         model.classifier = nn.Sequential(
@@ -121,5 +121,6 @@ class VGG19():
             nn.Dropout(p=0.5),
             nn.Linear(in_features=4096, out_features=2)
         )
-        
+        if weights_path is not None:
+            model.load_state_dict(torch.load(weights_path))
         return model
