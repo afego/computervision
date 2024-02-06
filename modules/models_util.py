@@ -11,27 +11,27 @@ class EfficientNet():
     data_transforms = {
     'train': transforms.Compose([
         transforms.RandomHorizontalFlip(),
-        transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
+        transforms.Resize(256, transforms.InterpolationMode('bilinear')),
         transforms.CenterCrop(224),
         transforms.ToTensor(), # When converting to tensor, pytorch automatically rescales to [0,1]
         transforms.Normalize(mean, std)
     ]),
     'val': transforms.Compose([
-        transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
+        transforms.Resize(256, transforms.InterpolationMode('bilinear')),
         transforms.CenterCrop(224),
         transforms.ToTensor(),
         transforms.Normalize(mean, std)
     ]),
     # probably shouldnt do this
     'test': transforms.Compose([
-        #transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
-        #transforms.CenterCrop(224),
+        transforms.Resize(256, transforms.InterpolationMode('bilinear')),
+        transforms.CenterCrop(224),
         transforms.ToTensor(),
         transforms.Normalize(mean, std)
     ])
     }
         
-    def load(weights_path:str=None):
+    def load(self, weights_path:str=None):
         model = models.efficientnet_b0(weights=models.EfficientNet_B0_Weights.DEFAULT)
 
         # A newly defined layer is created with requires_grad=True by default
@@ -39,8 +39,12 @@ class EfficientNet():
             nn.Dropout(p=0.2, inplace=True),
             nn.Linear(in_features=1280, out_features=2)
             )
-        # if weights_path is not None:
-        #     model.load_state_dict(torch.load(weights_path))
+        
+        for param in model.parameters():
+            param.requires_grad = True
+            
+        if weights_path is not None:
+            model.load_state_dict(torch.load(weights_path))
         return model
 
 class ViT():
@@ -51,13 +55,13 @@ class ViT():
     data_transforms = {
         'train': transforms.Compose([
             transforms.RandomHorizontalFlip(),
-            transforms.Resize(256, transforms.InterpolationMode('bilinear')),
+            transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
             transforms.CenterCrop(224),
             transforms.ToTensor(),
             transforms.Normalize(mean, std)
         ]),
         'val': transforms.Compose([
-            transforms.Resize(256, transforms.InterpolationMode('bilinear')),
+            transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
             transforms.CenterCrop(224),
             transforms.ToTensor(),
             transforms.Normalize(mean, std)
@@ -70,15 +74,19 @@ class ViT():
         ])
     }
     
-    def load(weights_path=None):
+    def load(self, weights_path=None):
         # model = models.vit_b_16()
         model = models.vit_b_16(weights=models.ViT_B_16_Weights.DEFAULT)
 
         model.heads = nn.Sequential(
             nn.Linear(in_features=768, out_features=2)
             )
-        # if len(weights_path):
-        #     model.load_state_dict(torch.load(weights_path))
+        
+        for param in model.parameters():
+            param.requires_grad = True
+            
+        if weights_path:
+            model.load_state_dict(torch.load(weights_path))
             
         return model
 
@@ -102,7 +110,7 @@ class VGG19():
             transforms.Normalize(mean, std)
         ]),
         'test': transforms.Compose([
-            transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
+            transforms.Resize(256, transforms.InterpolationMode('bilinear')),
             transforms.CenterCrop(224),
             transforms.ToTensor(),
             transforms.Normalize(mean, std)
@@ -121,6 +129,50 @@ class VGG19():
             nn.Dropout(p=0.5),
             nn.Linear(in_features=4096, out_features=2)
         )
+        for param in model.parameters():
+            param.requires_grad = True
+            
+        if weights_path is not None:
+            model.load_state_dict(torch.load(weights_path))
+        return model
+    
+class ResNet():
+    # resnet
+    mean = np.array([0.485, 0.456, 0.406])
+    std = np.array([0.229, 0.224, 0.225])
+
+    data_transforms = {
+        'train': transforms.Compose([
+            transforms.RandomHorizontalFlip(),
+            transforms.Resize(256),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(mean, std)
+        ]),
+        'val': transforms.Compose([
+            transforms.Resize(256),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(mean, std)
+        ]),
+        'test': transforms.Compose([
+            transforms.Resize(256),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(mean, std)
+        ])
+    }
+    
+    def load(self, weights_path:str=None):
+        model = models.resnet152(weights=models.ResNet152_Weights.DEFAULT)
+        
+        model.fc = nn.Sequential(
+            nn.Linear(in_features=512, out_features=2)
+        )
+        
+        for param in model.parameters():
+            param.requires_grad = True
+            
         if weights_path is not None:
             model.load_state_dict(torch.load(weights_path))
         return model

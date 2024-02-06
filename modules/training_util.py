@@ -1,10 +1,12 @@
 import time
 import torch
 import os
+import numpy as np
 
 from copy import deepcopy
 from torch import utils
 from torchvision import datasets, models, transforms
+from sklearn.metrics import confusion_matrix
 
 def makeDataloader(dataset_dir, data_transforms, batch_size=64):
     dataset_splits = ['train','test','val']
@@ -37,19 +39,10 @@ class PytorchDataset:
            
         self.dataset_sizes = {x: len(image_datasets[x]) for x in self.training_phases}
     
-    def change_dataloaders(self, data_transforms, batch_size):
-        '''
-        if at any point there is a need to change the dataloaders for the same dataset
-        '''
-        self.data_transforms = data_transforms
-        
-        image_datasets = {x: datasets.ImageFolder(path.join(self.directory, x), self.data_transforms[x])
-                        for x in self.training_phases}
-        
-        self.dataloaders = {x: utils.data.DataLoader(image_datasets[x], batch_size=batch_size, shuffle=True, num_workers=0)
-                        for x in self.training_phases}
-           
-        self.dataset_sizes = {x: len(image_datasets[x]) for x in self.training_phases}
+    def get_n_classes(self):
+        path = os.path.join(self.directory, self.training_phases[0])
+        return sum(os.path.isdir(os.path.join(path,i)) for i in os.listdir(path))
+    
 
 class EarlyStopping:
     # https://stackoverflow.com/questions/71998978/early-stopping-in-pytorch
@@ -97,10 +90,14 @@ class PytorchTraining:
         best_model_wts = deepcopy(model.state_dict())
         best_acc = 0.0
 
+        fully_trainable = True
+        for param in model.parameters():
+            if param.requires_grad == False:
+                fully_trainable = False
         log_path = f"{self.output_directory}/log.txt"
         
-        run_info = 'Dataset {}\nLearning Rate Epoch Schedule = {}\nLearning Rate Gamma = {}\nOptimizer = {}\nBatch Size = {}'.format(
-            self.dataset.directory, scheduler.step_size, scheduler.gamma, type (optimizer).__name__, self.dataset.batch_size
+        run_info = 'Model {} Fully Trained = {}\nDataset {}\nLearning Rate Epoch Schedule = {}\nLearning Rate Gamma = {}\nOptimizer = {}\nBatch Size = {}'.format(
+            model._get_name(), fully_trainable, self.dataset.directory, scheduler.step_size, scheduler.gamma, type (optimizer).__name__, self.dataset.batch_size
             )
         
         if not os.path.exists(log_path): 
@@ -113,6 +110,12 @@ class PytorchTraining:
         since = time.time()
         early_stop = False
         epoch = start_epoch
+        
+        ## https://stackoverflow.com/questions/53290306/confusion-matrix-and-test-accuracy-for-pytorch-transfer-learning-tutorial
+        # Initialize the prediction and label lists(tensors)
+        predlist=torch.zeros(0,dtype=torch.long, device='cpu')
+        lbllist=torch.zeros(0,dtype=torch.long, device='cpu')
+    
         while epoch < num_epochs+1 and not early_stop:
         # for epoch in range(start_epoch, num_epochs+1):
             epoch_start = time.time()
@@ -148,12 +151,16 @@ class PytorchTraining:
                         _, preds = torch.max(outputs, 1)
                         loss = criterion(outputs, labels)
 
-                        if phase == 'train':
-                            optimizer.zero_grad()
+                        if phase == 'train':  
                             loss.backward()
                             torch.nn.utils.clip_grad.clip_grad_value_(model.parameters(), clip_value=1) # gradient clipping
                             optimizer.step()
-                        
+                            optimizer.zero_grad()
+                        else:
+                            # Append batch prediction results
+                            predlist=torch.cat([predlist, preds.view(-1).cpu()])
+                            lbllist=torch.cat([lbllist, labels.view(-1).cpu()])
+                                            
                     # statistics
                     running_loss += loss.item() * inputs.size(0)
                     running_corrects += torch.sum(preds == labels.data)
@@ -186,7 +193,7 @@ class PytorchTraining:
             with open(log_path,'a') as log:
                 log.writelines(epoch_duration_info+'\n')
                 log.writelines(lr_info+'\n')
-                log.writelines(early_stopper.message)
+                log.writelines(early_stopper.message+'\n')
                 log.writelines('-' * 15+'\n')
             print(epoch_duration_info)
             print(lr_info)
@@ -204,10 +211,33 @@ class PytorchTraining:
         best_acc_text = 'Best val Acc: {:4f}'.format(best_acc)
         print(best_acc_text)
         
+        conf_mat=confusion_matrix(lbllist.numpy(), predlist.numpy())
+        class_accuracy=100*conf_mat.diagonal()/conf_mat.sum(1)
+        
         with open(log_path,'a') as log:
             log.writelines(complete_text+'\n')
             log.writelines(best_acc_text+'\n')
             
+        print("\nConfusion Matrix")
+        print(conf_mat)
+        print("\nAccuracy by class")
+        print(class_accuracy)
+        
+        statistics_path = f"{self.output_directory}/stats.txt"
+        
+        conf_mat = conf_mat.tolist()
+        class_accuracy = class_accuracy.tolist()
+        
+        with open(statistics_path,'x') as stats:
+            stats.writelines("Confusion matrix")
+            for row in conf_mat:
+                stats.writelines("\n{} {}".format(row[0],row[1]))
+            stats.writelines('\nAccuracy per class')
+            cls_acc = '\n'
+            for i in class_accuracy:
+                cls_acc += "{:4f} ".format(i)
+            stats.writelines(cls_acc)
+    
         # load best model weights
         model.load_state_dict(best_model_wts)
         torch.save(model.state_dict(), f'{self.output_directory}/best.pth')
