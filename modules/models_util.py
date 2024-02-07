@@ -7,6 +7,7 @@ from PIL import Image
 
 class Erase(object):
     '''
+    Class to erase COR logo from images
     '''
     def __init__(self, i=39,j=0,h=90,w=265,v=0):
         self.i = i
@@ -85,12 +86,13 @@ class EfficientNet(PytorchModel):
             )
         return model
 
-class ViT():
+class ViT(PytorchModel):
     def __init__(self):
         mean = np.array([0.485, 0.456, 0.406])
         std = np.array([0.229, 0.224, 0.225])
         data_transforms = {
             'train': transforms.Compose([
+                Erase(),
                 transforms.RandomHorizontalFlip(),
                 transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
                 transforms.CenterCrop(224),
@@ -98,12 +100,14 @@ class ViT():
                 transforms.Normalize(mean, std)
             ]),
             'val': transforms.Compose([
+                Erase(),
                 transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
                 transforms.CenterCrop(224),
                 transforms.ToTensor(),
                 transforms.Normalize(mean, std)
             ]),
             'test': transforms.Compose([
+                Erase(),
                 transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
                 transforms.CenterCrop(224),
                 transforms.ToTensor(),
@@ -111,18 +115,20 @@ class ViT():
             ])
         }
         super().__init__(mean, std, data_transforms, models.vit_b_16, models.ViT_B_16_Weights.DEFAULT)
+        
     def _change_fc_layer(self, model):
         model.heads = nn.Sequential(
             nn.Linear(in_features=768, out_features=2)
             )
         return model
     
-class VGG19():
+class VGG19(PytorchModel):
     def __init__(self):
         mean = np.array([0.485, 0.456, 0.406])
         std = np.array([0.229, 0.224, 0.225])
         data_transforms = {
             'train': transforms.Compose([
+                Erase(),
                 transforms.RandomHorizontalFlip(),
                 transforms.Resize(256, transforms.InterpolationMode('bilinear')),
                 transforms.CenterCrop(224),
@@ -130,12 +136,14 @@ class VGG19():
                 transforms.Normalize(mean, std)
             ]),
             'val': transforms.Compose([
+                Erase(),
                 transforms.Resize(256, transforms.InterpolationMode('bilinear')),
                 transforms.CenterCrop(224),
                 transforms.ToTensor(),
                 transforms.Normalize(mean, std)
             ]),
             'test': transforms.Compose([
+                Erase(),
                 transforms.Resize(256, transforms.InterpolationMode('bilinear')),
                 transforms.CenterCrop(224),
                 transforms.ToTensor(),
@@ -156,7 +164,7 @@ class VGG19():
             )
         return model
     
-class ResNet():
+class ResNet(PytorchModel):
     # resnet
     mean = np.array([0.485, 0.456, 0.406])
     std = np.array([0.229, 0.224, 0.225])

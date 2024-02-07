@@ -83,6 +83,8 @@ class PytorchTraining:
             log.writelines('=' * 10+'\n')
             log.close() 
         
+        # codelist = {x:[0,0] for x in self.dataset.codes['test']}
+        
         since = time.time()
         early_stop = False
         epoch = start_epoch
@@ -116,7 +118,7 @@ class PytorchTraining:
                 running_corrects = 0
 
                 # Iterate over data.
-                for inputs, labels in self.dataset.dataloaders[phase]:
+                for inputs, labels, path in self.dataset.dataloaders[phase]:
                     inputs = inputs.to(self.device)
                     labels = labels.to(self.device)
 
