@@ -83,10 +83,18 @@ class PytorchTraining:
             log.writelines('=' * 10+'\n')
             log.close() 
         
+        print('\n'+run_info+'\n')
+        
         # Overall accuracy per camera
         codelist = {x:[0,0] for x in self.dataset.codes['val']}
         # Accuracy per epoch
         code_epoch = []
+        # Overall accuracy per class per camera
+        code_class = {
+            x:[
+            [0,0],  # Class 0 correct classification, Class 0 total labels
+            [0,0]   # Class 1 correct classification, Class 1 total labels
+            ] for x in self.dataset.codes['val']}
         
         since = time.time()
         early_stop = False
@@ -143,7 +151,15 @@ class PytorchTraining:
                             # Calculating overall accuracy by camera per epoch
                             for j, path in enumerate(paths):
                                 code = os.path.basename(path).split(' ')[0]
-                                correct_class = (preds[j] == labels[j]).sum().item() # Correct classification
+                                correct_class = (preds[j] == labels[j]).sum().item()
+                                
+                                # Accuracy per camera per class                
+                                for idx in self.dataset.dataloaders[phase].dataset.class_to_idx.values():  
+                                    if preds[j].item() == idx:
+                                        if (preds[j] == labels[j]).item():
+                                            code_class[code][idx][0] += 1 
+                                        code_class[code][idx][1] += 1
+                                
                                 codelist[code][0] += correct_class 
                                 codelist[code][1] += 1 # Total images evaluated
                                 temp_dict[code] = [codelist[code][0], codelist[code][1]] # maybe rewrite this line, so it doesnt do this for every file with each code
@@ -234,9 +250,13 @@ class PytorchTraining:
                 cls_acc += "{:4f} ".format(i)
             stats.writelines(cls_acc)
             
-            stats.write(f"\n\nOveral accuracy by camera during validation")
+            stats.write(f"\n\nOverall accuracy by camera during validation")
             for key, value in codelist.items():
                 stats.write(f"\n{key}: {(value[0]/value[1]):.2f}")
+            
+            stats.write(f"\n\nOverall accuracy by camera per class during validation")
+            for key,value in code_class.items():
+                stats.write(f"\n{key}: Class 0: {(value[0][0]/value[0][1]):.2f} Class 1: {(value[1][0]/value[1][1]):.2f}")
                 
             stats.write(f"\n\nCamera accuracy per epoch")
             for i in range(len(code_epoch)):
@@ -244,7 +264,7 @@ class PytorchTraining:
                 for code in self.dataset.codes['val']:
                     values = code_epoch[i][code]
                     stats.write(f"\n{code}: {(values[0]/values[1]):.2f}, correctly classifying {values[0]} out of {values[1]} images")
-    
+
         # load best model weights
         model.load_state_dict(best_model_wts)
         torch.save(model.state_dict(), f'{self.output_directory}/best.pth')
