@@ -1,0 +1,98 @@
+Confusion matrix
+264 276
+21 519
+
+Accuracy per class
+48.888889 96.111111 
+
+Overall accuracy by camera during validation
+CODE1475: 0.74
+CODE38: 0.50
+CODE326: 0.94
+
+Overall accuracy by camera per class during validation
+CODE1475: Class 0: 0.29 Class 1: 0.45
+CODE38: Class 0: 0.00 Class 1: 0.50
+CODE326: Class 0: 0.44 Class 1: 0.49
+
+Camera accuracy per epoch
+Epoch 1
+CODE1475: 0.22, correctly classifying 4 out of 18 images
+CODE38: 0.56, correctly classifying 10 out of 18 images
+CODE326: 0.78, correctly classifying 14 out of 18 images
+Epoch 2
+CODE1475: 0.31, correctly classifying 11 out of 36 images
+CODE38: 0.53, correctly classifying 19 out of 36 images
+CODE326: 0.86, correctly classifying 31 out of 36 images
+Epoch 3
+CODE1475: 0.39, correctly classifying 21 out of 54 images
+CODE38: 0.52, correctly classifying 28 out of 54 images
+CODE326: 0.89, correctly classifying 48 out of 54 images
+Epoch 4
+CODE1475: 0.47, correctly classifying 34 out of 72 images
+CODE38: 0.51, correctly classifying 37 out of 72 images
+CODE326: 0.90, correctly classifying 65 out of 72 images
+Epoch 5
+CODE1475: 0.52, correctly classifying 47 out of 90 images
+CODE38: 0.51, correctly classifying 46 out of 90 images
+CODE326: 0.91, correctly classifying 82 out of 90 images
+Epoch 6
+CODE1475: 0.56, correctly classifying 60 out of 108 images
+CODE38: 0.51, correctly classifying 55 out of 108 images
+CODE326: 0.92, correctly classifying 99 out of 108 images
+Epoch 7
+CODE1475: 0.58, correctly classifying 73 out of 126 images
+CODE38: 0.51, correctly classifying 64 out of 126 images
+CODE326: 0.92, correctly classifying 116 out of 126 images
+Epoch 8
+CODE1475: 0.60, correctly classifying 86 out of 144 images
+CODE38: 0.51, correctly classifying 73 out of 144 images
+CODE326: 0.92, correctly classifying 133 out of 144 images
+Epoch 9
+CODE1475: 0.62, correctly classifying 100 out of 162 images
+CODE38: 0.51, correctly classifying 82 out of 162 images
+CODE326: 0.93, correctly classifying 150 out of 162 images
+Epoch 10
+CODE1475: 0.64, correctly classifying 115 out of 180 images
+CODE38: 0.51, correctly classifying 91 out of 180 images
+CODE326: 0.93, correctly classifying 167 out of 180 images
+Epoch 11
+CODE1475: 0.66, correctly classifying 130 out of 198 images
+CODE38: 0.51, correctly classifying 100 out of 198 images
+CODE326: 0.93, correctly classifying 184 out of 198 images
+Epoch 12
+CODE1475: 0.67, correctly classifying 145 out of 216 images
+CODE38: 0.50, correctly classifying 109 out of 216 images
+CODE326: 0.93, correctly classifying 201 out of 216 images
+Epoch 13
+CODE1475: 0.68, correctly classifying 160 out of 234 images
+CODE38: 0.50, correctly classifying 118 out of 234 images
+CODE326: 0.93, correctly classifying 218 out of 234 images
+Epoch 14
+CODE1475: 0.69, correctly classifying 175 out of 252 images
+CODE38: 0.50, correctly classifying 127 out of 252 images
+CODE326: 0.93, correctly classifying 235 out of 252 images
+Epoch 15
+CODE1475: 0.70, correctly classifying 190 out of 270 images
+CODE38: 0.50, correctly classifying 136 out of 270 images
+CODE326: 0.93, correctly classifying 252 out of 270 images
+Epoch 16
+CODE1475: 0.71, correctly classifying 205 out of 288 images
+CODE38: 0.50, correctly classifying 145 out of 288 images
+CODE326: 0.93, correctly classifying 269 out of 288 images
+Epoch 17
+CODE1475: 0.72, correctly classifying 220 out of 306 images
+CODE38: 0.50, correctly classifying 154 out of 306 images
+CODE326: 0.93, correctly classifying 286 out of 306 images
+Epoch 18
+CODE1475: 0.73, correctly classifying 235 out of 324 images
+CODE38: 0.50, correctly classifying 163 out of 324 images
+CODE326: 0.94, correctly classifying 303 out of 324 images
+Epoch 19
+CODE1475: 0.73, correctly classifying 250 out of 342 images
+CODE38: 0.50, correctly classifying 172 out of 342 images
+CODE326: 0.94, correctly classifying 320 out of 342 images
+Epoch 20
+CODE1475: 0.74, correctly classifying 265 out of 360 images
+CODE38: 0.50, correctly classifying 181 out of 360 images
+CODE326: 0.94, correctly classifying 337 out of 360 images

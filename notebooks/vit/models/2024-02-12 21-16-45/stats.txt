@@ -1,0 +1,2278 @@
+Confusion matrix
+4154 2546
+969 5731
+
+Accuracy per class
+62.000000 85.537313 
+
+Overall accuracy by camera during validation
+CODE3290: 0.91
+CODE1538: 0.48
+CODE268: 0.70
+CODE92: 0.58
+CODE313: 0.67
+CODE430: 0.78
+CODE1994: 0.90
+CODE1393: 0.87
+
+Overall accuracy by camera per class during validation
+CODE3290: Class 0: 0.41 Class 1: 0.50
+CODE1538: Class 0: 0.35 Class 1: 0.13
+CODE268: Class 0: 0.20 Class 1: 0.50
+CODE92: Class 0: 0.14 Class 1: 0.44
+CODE313: Class 0: 0.17 Class 1: 0.50
+CODE430: Class 0: 0.37 Class 1: 0.41
+CODE1994: Class 0: 0.45 Class 1: 0.46
+CODE1393: Class 0: 0.37 Class 1: 0.50
+
+Camera accuracy per epoch
+Epoch 1
+CODE3290: 0.94, correctly classifying 32 out of 34 images
+CODE1538: 0.41, correctly classifying 14 out of 34 images
+CODE268: 0.62, correctly classifying 21 out of 34 images
+CODE92: 0.47, correctly classifying 16 out of 34 images
+CODE313: 0.63, correctly classifying 19 out of 30 images
+CODE430: 0.56, correctly classifying 19 out of 34 images
+CODE1994: 0.50, correctly classifying 17 out of 34 images
+CODE1393: 0.85, correctly classifying 29 out of 34 images
+Epoch 2
+CODE3290: 0.94, correctly classifying 32 out of 34 images
+CODE1538: 0.41, correctly classifying 14 out of 34 images
+CODE268: 0.62, correctly classifying 21 out of 34 images
+CODE92: 0.47, correctly classifying 16 out of 34 images
+CODE313: 0.63, correctly classifying 19 out of 30 images
+CODE430: 0.56, correctly classifying 19 out of 34 images
+CODE1994: 0.50, correctly classifying 17 out of 34 images
+CODE1393: 0.85, correctly classifying 29 out of 34 images
+Epoch 3
+CODE3290: 0.94, correctly classifying 32 out of 34 images
+CODE1538: 0.41, correctly classifying 14 out of 34 images
+CODE268: 0.62, correctly classifying 21 out of 34 images
+CODE92: 0.47, correctly classifying 16 out of 34 images
+CODE313: 0.63, correctly classifying 19 out of 30 images
+CODE430: 0.56, correctly classifying 19 out of 34 images
+CODE1994: 0.50, correctly classifying 17 out of 34 images
+CODE1393: 0.85, correctly classifying 29 out of 34 images
+Epoch 4
+CODE3290: 0.94, correctly classifying 32 out of 34 images
+CODE1538: 0.41, correctly classifying 14 out of 34 images
+CODE268: 0.62, correctly classifying 21 out of 34 images
+CODE92: 0.47, correctly classifying 16 out of 34 images
+CODE313: 0.63, correctly classifying 19 out of 30 images
+CODE430: 0.56, correctly classifying 19 out of 34 images
+CODE1994: 0.50, correctly classifying 17 out of 34 images
+CODE1393: 0.85, correctly classifying 29 out of 34 images
+Epoch 5
+CODE3290: 0.94, correctly classifying 32 out of 34 images
+CODE1538: 0.41, correctly classifying 14 out of 34 images
+CODE268: 0.62, correctly classifying 21 out of 34 images
+CODE92: 0.47, correctly classifying 16 out of 34 images
+CODE313: 0.63, correctly classifying 19 out of 30 images
+CODE430: 0.56, correctly classifying 19 out of 34 images
+CODE1994: 0.50, correctly classifying 17 out of 34 images
+CODE1393: 0.85, correctly classifying 29 out of 34 images
+Epoch 6
+CODE3290: 0.94, correctly classifying 64 out of 68 images
+CODE1538: 0.41, correctly classifying 28 out of 68 images
+CODE268: 0.63, correctly classifying 43 out of 68 images
+CODE92: 0.49, correctly classifying 33 out of 68 images
+CODE313: 0.65, correctly classifying 39 out of 60 images
+CODE430: 0.60, correctly classifying 41 out of 68 images
+CODE1994: 0.53, correctly classifying 36 out of 68 images
+CODE1393: 0.85, correctly classifying 58 out of 68 images
+Epoch 7
+CODE3290: 0.94, correctly classifying 64 out of 68 images
+CODE1538: 0.41, correctly classifying 28 out of 68 images
+CODE268: 0.63, correctly classifying 43 out of 68 images
+CODE92: 0.49, correctly classifying 33 out of 68 images
+CODE313: 0.65, correctly classifying 39 out of 60 images
+CODE430: 0.60, correctly classifying 41 out of 68 images
+CODE1994: 0.53, correctly classifying 36 out of 68 images
+CODE1393: 0.85, correctly classifying 58 out of 68 images
+Epoch 8
+CODE3290: 0.94, correctly classifying 64 out of 68 images
+CODE1538: 0.41, correctly classifying 28 out of 68 images
+CODE268: 0.63, correctly classifying 43 out of 68 images
+CODE92: 0.49, correctly classifying 33 out of 68 images
+CODE313: 0.65, correctly classifying 39 out of 60 images
+CODE430: 0.60, correctly classifying 41 out of 68 images
+CODE1994: 0.53, correctly classifying 36 out of 68 images
+CODE1393: 0.85, correctly classifying 58 out of 68 images
+Epoch 9
+CODE3290: 0.94, correctly classifying 64 out of 68 images
+CODE1538: 0.41, correctly classifying 28 out of 68 images
+CODE268: 0.63, correctly classifying 43 out of 68 images
+CODE92: 0.49, correctly classifying 33 out of 68 images
+CODE313: 0.65, correctly classifying 39 out of 60 images
+CODE430: 0.60, correctly classifying 41 out of 68 images
+CODE1994: 0.53, correctly classifying 36 out of 68 images
+CODE1393: 0.85, correctly classifying 58 out of 68 images
+Epoch 10
+CODE3290: 0.94, correctly classifying 64 out of 68 images
+CODE1538: 0.41, correctly classifying 28 out of 68 images
+CODE268: 0.63, correctly classifying 43 out of 68 images
+CODE92: 0.49, correctly classifying 33 out of 68 images
+CODE313: 0.65, correctly classifying 39 out of 60 images
+CODE430: 0.60, correctly classifying 41 out of 68 images
+CODE1994: 0.53, correctly classifying 36 out of 68 images
+CODE1393: 0.85, correctly classifying 58 out of 68 images
+Epoch 11
+CODE3290: 0.93, correctly classifying 95 out of 102 images
+CODE1538: 0.42, correctly classifying 43 out of 102 images
+CODE268: 0.64, correctly classifying 65 out of 102 images
+CODE92: 0.50, correctly classifying 51 out of 102 images
+CODE313: 0.66, correctly classifying 59 out of 90 images
+CODE430: 0.62, correctly classifying 63 out of 102 images
+CODE1994: 0.56, correctly classifying 57 out of 102 images
+CODE1393: 0.84, correctly classifying 86 out of 102 images
+Epoch 12
+CODE3290: 0.93, correctly classifying 95 out of 102 images
+CODE1538: 0.42, correctly classifying 43 out of 102 images
+CODE268: 0.64, correctly classifying 65 out of 102 images
+CODE92: 0.50, correctly classifying 51 out of 102 images
+CODE313: 0.66, correctly classifying 59 out of 90 images
+CODE430: 0.62, correctly classifying 63 out of 102 images
+CODE1994: 0.56, correctly classifying 57 out of 102 images
+CODE1393: 0.84, correctly classifying 86 out of 102 images
+Epoch 13
+CODE3290: 0.93, correctly classifying 95 out of 102 images
+CODE1538: 0.42, correctly classifying 43 out of 102 images
+CODE268: 0.64, correctly classifying 65 out of 102 images
+CODE92: 0.50, correctly classifying 51 out of 102 images
+CODE313: 0.66, correctly classifying 59 out of 90 images
+CODE430: 0.62, correctly classifying 63 out of 102 images
+CODE1994: 0.56, correctly classifying 57 out of 102 images
+CODE1393: 0.84, correctly classifying 86 out of 102 images
+Epoch 14
+CODE3290: 0.93, correctly classifying 95 out of 102 images
+CODE1538: 0.42, correctly classifying 43 out of 102 images
+CODE268: 0.64, correctly classifying 65 out of 102 images
+CODE92: 0.50, correctly classifying 51 out of 102 images
+CODE313: 0.66, correctly classifying 59 out of 90 images
+CODE430: 0.62, correctly classifying 63 out of 102 images
+CODE1994: 0.56, correctly classifying 57 out of 102 images
+CODE1393: 0.84, correctly classifying 86 out of 102 images
+Epoch 15
+CODE3290: 0.93, correctly classifying 95 out of 102 images
+CODE1538: 0.42, correctly classifying 43 out of 102 images
+CODE268: 0.64, correctly classifying 65 out of 102 images
+CODE92: 0.50, correctly classifying 51 out of 102 images
+CODE313: 0.66, correctly classifying 59 out of 90 images
+CODE430: 0.62, correctly classifying 63 out of 102 images
+CODE1994: 0.56, correctly classifying 57 out of 102 images
+CODE1393: 0.84, correctly classifying 86 out of 102 images
+Epoch 16
+CODE3290: 0.93, correctly classifying 126 out of 136 images
+CODE1538: 0.43, correctly classifying 58 out of 136 images
+CODE268: 0.65, correctly classifying 88 out of 136 images
+CODE92: 0.51, correctly classifying 69 out of 136 images
+CODE313: 0.66, correctly classifying 79 out of 120 images
+CODE430: 0.64, correctly classifying 87 out of 136 images
+CODE1994: 0.58, correctly classifying 79 out of 136 images
+CODE1393: 0.84, correctly classifying 114 out of 136 images
+Epoch 17
+CODE3290: 0.93, correctly classifying 126 out of 136 images
+CODE1538: 0.43, correctly classifying 58 out of 136 images
+CODE268: 0.65, correctly classifying 88 out of 136 images
+CODE92: 0.51, correctly classifying 69 out of 136 images
+CODE313: 0.66, correctly classifying 79 out of 120 images
+CODE430: 0.64, correctly classifying 87 out of 136 images
+CODE1994: 0.58, correctly classifying 79 out of 136 images
+CODE1393: 0.84, correctly classifying 114 out of 136 images
+Epoch 18
+CODE3290: 0.93, correctly classifying 126 out of 136 images
+CODE1538: 0.43, correctly classifying 58 out of 136 images
+CODE268: 0.65, correctly classifying 88 out of 136 images
+CODE92: 0.51, correctly classifying 69 out of 136 images
+CODE313: 0.66, correctly classifying 79 out of 120 images
+CODE430: 0.64, correctly classifying 87 out of 136 images
+CODE1994: 0.58, correctly classifying 79 out of 136 images
+CODE1393: 0.84, correctly classifying 114 out of 136 images
+Epoch 19
+CODE3290: 0.93, correctly classifying 126 out of 136 images
+CODE1538: 0.43, correctly classifying 58 out of 136 images
+CODE268: 0.65, correctly classifying 88 out of 136 images
+CODE92: 0.51, correctly classifying 69 out of 136 images
+CODE313: 0.66, correctly classifying 79 out of 120 images
+CODE430: 0.64, correctly classifying 87 out of 136 images
+CODE1994: 0.58, correctly classifying 79 out of 136 images
+CODE1393: 0.84, correctly classifying 114 out of 136 images
+Epoch 20
+CODE3290: 0.93, correctly classifying 126 out of 136 images
+CODE1538: 0.43, correctly classifying 58 out of 136 images
+CODE268: 0.65, correctly classifying 88 out of 136 images
+CODE92: 0.51, correctly classifying 69 out of 136 images
+CODE313: 0.66, correctly classifying 79 out of 120 images
+CODE430: 0.64, correctly classifying 87 out of 136 images
+CODE1994: 0.58, correctly classifying 79 out of 136 images
+CODE1393: 0.84, correctly classifying 114 out of 136 images
+Epoch 21
+CODE3290: 0.92, correctly classifying 157 out of 170 images
+CODE1538: 0.44, correctly classifying 74 out of 170 images
+CODE268: 0.65, correctly classifying 111 out of 170 images
+CODE92: 0.52, correctly classifying 88 out of 170 images
+CODE313: 0.66, correctly classifying 99 out of 150 images
+CODE430: 0.65, correctly classifying 111 out of 170 images
+CODE1994: 0.62, correctly classifying 105 out of 170 images
+CODE1393: 0.83, correctly classifying 141 out of 170 images
+Epoch 22
+CODE3290: 0.92, correctly classifying 157 out of 170 images
+CODE1538: 0.44, correctly classifying 74 out of 170 images
+CODE268: 0.65, correctly classifying 111 out of 170 images
+CODE92: 0.52, correctly classifying 88 out of 170 images
+CODE313: 0.66, correctly classifying 99 out of 150 images
+CODE430: 0.65, correctly classifying 111 out of 170 images
+CODE1994: 0.62, correctly classifying 105 out of 170 images
+CODE1393: 0.83, correctly classifying 141 out of 170 images
+Epoch 23
+CODE3290: 0.92, correctly classifying 157 out of 170 images
+CODE1538: 0.44, correctly classifying 74 out of 170 images
+CODE268: 0.65, correctly classifying 111 out of 170 images
+CODE92: 0.52, correctly classifying 88 out of 170 images
+CODE313: 0.66, correctly classifying 99 out of 150 images
+CODE430: 0.65, correctly classifying 111 out of 170 images
+CODE1994: 0.62, correctly classifying 105 out of 170 images
+CODE1393: 0.83, correctly classifying 141 out of 170 images
+Epoch 24
+CODE3290: 0.92, correctly classifying 157 out of 170 images
+CODE1538: 0.44, correctly classifying 74 out of 170 images
+CODE268: 0.65, correctly classifying 111 out of 170 images
+CODE92: 0.52, correctly classifying 88 out of 170 images
+CODE313: 0.66, correctly classifying 99 out of 150 images
+CODE430: 0.65, correctly classifying 111 out of 170 images
+CODE1994: 0.62, correctly classifying 105 out of 170 images
+CODE1393: 0.83, correctly classifying 141 out of 170 images
+Epoch 25
+CODE3290: 0.92, correctly classifying 157 out of 170 images
+CODE1538: 0.44, correctly classifying 74 out of 170 images
+CODE268: 0.65, correctly classifying 111 out of 170 images
+CODE92: 0.52, correctly classifying 88 out of 170 images
+CODE313: 0.66, correctly classifying 99 out of 150 images
+CODE430: 0.65, correctly classifying 111 out of 170 images
+CODE1994: 0.62, correctly classifying 105 out of 170 images
+CODE1393: 0.83, correctly classifying 141 out of 170 images
+Epoch 26
+CODE3290: 0.92, correctly classifying 188 out of 204 images
+CODE1538: 0.44, correctly classifying 90 out of 204 images
+CODE268: 0.66, correctly classifying 134 out of 204 images
+CODE92: 0.52, correctly classifying 107 out of 204 images
+CODE313: 0.66, correctly classifying 119 out of 180 images
+CODE430: 0.68, correctly classifying 138 out of 204 images
+CODE1994: 0.65, correctly classifying 132 out of 204 images
+CODE1393: 0.83, correctly classifying 170 out of 204 images
+Epoch 27
+CODE3290: 0.92, correctly classifying 188 out of 204 images
+CODE1538: 0.44, correctly classifying 90 out of 204 images
+CODE268: 0.66, correctly classifying 134 out of 204 images
+CODE92: 0.52, correctly classifying 107 out of 204 images
+CODE313: 0.66, correctly classifying 119 out of 180 images
+CODE430: 0.68, correctly classifying 138 out of 204 images
+CODE1994: 0.65, correctly classifying 132 out of 204 images
+CODE1393: 0.83, correctly classifying 170 out of 204 images
+Epoch 28
+CODE3290: 0.92, correctly classifying 188 out of 204 images
+CODE1538: 0.44, correctly classifying 90 out of 204 images
+CODE268: 0.66, correctly classifying 134 out of 204 images
+CODE92: 0.52, correctly classifying 107 out of 204 images
+CODE313: 0.66, correctly classifying 119 out of 180 images
+CODE430: 0.68, correctly classifying 138 out of 204 images
+CODE1994: 0.65, correctly classifying 132 out of 204 images
+CODE1393: 0.83, correctly classifying 170 out of 204 images
+Epoch 29
+CODE3290: 0.92, correctly classifying 188 out of 204 images
+CODE1538: 0.44, correctly classifying 90 out of 204 images
+CODE268: 0.66, correctly classifying 134 out of 204 images
+CODE92: 0.52, correctly classifying 107 out of 204 images
+CODE313: 0.66, correctly classifying 119 out of 180 images
+CODE430: 0.68, correctly classifying 138 out of 204 images
+CODE1994: 0.65, correctly classifying 132 out of 204 images
+CODE1393: 0.83, correctly classifying 170 out of 204 images
+Epoch 30
+CODE3290: 0.92, correctly classifying 188 out of 204 images
+CODE1538: 0.44, correctly classifying 90 out of 204 images
+CODE268: 0.66, correctly classifying 134 out of 204 images
+CODE92: 0.52, correctly classifying 107 out of 204 images
+CODE313: 0.66, correctly classifying 119 out of 180 images
+CODE430: 0.68, correctly classifying 138 out of 204 images
+CODE1994: 0.65, correctly classifying 132 out of 204 images
+CODE1393: 0.83, correctly classifying 170 out of 204 images
+Epoch 31
+CODE3290: 0.92, correctly classifying 219 out of 238 images
+CODE1538: 0.45, correctly classifying 108 out of 238 images
+CODE268: 0.66, correctly classifying 157 out of 238 images
+CODE92: 0.53, correctly classifying 127 out of 238 images
+CODE313: 0.66, correctly classifying 139 out of 210 images
+CODE430: 0.69, correctly classifying 165 out of 238 images
+CODE1994: 0.68, correctly classifying 161 out of 238 images
+CODE1393: 0.83, correctly classifying 197 out of 238 images
+Epoch 32
+CODE3290: 0.92, correctly classifying 219 out of 238 images
+CODE1538: 0.45, correctly classifying 108 out of 238 images
+CODE268: 0.66, correctly classifying 157 out of 238 images
+CODE92: 0.53, correctly classifying 127 out of 238 images
+CODE313: 0.66, correctly classifying 139 out of 210 images
+CODE430: 0.69, correctly classifying 165 out of 238 images
+CODE1994: 0.68, correctly classifying 161 out of 238 images
+CODE1393: 0.83, correctly classifying 197 out of 238 images
+Epoch 33
+CODE3290: 0.92, correctly classifying 219 out of 238 images
+CODE1538: 0.45, correctly classifying 108 out of 238 images
+CODE268: 0.66, correctly classifying 157 out of 238 images
+CODE92: 0.53, correctly classifying 127 out of 238 images
+CODE313: 0.66, correctly classifying 139 out of 210 images
+CODE430: 0.69, correctly classifying 165 out of 238 images
+CODE1994: 0.68, correctly classifying 161 out of 238 images
+CODE1393: 0.83, correctly classifying 197 out of 238 images
+Epoch 34
+CODE3290: 0.92, correctly classifying 219 out of 238 images
+CODE1538: 0.45, correctly classifying 108 out of 238 images
+CODE268: 0.66, correctly classifying 157 out of 238 images
+CODE92: 0.53, correctly classifying 127 out of 238 images
+CODE313: 0.66, correctly classifying 139 out of 210 images
+CODE430: 0.69, correctly classifying 165 out of 238 images
+CODE1994: 0.68, correctly classifying 161 out of 238 images
+CODE1393: 0.83, correctly classifying 197 out of 238 images
+Epoch 35
+CODE3290: 0.92, correctly classifying 219 out of 238 images
+CODE1538: 0.45, correctly classifying 108 out of 238 images
+CODE268: 0.66, correctly classifying 157 out of 238 images
+CODE92: 0.53, correctly classifying 127 out of 238 images
+CODE313: 0.66, correctly classifying 139 out of 210 images
+CODE430: 0.69, correctly classifying 165 out of 238 images
+CODE1994: 0.68, correctly classifying 161 out of 238 images
+CODE1393: 0.83, correctly classifying 197 out of 238 images
+Epoch 36
+CODE3290: 0.92, correctly classifying 250 out of 272 images
+CODE1538: 0.46, correctly classifying 126 out of 272 images
+CODE268: 0.67, correctly classifying 181 out of 272 images
+CODE92: 0.54, correctly classifying 147 out of 272 images
+CODE313: 0.66, correctly classifying 159 out of 240 images
+CODE430: 0.71, correctly classifying 192 out of 272 images
+CODE1994: 0.70, correctly classifying 191 out of 272 images
+CODE1393: 0.83, correctly classifying 226 out of 272 images
+Epoch 37
+CODE3290: 0.92, correctly classifying 250 out of 272 images
+CODE1538: 0.46, correctly classifying 126 out of 272 images
+CODE268: 0.67, correctly classifying 181 out of 272 images
+CODE92: 0.54, correctly classifying 147 out of 272 images
+CODE313: 0.66, correctly classifying 159 out of 240 images
+CODE430: 0.71, correctly classifying 192 out of 272 images
+CODE1994: 0.70, correctly classifying 191 out of 272 images
+CODE1393: 0.83, correctly classifying 226 out of 272 images
+Epoch 38
+CODE3290: 0.92, correctly classifying 250 out of 272 images
+CODE1538: 0.46, correctly classifying 126 out of 272 images
+CODE268: 0.67, correctly classifying 181 out of 272 images
+CODE92: 0.54, correctly classifying 147 out of 272 images
+CODE313: 0.66, correctly classifying 159 out of 240 images
+CODE430: 0.71, correctly classifying 192 out of 272 images
+CODE1994: 0.70, correctly classifying 191 out of 272 images
+CODE1393: 0.83, correctly classifying 226 out of 272 images
+Epoch 39
+CODE3290: 0.92, correctly classifying 250 out of 272 images
+CODE1538: 0.46, correctly classifying 126 out of 272 images
+CODE268: 0.67, correctly classifying 181 out of 272 images
+CODE92: 0.54, correctly classifying 147 out of 272 images
+CODE313: 0.66, correctly classifying 159 out of 240 images
+CODE430: 0.71, correctly classifying 192 out of 272 images
+CODE1994: 0.70, correctly classifying 191 out of 272 images
+CODE1393: 0.83, correctly classifying 226 out of 272 images
+Epoch 40
+CODE3290: 0.92, correctly classifying 250 out of 272 images
+CODE1538: 0.46, correctly classifying 126 out of 272 images
+CODE268: 0.67, correctly classifying 181 out of 272 images
+CODE92: 0.54, correctly classifying 147 out of 272 images
+CODE313: 0.66, correctly classifying 159 out of 240 images
+CODE430: 0.71, correctly classifying 192 out of 272 images
+CODE1994: 0.70, correctly classifying 191 out of 272 images
+CODE1393: 0.83, correctly classifying 226 out of 272 images
+Epoch 41
+CODE3290: 0.92, correctly classifying 281 out of 306 images
+CODE1538: 0.47, correctly classifying 144 out of 306 images
+CODE268: 0.67, correctly classifying 205 out of 306 images
+CODE92: 0.55, correctly classifying 167 out of 306 images
+CODE313: 0.66, correctly classifying 179 out of 270 images
+CODE430: 0.72, correctly classifying 219 out of 306 images
+CODE1994: 0.73, correctly classifying 222 out of 306 images
+CODE1393: 0.84, correctly classifying 256 out of 306 images
+Epoch 42
+CODE3290: 0.92, correctly classifying 281 out of 306 images
+CODE1538: 0.47, correctly classifying 144 out of 306 images
+CODE268: 0.67, correctly classifying 205 out of 306 images
+CODE92: 0.55, correctly classifying 167 out of 306 images
+CODE313: 0.66, correctly classifying 179 out of 270 images
+CODE430: 0.72, correctly classifying 219 out of 306 images
+CODE1994: 0.73, correctly classifying 222 out of 306 images
+CODE1393: 0.84, correctly classifying 256 out of 306 images
+Epoch 43
+CODE3290: 0.92, correctly classifying 281 out of 306 images
+CODE1538: 0.47, correctly classifying 144 out of 306 images
+CODE268: 0.67, correctly classifying 205 out of 306 images
+CODE92: 0.55, correctly classifying 167 out of 306 images
+CODE313: 0.66, correctly classifying 179 out of 270 images
+CODE430: 0.72, correctly classifying 219 out of 306 images
+CODE1994: 0.73, correctly classifying 222 out of 306 images
+CODE1393: 0.84, correctly classifying 256 out of 306 images
+Epoch 44
+CODE3290: 0.92, correctly classifying 281 out of 306 images
+CODE1538: 0.47, correctly classifying 144 out of 306 images
+CODE268: 0.67, correctly classifying 205 out of 306 images
+CODE92: 0.55, correctly classifying 167 out of 306 images
+CODE313: 0.66, correctly classifying 179 out of 270 images
+CODE430: 0.72, correctly classifying 219 out of 306 images
+CODE1994: 0.73, correctly classifying 222 out of 306 images
+CODE1393: 0.84, correctly classifying 256 out of 306 images
+Epoch 45
+CODE3290: 0.92, correctly classifying 281 out of 306 images
+CODE1538: 0.47, correctly classifying 144 out of 306 images
+CODE268: 0.67, correctly classifying 205 out of 306 images
+CODE92: 0.55, correctly classifying 167 out of 306 images
+CODE313: 0.66, correctly classifying 179 out of 270 images
+CODE430: 0.72, correctly classifying 219 out of 306 images
+CODE1994: 0.73, correctly classifying 222 out of 306 images
+CODE1393: 0.84, correctly classifying 256 out of 306 images
+Epoch 46
+CODE3290: 0.92, correctly classifying 312 out of 340 images
+CODE1538: 0.47, correctly classifying 161 out of 340 images
+CODE268: 0.67, correctly classifying 229 out of 340 images
+CODE92: 0.55, correctly classifying 187 out of 340 images
+CODE313: 0.66, correctly classifying 199 out of 300 images
+CODE430: 0.72, correctly classifying 246 out of 340 images
+CODE1994: 0.75, correctly classifying 254 out of 340 images
+CODE1393: 0.84, correctly classifying 286 out of 340 images
+Epoch 47
+CODE3290: 0.92, correctly classifying 312 out of 340 images
+CODE1538: 0.47, correctly classifying 161 out of 340 images
+CODE268: 0.67, correctly classifying 229 out of 340 images
+CODE92: 0.55, correctly classifying 187 out of 340 images
+CODE313: 0.66, correctly classifying 199 out of 300 images
+CODE430: 0.72, correctly classifying 246 out of 340 images
+CODE1994: 0.75, correctly classifying 254 out of 340 images
+CODE1393: 0.84, correctly classifying 286 out of 340 images
+Epoch 48
+CODE3290: 0.92, correctly classifying 312 out of 340 images
+CODE1538: 0.47, correctly classifying 161 out of 340 images
+CODE268: 0.67, correctly classifying 229 out of 340 images
+CODE92: 0.55, correctly classifying 187 out of 340 images
+CODE313: 0.66, correctly classifying 199 out of 300 images
+CODE430: 0.72, correctly classifying 246 out of 340 images
+CODE1994: 0.75, correctly classifying 254 out of 340 images
+CODE1393: 0.84, correctly classifying 286 out of 340 images
+Epoch 49
+CODE3290: 0.92, correctly classifying 312 out of 340 images
+CODE1538: 0.47, correctly classifying 161 out of 340 images
+CODE268: 0.67, correctly classifying 229 out of 340 images
+CODE92: 0.55, correctly classifying 187 out of 340 images
+CODE313: 0.66, correctly classifying 199 out of 300 images
+CODE430: 0.72, correctly classifying 246 out of 340 images
+CODE1994: 0.75, correctly classifying 254 out of 340 images
+CODE1393: 0.84, correctly classifying 286 out of 340 images
+Epoch 50
+CODE3290: 0.92, correctly classifying 312 out of 340 images
+CODE1538: 0.47, correctly classifying 161 out of 340 images
+CODE268: 0.67, correctly classifying 229 out of 340 images
+CODE92: 0.55, correctly classifying 187 out of 340 images
+CODE313: 0.66, correctly classifying 199 out of 300 images
+CODE430: 0.72, correctly classifying 246 out of 340 images
+CODE1994: 0.75, correctly classifying 254 out of 340 images
+CODE1393: 0.84, correctly classifying 286 out of 340 images
+Epoch 51
+CODE3290: 0.92, correctly classifying 343 out of 374 images
+CODE1538: 0.48, correctly classifying 178 out of 374 images
+CODE268: 0.68, correctly classifying 253 out of 374 images
+CODE92: 0.55, correctly classifying 207 out of 374 images
+CODE313: 0.66, correctly classifying 219 out of 330 images
+CODE430: 0.73, correctly classifying 273 out of 374 images
+CODE1994: 0.76, correctly classifying 286 out of 374 images
+CODE1393: 0.84, correctly classifying 316 out of 374 images
+Epoch 52
+CODE3290: 0.92, correctly classifying 343 out of 374 images
+CODE1538: 0.48, correctly classifying 178 out of 374 images
+CODE268: 0.68, correctly classifying 253 out of 374 images
+CODE92: 0.55, correctly classifying 207 out of 374 images
+CODE313: 0.66, correctly classifying 219 out of 330 images
+CODE430: 0.73, correctly classifying 273 out of 374 images
+CODE1994: 0.76, correctly classifying 286 out of 374 images
+CODE1393: 0.84, correctly classifying 316 out of 374 images
+Epoch 53
+CODE3290: 0.92, correctly classifying 343 out of 374 images
+CODE1538: 0.48, correctly classifying 178 out of 374 images
+CODE268: 0.68, correctly classifying 253 out of 374 images
+CODE92: 0.55, correctly classifying 207 out of 374 images
+CODE313: 0.66, correctly classifying 219 out of 330 images
+CODE430: 0.73, correctly classifying 273 out of 374 images
+CODE1994: 0.76, correctly classifying 286 out of 374 images
+CODE1393: 0.84, correctly classifying 316 out of 374 images
+Epoch 54
+CODE3290: 0.92, correctly classifying 343 out of 374 images
+CODE1538: 0.48, correctly classifying 178 out of 374 images
+CODE268: 0.68, correctly classifying 253 out of 374 images
+CODE92: 0.55, correctly classifying 207 out of 374 images
+CODE313: 0.66, correctly classifying 219 out of 330 images
+CODE430: 0.73, correctly classifying 273 out of 374 images
+CODE1994: 0.76, correctly classifying 286 out of 374 images
+CODE1393: 0.84, correctly classifying 316 out of 374 images
+Epoch 55
+CODE3290: 0.92, correctly classifying 343 out of 374 images
+CODE1538: 0.48, correctly classifying 178 out of 374 images
+CODE268: 0.68, correctly classifying 253 out of 374 images
+CODE92: 0.55, correctly classifying 207 out of 374 images
+CODE313: 0.66, correctly classifying 219 out of 330 images
+CODE430: 0.73, correctly classifying 273 out of 374 images
+CODE1994: 0.76, correctly classifying 286 out of 374 images
+CODE1393: 0.84, correctly classifying 316 out of 374 images
+Epoch 56
+CODE3290: 0.92, correctly classifying 374 out of 408 images
+CODE1538: 0.48, correctly classifying 195 out of 408 images
+CODE268: 0.68, correctly classifying 277 out of 408 images
+CODE92: 0.56, correctly classifying 227 out of 408 images
+CODE313: 0.66, correctly classifying 239 out of 360 images
+CODE430: 0.74, correctly classifying 300 out of 408 images
+CODE1994: 0.78, correctly classifying 318 out of 408 images
+CODE1393: 0.85, correctly classifying 346 out of 408 images
+Epoch 57
+CODE3290: 0.92, correctly classifying 374 out of 408 images
+CODE1538: 0.48, correctly classifying 195 out of 408 images
+CODE268: 0.68, correctly classifying 277 out of 408 images
+CODE92: 0.56, correctly classifying 227 out of 408 images
+CODE313: 0.66, correctly classifying 239 out of 360 images
+CODE430: 0.74, correctly classifying 300 out of 408 images
+CODE1994: 0.78, correctly classifying 318 out of 408 images
+CODE1393: 0.85, correctly classifying 346 out of 408 images
+Epoch 58
+CODE3290: 0.92, correctly classifying 374 out of 408 images
+CODE1538: 0.48, correctly classifying 195 out of 408 images
+CODE268: 0.68, correctly classifying 277 out of 408 images
+CODE92: 0.56, correctly classifying 227 out of 408 images
+CODE313: 0.66, correctly classifying 239 out of 360 images
+CODE430: 0.74, correctly classifying 300 out of 408 images
+CODE1994: 0.78, correctly classifying 318 out of 408 images
+CODE1393: 0.85, correctly classifying 346 out of 408 images
+Epoch 59
+CODE3290: 0.92, correctly classifying 374 out of 408 images
+CODE1538: 0.48, correctly classifying 195 out of 408 images
+CODE268: 0.68, correctly classifying 277 out of 408 images
+CODE92: 0.56, correctly classifying 227 out of 408 images
+CODE313: 0.66, correctly classifying 239 out of 360 images
+CODE430: 0.74, correctly classifying 300 out of 408 images
+CODE1994: 0.78, correctly classifying 318 out of 408 images
+CODE1393: 0.85, correctly classifying 346 out of 408 images
+Epoch 60
+CODE3290: 0.92, correctly classifying 374 out of 408 images
+CODE1538: 0.48, correctly classifying 195 out of 408 images
+CODE268: 0.68, correctly classifying 277 out of 408 images
+CODE92: 0.56, correctly classifying 227 out of 408 images
+CODE313: 0.66, correctly classifying 239 out of 360 images
+CODE430: 0.74, correctly classifying 300 out of 408 images
+CODE1994: 0.78, correctly classifying 318 out of 408 images
+CODE1393: 0.85, correctly classifying 346 out of 408 images
+Epoch 61
+CODE3290: 0.92, correctly classifying 405 out of 442 images
+CODE1538: 0.48, correctly classifying 212 out of 442 images
+CODE268: 0.68, correctly classifying 301 out of 442 images
+CODE92: 0.56, correctly classifying 247 out of 442 images
+CODE313: 0.66, correctly classifying 259 out of 390 images
+CODE430: 0.74, correctly classifying 327 out of 442 images
+CODE1994: 0.79, correctly classifying 350 out of 442 images
+CODE1393: 0.85, correctly classifying 376 out of 442 images
+Epoch 62
+CODE3290: 0.92, correctly classifying 405 out of 442 images
+CODE1538: 0.48, correctly classifying 212 out of 442 images
+CODE268: 0.68, correctly classifying 301 out of 442 images
+CODE92: 0.56, correctly classifying 247 out of 442 images
+CODE313: 0.66, correctly classifying 259 out of 390 images
+CODE430: 0.74, correctly classifying 327 out of 442 images
+CODE1994: 0.79, correctly classifying 350 out of 442 images
+CODE1393: 0.85, correctly classifying 376 out of 442 images
+Epoch 63
+CODE3290: 0.92, correctly classifying 405 out of 442 images
+CODE1538: 0.48, correctly classifying 212 out of 442 images
+CODE268: 0.68, correctly classifying 301 out of 442 images
+CODE92: 0.56, correctly classifying 247 out of 442 images
+CODE313: 0.66, correctly classifying 259 out of 390 images
+CODE430: 0.74, correctly classifying 327 out of 442 images
+CODE1994: 0.79, correctly classifying 350 out of 442 images
+CODE1393: 0.85, correctly classifying 376 out of 442 images
+Epoch 64
+CODE3290: 0.92, correctly classifying 405 out of 442 images
+CODE1538: 0.48, correctly classifying 212 out of 442 images
+CODE268: 0.68, correctly classifying 301 out of 442 images
+CODE92: 0.56, correctly classifying 247 out of 442 images
+CODE313: 0.66, correctly classifying 259 out of 390 images
+CODE430: 0.74, correctly classifying 327 out of 442 images
+CODE1994: 0.79, correctly classifying 350 out of 442 images
+CODE1393: 0.85, correctly classifying 376 out of 442 images
+Epoch 65
+CODE3290: 0.92, correctly classifying 405 out of 442 images
+CODE1538: 0.48, correctly classifying 212 out of 442 images
+CODE268: 0.68, correctly classifying 301 out of 442 images
+CODE92: 0.56, correctly classifying 247 out of 442 images
+CODE313: 0.66, correctly classifying 259 out of 390 images
+CODE430: 0.74, correctly classifying 327 out of 442 images
+CODE1994: 0.79, correctly classifying 350 out of 442 images
+CODE1393: 0.85, correctly classifying 376 out of 442 images
+Epoch 66
+CODE3290: 0.92, correctly classifying 436 out of 476 images
+CODE1538: 0.48, correctly classifying 229 out of 476 images
+CODE268: 0.68, correctly classifying 325 out of 476 images
+CODE92: 0.56, correctly classifying 267 out of 476 images
+CODE313: 0.66, correctly classifying 279 out of 420 images
+CODE430: 0.74, correctly classifying 354 out of 476 images
+CODE1994: 0.80, correctly classifying 382 out of 476 images
+CODE1393: 0.85, correctly classifying 406 out of 476 images
+Epoch 67
+CODE3290: 0.92, correctly classifying 436 out of 476 images
+CODE1538: 0.48, correctly classifying 229 out of 476 images
+CODE268: 0.68, correctly classifying 325 out of 476 images
+CODE92: 0.56, correctly classifying 267 out of 476 images
+CODE313: 0.66, correctly classifying 279 out of 420 images
+CODE430: 0.74, correctly classifying 354 out of 476 images
+CODE1994: 0.80, correctly classifying 382 out of 476 images
+CODE1393: 0.85, correctly classifying 406 out of 476 images
+Epoch 68
+CODE3290: 0.92, correctly classifying 436 out of 476 images
+CODE1538: 0.48, correctly classifying 229 out of 476 images
+CODE268: 0.68, correctly classifying 325 out of 476 images
+CODE92: 0.56, correctly classifying 267 out of 476 images
+CODE313: 0.66, correctly classifying 279 out of 420 images
+CODE430: 0.74, correctly classifying 354 out of 476 images
+CODE1994: 0.80, correctly classifying 382 out of 476 images
+CODE1393: 0.85, correctly classifying 406 out of 476 images
+Epoch 69
+CODE3290: 0.92, correctly classifying 436 out of 476 images
+CODE1538: 0.48, correctly classifying 229 out of 476 images
+CODE268: 0.68, correctly classifying 325 out of 476 images
+CODE92: 0.56, correctly classifying 267 out of 476 images
+CODE313: 0.66, correctly classifying 279 out of 420 images
+CODE430: 0.74, correctly classifying 354 out of 476 images
+CODE1994: 0.80, correctly classifying 382 out of 476 images
+CODE1393: 0.85, correctly classifying 406 out of 476 images
+Epoch 70
+CODE3290: 0.92, correctly classifying 436 out of 476 images
+CODE1538: 0.48, correctly classifying 229 out of 476 images
+CODE268: 0.68, correctly classifying 325 out of 476 images
+CODE92: 0.56, correctly classifying 267 out of 476 images
+CODE313: 0.66, correctly classifying 279 out of 420 images
+CODE430: 0.74, correctly classifying 354 out of 476 images
+CODE1994: 0.80, correctly classifying 382 out of 476 images
+CODE1393: 0.85, correctly classifying 406 out of 476 images
+Epoch 71
+CODE3290: 0.92, correctly classifying 467 out of 510 images
+CODE1538: 0.48, correctly classifying 246 out of 510 images
+CODE268: 0.68, correctly classifying 349 out of 510 images
+CODE92: 0.56, correctly classifying 287 out of 510 images
+CODE313: 0.66, correctly classifying 299 out of 450 images
+CODE430: 0.75, correctly classifying 381 out of 510 images
+CODE1994: 0.81, correctly classifying 414 out of 510 images
+CODE1393: 0.85, correctly classifying 436 out of 510 images
+Epoch 72
+CODE3290: 0.92, correctly classifying 467 out of 510 images
+CODE1538: 0.48, correctly classifying 246 out of 510 images
+CODE268: 0.68, correctly classifying 349 out of 510 images
+CODE92: 0.56, correctly classifying 287 out of 510 images
+CODE313: 0.66, correctly classifying 299 out of 450 images
+CODE430: 0.75, correctly classifying 381 out of 510 images
+CODE1994: 0.81, correctly classifying 414 out of 510 images
+CODE1393: 0.85, correctly classifying 436 out of 510 images
+Epoch 73
+CODE3290: 0.92, correctly classifying 467 out of 510 images
+CODE1538: 0.48, correctly classifying 246 out of 510 images
+CODE268: 0.68, correctly classifying 349 out of 510 images
+CODE92: 0.56, correctly classifying 287 out of 510 images
+CODE313: 0.66, correctly classifying 299 out of 450 images
+CODE430: 0.75, correctly classifying 381 out of 510 images
+CODE1994: 0.81, correctly classifying 414 out of 510 images
+CODE1393: 0.85, correctly classifying 436 out of 510 images
+Epoch 74
+CODE3290: 0.92, correctly classifying 467 out of 510 images
+CODE1538: 0.48, correctly classifying 246 out of 510 images
+CODE268: 0.68, correctly classifying 349 out of 510 images
+CODE92: 0.56, correctly classifying 287 out of 510 images
+CODE313: 0.66, correctly classifying 299 out of 450 images
+CODE430: 0.75, correctly classifying 381 out of 510 images
+CODE1994: 0.81, correctly classifying 414 out of 510 images
+CODE1393: 0.85, correctly classifying 436 out of 510 images
+Epoch 75
+CODE3290: 0.92, correctly classifying 467 out of 510 images
+CODE1538: 0.48, correctly classifying 246 out of 510 images
+CODE268: 0.68, correctly classifying 349 out of 510 images
+CODE92: 0.56, correctly classifying 287 out of 510 images
+CODE313: 0.66, correctly classifying 299 out of 450 images
+CODE430: 0.75, correctly classifying 381 out of 510 images
+CODE1994: 0.81, correctly classifying 414 out of 510 images
+CODE1393: 0.85, correctly classifying 436 out of 510 images
+Epoch 76
+CODE3290: 0.92, correctly classifying 498 out of 544 images
+CODE1538: 0.48, correctly classifying 263 out of 544 images
+CODE268: 0.69, correctly classifying 373 out of 544 images
+CODE92: 0.56, correctly classifying 307 out of 544 images
+CODE313: 0.66, correctly classifying 319 out of 480 images
+CODE430: 0.75, correctly classifying 408 out of 544 images
+CODE1994: 0.82, correctly classifying 446 out of 544 images
+CODE1393: 0.86, correctly classifying 466 out of 544 images
+Epoch 77
+CODE3290: 0.92, correctly classifying 498 out of 544 images
+CODE1538: 0.48, correctly classifying 263 out of 544 images
+CODE268: 0.69, correctly classifying 373 out of 544 images
+CODE92: 0.56, correctly classifying 307 out of 544 images
+CODE313: 0.66, correctly classifying 319 out of 480 images
+CODE430: 0.75, correctly classifying 408 out of 544 images
+CODE1994: 0.82, correctly classifying 446 out of 544 images
+CODE1393: 0.86, correctly classifying 466 out of 544 images
+Epoch 78
+CODE3290: 0.92, correctly classifying 498 out of 544 images
+CODE1538: 0.48, correctly classifying 263 out of 544 images
+CODE268: 0.69, correctly classifying 373 out of 544 images
+CODE92: 0.56, correctly classifying 307 out of 544 images
+CODE313: 0.66, correctly classifying 319 out of 480 images
+CODE430: 0.75, correctly classifying 408 out of 544 images
+CODE1994: 0.82, correctly classifying 446 out of 544 images
+CODE1393: 0.86, correctly classifying 466 out of 544 images
+Epoch 79
+CODE3290: 0.92, correctly classifying 498 out of 544 images
+CODE1538: 0.48, correctly classifying 263 out of 544 images
+CODE268: 0.69, correctly classifying 373 out of 544 images
+CODE92: 0.56, correctly classifying 307 out of 544 images
+CODE313: 0.66, correctly classifying 319 out of 480 images
+CODE430: 0.75, correctly classifying 408 out of 544 images
+CODE1994: 0.82, correctly classifying 446 out of 544 images
+CODE1393: 0.86, correctly classifying 466 out of 544 images
+Epoch 80
+CODE3290: 0.92, correctly classifying 498 out of 544 images
+CODE1538: 0.48, correctly classifying 263 out of 544 images
+CODE268: 0.69, correctly classifying 373 out of 544 images
+CODE92: 0.56, correctly classifying 307 out of 544 images
+CODE313: 0.66, correctly classifying 319 out of 480 images
+CODE430: 0.75, correctly classifying 408 out of 544 images
+CODE1994: 0.82, correctly classifying 446 out of 544 images
+CODE1393: 0.86, correctly classifying 466 out of 544 images
+Epoch 81
+CODE3290: 0.92, correctly classifying 529 out of 578 images
+CODE1538: 0.48, correctly classifying 280 out of 578 images
+CODE268: 0.69, correctly classifying 397 out of 578 images
+CODE92: 0.57, correctly classifying 327 out of 578 images
+CODE313: 0.66, correctly classifying 339 out of 510 images
+CODE430: 0.75, correctly classifying 435 out of 578 images
+CODE1994: 0.83, correctly classifying 478 out of 578 images
+CODE1393: 0.86, correctly classifying 496 out of 578 images
+Epoch 82
+CODE3290: 0.92, correctly classifying 529 out of 578 images
+CODE1538: 0.48, correctly classifying 280 out of 578 images
+CODE268: 0.69, correctly classifying 397 out of 578 images
+CODE92: 0.57, correctly classifying 327 out of 578 images
+CODE313: 0.66, correctly classifying 339 out of 510 images
+CODE430: 0.75, correctly classifying 435 out of 578 images
+CODE1994: 0.83, correctly classifying 478 out of 578 images
+CODE1393: 0.86, correctly classifying 496 out of 578 images
+Epoch 83
+CODE3290: 0.92, correctly classifying 529 out of 578 images
+CODE1538: 0.48, correctly classifying 280 out of 578 images
+CODE268: 0.69, correctly classifying 397 out of 578 images
+CODE92: 0.57, correctly classifying 327 out of 578 images
+CODE313: 0.66, correctly classifying 339 out of 510 images
+CODE430: 0.75, correctly classifying 435 out of 578 images
+CODE1994: 0.83, correctly classifying 478 out of 578 images
+CODE1393: 0.86, correctly classifying 496 out of 578 images
+Epoch 84
+CODE3290: 0.92, correctly classifying 529 out of 578 images
+CODE1538: 0.48, correctly classifying 280 out of 578 images
+CODE268: 0.69, correctly classifying 397 out of 578 images
+CODE92: 0.57, correctly classifying 327 out of 578 images
+CODE313: 0.66, correctly classifying 339 out of 510 images
+CODE430: 0.75, correctly classifying 435 out of 578 images
+CODE1994: 0.83, correctly classifying 478 out of 578 images
+CODE1393: 0.86, correctly classifying 496 out of 578 images
+Epoch 85
+CODE3290: 0.92, correctly classifying 529 out of 578 images
+CODE1538: 0.48, correctly classifying 280 out of 578 images
+CODE268: 0.69, correctly classifying 397 out of 578 images
+CODE92: 0.57, correctly classifying 327 out of 578 images
+CODE313: 0.66, correctly classifying 339 out of 510 images
+CODE430: 0.75, correctly classifying 435 out of 578 images
+CODE1994: 0.83, correctly classifying 478 out of 578 images
+CODE1393: 0.86, correctly classifying 496 out of 578 images
+Epoch 86
+CODE3290: 0.92, correctly classifying 560 out of 612 images
+CODE1538: 0.49, correctly classifying 297 out of 612 images
+CODE268: 0.69, correctly classifying 421 out of 612 images
+CODE92: 0.57, correctly classifying 347 out of 612 images
+CODE313: 0.66, correctly classifying 359 out of 540 images
+CODE430: 0.75, correctly classifying 462 out of 612 images
+CODE1994: 0.83, correctly classifying 510 out of 612 images
+CODE1393: 0.86, correctly classifying 526 out of 612 images
+Epoch 87
+CODE3290: 0.92, correctly classifying 560 out of 612 images
+CODE1538: 0.49, correctly classifying 297 out of 612 images
+CODE268: 0.69, correctly classifying 421 out of 612 images
+CODE92: 0.57, correctly classifying 347 out of 612 images
+CODE313: 0.66, correctly classifying 359 out of 540 images
+CODE430: 0.75, correctly classifying 462 out of 612 images
+CODE1994: 0.83, correctly classifying 510 out of 612 images
+CODE1393: 0.86, correctly classifying 526 out of 612 images
+Epoch 88
+CODE3290: 0.92, correctly classifying 560 out of 612 images
+CODE1538: 0.49, correctly classifying 297 out of 612 images
+CODE268: 0.69, correctly classifying 421 out of 612 images
+CODE92: 0.57, correctly classifying 347 out of 612 images
+CODE313: 0.66, correctly classifying 359 out of 540 images
+CODE430: 0.75, correctly classifying 462 out of 612 images
+CODE1994: 0.83, correctly classifying 510 out of 612 images
+CODE1393: 0.86, correctly classifying 526 out of 612 images
+Epoch 89
+CODE3290: 0.92, correctly classifying 560 out of 612 images
+CODE1538: 0.49, correctly classifying 297 out of 612 images
+CODE268: 0.69, correctly classifying 421 out of 612 images
+CODE92: 0.57, correctly classifying 347 out of 612 images
+CODE313: 0.66, correctly classifying 359 out of 540 images
+CODE430: 0.75, correctly classifying 462 out of 612 images
+CODE1994: 0.83, correctly classifying 510 out of 612 images
+CODE1393: 0.86, correctly classifying 526 out of 612 images
+Epoch 90
+CODE3290: 0.92, correctly classifying 560 out of 612 images
+CODE1538: 0.49, correctly classifying 297 out of 612 images
+CODE268: 0.69, correctly classifying 421 out of 612 images
+CODE92: 0.57, correctly classifying 347 out of 612 images
+CODE313: 0.66, correctly classifying 359 out of 540 images
+CODE430: 0.75, correctly classifying 462 out of 612 images
+CODE1994: 0.83, correctly classifying 510 out of 612 images
+CODE1393: 0.86, correctly classifying 526 out of 612 images
+Epoch 91
+CODE3290: 0.91, correctly classifying 591 out of 646 images
+CODE1538: 0.49, correctly classifying 314 out of 646 images
+CODE268: 0.69, correctly classifying 445 out of 646 images
+CODE92: 0.57, correctly classifying 367 out of 646 images
+CODE313: 0.66, correctly classifying 379 out of 570 images
+CODE430: 0.76, correctly classifying 489 out of 646 images
+CODE1994: 0.84, correctly classifying 542 out of 646 images
+CODE1393: 0.86, correctly classifying 556 out of 646 images
+Epoch 92
+CODE3290: 0.91, correctly classifying 591 out of 646 images
+CODE1538: 0.49, correctly classifying 314 out of 646 images
+CODE268: 0.69, correctly classifying 445 out of 646 images
+CODE92: 0.57, correctly classifying 367 out of 646 images
+CODE313: 0.66, correctly classifying 379 out of 570 images
+CODE430: 0.76, correctly classifying 489 out of 646 images
+CODE1994: 0.84, correctly classifying 542 out of 646 images
+CODE1393: 0.86, correctly classifying 556 out of 646 images
+Epoch 93
+CODE3290: 0.91, correctly classifying 591 out of 646 images
+CODE1538: 0.49, correctly classifying 314 out of 646 images
+CODE268: 0.69, correctly classifying 445 out of 646 images
+CODE92: 0.57, correctly classifying 367 out of 646 images
+CODE313: 0.66, correctly classifying 379 out of 570 images
+CODE430: 0.76, correctly classifying 489 out of 646 images
+CODE1994: 0.84, correctly classifying 542 out of 646 images
+CODE1393: 0.86, correctly classifying 556 out of 646 images
+Epoch 94
+CODE3290: 0.91, correctly classifying 591 out of 646 images
+CODE1538: 0.49, correctly classifying 314 out of 646 images
+CODE268: 0.69, correctly classifying 445 out of 646 images
+CODE92: 0.57, correctly classifying 367 out of 646 images
+CODE313: 0.66, correctly classifying 379 out of 570 images
+CODE430: 0.76, correctly classifying 489 out of 646 images
+CODE1994: 0.84, correctly classifying 542 out of 646 images
+CODE1393: 0.86, correctly classifying 556 out of 646 images
+Epoch 95
+CODE3290: 0.91, correctly classifying 591 out of 646 images
+CODE1538: 0.49, correctly classifying 314 out of 646 images
+CODE268: 0.69, correctly classifying 445 out of 646 images
+CODE92: 0.57, correctly classifying 367 out of 646 images
+CODE313: 0.66, correctly classifying 379 out of 570 images
+CODE430: 0.76, correctly classifying 489 out of 646 images
+CODE1994: 0.84, correctly classifying 542 out of 646 images
+CODE1393: 0.86, correctly classifying 556 out of 646 images
+Epoch 96
+CODE3290: 0.91, correctly classifying 622 out of 680 images
+CODE1538: 0.49, correctly classifying 331 out of 680 images
+CODE268: 0.69, correctly classifying 469 out of 680 images
+CODE92: 0.57, correctly classifying 387 out of 680 images
+CODE313: 0.67, correctly classifying 399 out of 600 images
+CODE430: 0.76, correctly classifying 516 out of 680 images
+CODE1994: 0.84, correctly classifying 574 out of 680 images
+CODE1393: 0.86, correctly classifying 586 out of 680 images
+Epoch 97
+CODE3290: 0.91, correctly classifying 622 out of 680 images
+CODE1538: 0.49, correctly classifying 331 out of 680 images
+CODE268: 0.69, correctly classifying 469 out of 680 images
+CODE92: 0.57, correctly classifying 387 out of 680 images
+CODE313: 0.67, correctly classifying 399 out of 600 images
+CODE430: 0.76, correctly classifying 516 out of 680 images
+CODE1994: 0.84, correctly classifying 574 out of 680 images
+CODE1393: 0.86, correctly classifying 586 out of 680 images
+Epoch 98
+CODE3290: 0.91, correctly classifying 622 out of 680 images
+CODE1538: 0.49, correctly classifying 331 out of 680 images
+CODE268: 0.69, correctly classifying 469 out of 680 images
+CODE92: 0.57, correctly classifying 387 out of 680 images
+CODE313: 0.67, correctly classifying 399 out of 600 images
+CODE430: 0.76, correctly classifying 516 out of 680 images
+CODE1994: 0.84, correctly classifying 574 out of 680 images
+CODE1393: 0.86, correctly classifying 586 out of 680 images
+Epoch 99
+CODE3290: 0.91, correctly classifying 622 out of 680 images
+CODE1538: 0.49, correctly classifying 331 out of 680 images
+CODE268: 0.69, correctly classifying 469 out of 680 images
+CODE92: 0.57, correctly classifying 387 out of 680 images
+CODE313: 0.67, correctly classifying 399 out of 600 images
+CODE430: 0.76, correctly classifying 516 out of 680 images
+CODE1994: 0.84, correctly classifying 574 out of 680 images
+CODE1393: 0.86, correctly classifying 586 out of 680 images
+Epoch 100
+CODE3290: 0.91, correctly classifying 622 out of 680 images
+CODE1538: 0.49, correctly classifying 331 out of 680 images
+CODE268: 0.69, correctly classifying 469 out of 680 images
+CODE92: 0.57, correctly classifying 387 out of 680 images
+CODE313: 0.67, correctly classifying 399 out of 600 images
+CODE430: 0.76, correctly classifying 516 out of 680 images
+CODE1994: 0.84, correctly classifying 574 out of 680 images
+CODE1393: 0.86, correctly classifying 586 out of 680 images
+Epoch 101
+CODE3290: 0.91, correctly classifying 653 out of 714 images
+CODE1538: 0.49, correctly classifying 348 out of 714 images
+CODE268: 0.69, correctly classifying 493 out of 714 images
+CODE92: 0.57, correctly classifying 407 out of 714 images
+CODE313: 0.67, correctly classifying 419 out of 630 images
+CODE430: 0.76, correctly classifying 543 out of 714 images
+CODE1994: 0.85, correctly classifying 606 out of 714 images
+CODE1393: 0.86, correctly classifying 616 out of 714 images
+Epoch 102
+CODE3290: 0.91, correctly classifying 653 out of 714 images
+CODE1538: 0.49, correctly classifying 348 out of 714 images
+CODE268: 0.69, correctly classifying 493 out of 714 images
+CODE92: 0.57, correctly classifying 407 out of 714 images
+CODE313: 0.67, correctly classifying 419 out of 630 images
+CODE430: 0.76, correctly classifying 543 out of 714 images
+CODE1994: 0.85, correctly classifying 606 out of 714 images
+CODE1393: 0.86, correctly classifying 616 out of 714 images
+Epoch 103
+CODE3290: 0.91, correctly classifying 653 out of 714 images
+CODE1538: 0.49, correctly classifying 348 out of 714 images
+CODE268: 0.69, correctly classifying 493 out of 714 images
+CODE92: 0.57, correctly classifying 407 out of 714 images
+CODE313: 0.67, correctly classifying 419 out of 630 images
+CODE430: 0.76, correctly classifying 543 out of 714 images
+CODE1994: 0.85, correctly classifying 606 out of 714 images
+CODE1393: 0.86, correctly classifying 616 out of 714 images
+Epoch 104
+CODE3290: 0.91, correctly classifying 653 out of 714 images
+CODE1538: 0.49, correctly classifying 348 out of 714 images
+CODE268: 0.69, correctly classifying 493 out of 714 images
+CODE92: 0.57, correctly classifying 407 out of 714 images
+CODE313: 0.67, correctly classifying 419 out of 630 images
+CODE430: 0.76, correctly classifying 543 out of 714 images
+CODE1994: 0.85, correctly classifying 606 out of 714 images
+CODE1393: 0.86, correctly classifying 616 out of 714 images
+Epoch 105
+CODE3290: 0.91, correctly classifying 653 out of 714 images
+CODE1538: 0.49, correctly classifying 348 out of 714 images
+CODE268: 0.69, correctly classifying 493 out of 714 images
+CODE92: 0.57, correctly classifying 407 out of 714 images
+CODE313: 0.67, correctly classifying 419 out of 630 images
+CODE430: 0.76, correctly classifying 543 out of 714 images
+CODE1994: 0.85, correctly classifying 606 out of 714 images
+CODE1393: 0.86, correctly classifying 616 out of 714 images
+Epoch 106
+CODE3290: 0.91, correctly classifying 684 out of 748 images
+CODE1538: 0.49, correctly classifying 364 out of 748 images
+CODE268: 0.69, correctly classifying 517 out of 748 images
+CODE92: 0.57, correctly classifying 427 out of 748 images
+CODE313: 0.67, correctly classifying 439 out of 660 images
+CODE430: 0.76, correctly classifying 570 out of 748 images
+CODE1994: 0.85, correctly classifying 638 out of 748 images
+CODE1393: 0.86, correctly classifying 646 out of 748 images
+Epoch 107
+CODE3290: 0.91, correctly classifying 684 out of 748 images
+CODE1538: 0.49, correctly classifying 364 out of 748 images
+CODE268: 0.69, correctly classifying 517 out of 748 images
+CODE92: 0.57, correctly classifying 427 out of 748 images
+CODE313: 0.67, correctly classifying 439 out of 660 images
+CODE430: 0.76, correctly classifying 570 out of 748 images
+CODE1994: 0.85, correctly classifying 638 out of 748 images
+CODE1393: 0.86, correctly classifying 646 out of 748 images
+Epoch 108
+CODE3290: 0.91, correctly classifying 684 out of 748 images
+CODE1538: 0.49, correctly classifying 364 out of 748 images
+CODE268: 0.69, correctly classifying 517 out of 748 images
+CODE92: 0.57, correctly classifying 427 out of 748 images
+CODE313: 0.67, correctly classifying 439 out of 660 images
+CODE430: 0.76, correctly classifying 570 out of 748 images
+CODE1994: 0.85, correctly classifying 638 out of 748 images
+CODE1393: 0.86, correctly classifying 646 out of 748 images
+Epoch 109
+CODE3290: 0.91, correctly classifying 684 out of 748 images
+CODE1538: 0.49, correctly classifying 364 out of 748 images
+CODE268: 0.69, correctly classifying 517 out of 748 images
+CODE92: 0.57, correctly classifying 427 out of 748 images
+CODE313: 0.67, correctly classifying 439 out of 660 images
+CODE430: 0.76, correctly classifying 570 out of 748 images
+CODE1994: 0.85, correctly classifying 638 out of 748 images
+CODE1393: 0.86, correctly classifying 646 out of 748 images
+Epoch 110
+CODE3290: 0.91, correctly classifying 684 out of 748 images
+CODE1538: 0.49, correctly classifying 364 out of 748 images
+CODE268: 0.69, correctly classifying 517 out of 748 images
+CODE92: 0.57, correctly classifying 427 out of 748 images
+CODE313: 0.67, correctly classifying 439 out of 660 images
+CODE430: 0.76, correctly classifying 570 out of 748 images
+CODE1994: 0.85, correctly classifying 638 out of 748 images
+CODE1393: 0.86, correctly classifying 646 out of 748 images
+Epoch 111
+CODE3290: 0.91, correctly classifying 715 out of 782 images
+CODE1538: 0.49, correctly classifying 380 out of 782 images
+CODE268: 0.69, correctly classifying 541 out of 782 images
+CODE92: 0.57, correctly classifying 447 out of 782 images
+CODE313: 0.67, correctly classifying 459 out of 690 images
+CODE430: 0.76, correctly classifying 597 out of 782 images
+CODE1994: 0.86, correctly classifying 670 out of 782 images
+CODE1393: 0.86, correctly classifying 676 out of 782 images
+Epoch 112
+CODE3290: 0.91, correctly classifying 715 out of 782 images
+CODE1538: 0.49, correctly classifying 380 out of 782 images
+CODE268: 0.69, correctly classifying 541 out of 782 images
+CODE92: 0.57, correctly classifying 447 out of 782 images
+CODE313: 0.67, correctly classifying 459 out of 690 images
+CODE430: 0.76, correctly classifying 597 out of 782 images
+CODE1994: 0.86, correctly classifying 670 out of 782 images
+CODE1393: 0.86, correctly classifying 676 out of 782 images
+Epoch 113
+CODE3290: 0.91, correctly classifying 715 out of 782 images
+CODE1538: 0.49, correctly classifying 380 out of 782 images
+CODE268: 0.69, correctly classifying 541 out of 782 images
+CODE92: 0.57, correctly classifying 447 out of 782 images
+CODE313: 0.67, correctly classifying 459 out of 690 images
+CODE430: 0.76, correctly classifying 597 out of 782 images
+CODE1994: 0.86, correctly classifying 670 out of 782 images
+CODE1393: 0.86, correctly classifying 676 out of 782 images
+Epoch 114
+CODE3290: 0.91, correctly classifying 715 out of 782 images
+CODE1538: 0.49, correctly classifying 380 out of 782 images
+CODE268: 0.69, correctly classifying 541 out of 782 images
+CODE92: 0.57, correctly classifying 447 out of 782 images
+CODE313: 0.67, correctly classifying 459 out of 690 images
+CODE430: 0.76, correctly classifying 597 out of 782 images
+CODE1994: 0.86, correctly classifying 670 out of 782 images
+CODE1393: 0.86, correctly classifying 676 out of 782 images
+Epoch 115
+CODE3290: 0.91, correctly classifying 715 out of 782 images
+CODE1538: 0.49, correctly classifying 380 out of 782 images
+CODE268: 0.69, correctly classifying 541 out of 782 images
+CODE92: 0.57, correctly classifying 447 out of 782 images
+CODE313: 0.67, correctly classifying 459 out of 690 images
+CODE430: 0.76, correctly classifying 597 out of 782 images
+CODE1994: 0.86, correctly classifying 670 out of 782 images
+CODE1393: 0.86, correctly classifying 676 out of 782 images
+Epoch 116
+CODE3290: 0.91, correctly classifying 746 out of 816 images
+CODE1538: 0.49, correctly classifying 396 out of 816 images
+CODE268: 0.69, correctly classifying 565 out of 816 images
+CODE92: 0.57, correctly classifying 467 out of 816 images
+CODE313: 0.67, correctly classifying 479 out of 720 images
+CODE430: 0.76, correctly classifying 624 out of 816 images
+CODE1994: 0.86, correctly classifying 702 out of 816 images
+CODE1393: 0.87, correctly classifying 706 out of 816 images
+Epoch 117
+CODE3290: 0.91, correctly classifying 746 out of 816 images
+CODE1538: 0.49, correctly classifying 396 out of 816 images
+CODE268: 0.69, correctly classifying 565 out of 816 images
+CODE92: 0.57, correctly classifying 467 out of 816 images
+CODE313: 0.67, correctly classifying 479 out of 720 images
+CODE430: 0.76, correctly classifying 624 out of 816 images
+CODE1994: 0.86, correctly classifying 702 out of 816 images
+CODE1393: 0.87, correctly classifying 706 out of 816 images
+Epoch 118
+CODE3290: 0.91, correctly classifying 746 out of 816 images
+CODE1538: 0.49, correctly classifying 396 out of 816 images
+CODE268: 0.69, correctly classifying 565 out of 816 images
+CODE92: 0.57, correctly classifying 467 out of 816 images
+CODE313: 0.67, correctly classifying 479 out of 720 images
+CODE430: 0.76, correctly classifying 624 out of 816 images
+CODE1994: 0.86, correctly classifying 702 out of 816 images
+CODE1393: 0.87, correctly classifying 706 out of 816 images
+Epoch 119
+CODE3290: 0.91, correctly classifying 746 out of 816 images
+CODE1538: 0.49, correctly classifying 396 out of 816 images
+CODE268: 0.69, correctly classifying 565 out of 816 images
+CODE92: 0.57, correctly classifying 467 out of 816 images
+CODE313: 0.67, correctly classifying 479 out of 720 images
+CODE430: 0.76, correctly classifying 624 out of 816 images
+CODE1994: 0.86, correctly classifying 702 out of 816 images
+CODE1393: 0.87, correctly classifying 706 out of 816 images
+Epoch 120
+CODE3290: 0.91, correctly classifying 746 out of 816 images
+CODE1538: 0.49, correctly classifying 396 out of 816 images
+CODE268: 0.69, correctly classifying 565 out of 816 images
+CODE92: 0.57, correctly classifying 467 out of 816 images
+CODE313: 0.67, correctly classifying 479 out of 720 images
+CODE430: 0.76, correctly classifying 624 out of 816 images
+CODE1994: 0.86, correctly classifying 702 out of 816 images
+CODE1393: 0.87, correctly classifying 706 out of 816 images
+Epoch 121
+CODE3290: 0.91, correctly classifying 777 out of 850 images
+CODE1538: 0.48, correctly classifying 412 out of 850 images
+CODE268: 0.69, correctly classifying 589 out of 850 images
+CODE92: 0.57, correctly classifying 487 out of 850 images
+CODE313: 0.67, correctly classifying 499 out of 750 images
+CODE430: 0.77, correctly classifying 651 out of 850 images
+CODE1994: 0.86, correctly classifying 734 out of 850 images
+CODE1393: 0.87, correctly classifying 736 out of 850 images
+Epoch 122
+CODE3290: 0.91, correctly classifying 777 out of 850 images
+CODE1538: 0.48, correctly classifying 412 out of 850 images
+CODE268: 0.69, correctly classifying 589 out of 850 images
+CODE92: 0.57, correctly classifying 487 out of 850 images
+CODE313: 0.67, correctly classifying 499 out of 750 images
+CODE430: 0.77, correctly classifying 651 out of 850 images
+CODE1994: 0.86, correctly classifying 734 out of 850 images
+CODE1393: 0.87, correctly classifying 736 out of 850 images
+Epoch 123
+CODE3290: 0.91, correctly classifying 777 out of 850 images
+CODE1538: 0.48, correctly classifying 412 out of 850 images
+CODE268: 0.69, correctly classifying 589 out of 850 images
+CODE92: 0.57, correctly classifying 487 out of 850 images
+CODE313: 0.67, correctly classifying 499 out of 750 images
+CODE430: 0.77, correctly classifying 651 out of 850 images
+CODE1994: 0.86, correctly classifying 734 out of 850 images
+CODE1393: 0.87, correctly classifying 736 out of 850 images
+Epoch 124
+CODE3290: 0.91, correctly classifying 777 out of 850 images
+CODE1538: 0.48, correctly classifying 412 out of 850 images
+CODE268: 0.69, correctly classifying 589 out of 850 images
+CODE92: 0.57, correctly classifying 487 out of 850 images
+CODE313: 0.67, correctly classifying 499 out of 750 images
+CODE430: 0.77, correctly classifying 651 out of 850 images
+CODE1994: 0.86, correctly classifying 734 out of 850 images
+CODE1393: 0.87, correctly classifying 736 out of 850 images
+Epoch 125
+CODE3290: 0.91, correctly classifying 777 out of 850 images
+CODE1538: 0.48, correctly classifying 412 out of 850 images
+CODE268: 0.69, correctly classifying 589 out of 850 images
+CODE92: 0.57, correctly classifying 487 out of 850 images
+CODE313: 0.67, correctly classifying 499 out of 750 images
+CODE430: 0.77, correctly classifying 651 out of 850 images
+CODE1994: 0.86, correctly classifying 734 out of 850 images
+CODE1393: 0.87, correctly classifying 736 out of 850 images
+Epoch 126
+CODE3290: 0.91, correctly classifying 808 out of 884 images
+CODE1538: 0.48, correctly classifying 428 out of 884 images
+CODE268: 0.69, correctly classifying 613 out of 884 images
+CODE92: 0.57, correctly classifying 507 out of 884 images
+CODE313: 0.67, correctly classifying 519 out of 780 images
+CODE430: 0.77, correctly classifying 678 out of 884 images
+CODE1994: 0.87, correctly classifying 766 out of 884 images
+CODE1393: 0.87, correctly classifying 766 out of 884 images
+Epoch 127
+CODE3290: 0.91, correctly classifying 808 out of 884 images
+CODE1538: 0.48, correctly classifying 428 out of 884 images
+CODE268: 0.69, correctly classifying 613 out of 884 images
+CODE92: 0.57, correctly classifying 507 out of 884 images
+CODE313: 0.67, correctly classifying 519 out of 780 images
+CODE430: 0.77, correctly classifying 678 out of 884 images
+CODE1994: 0.87, correctly classifying 766 out of 884 images
+CODE1393: 0.87, correctly classifying 766 out of 884 images
+Epoch 128
+CODE3290: 0.91, correctly classifying 808 out of 884 images
+CODE1538: 0.48, correctly classifying 428 out of 884 images
+CODE268: 0.69, correctly classifying 613 out of 884 images
+CODE92: 0.57, correctly classifying 507 out of 884 images
+CODE313: 0.67, correctly classifying 519 out of 780 images
+CODE430: 0.77, correctly classifying 678 out of 884 images
+CODE1994: 0.87, correctly classifying 766 out of 884 images
+CODE1393: 0.87, correctly classifying 766 out of 884 images
+Epoch 129
+CODE3290: 0.91, correctly classifying 808 out of 884 images
+CODE1538: 0.48, correctly classifying 428 out of 884 images
+CODE268: 0.69, correctly classifying 613 out of 884 images
+CODE92: 0.57, correctly classifying 507 out of 884 images
+CODE313: 0.67, correctly classifying 519 out of 780 images
+CODE430: 0.77, correctly classifying 678 out of 884 images
+CODE1994: 0.87, correctly classifying 766 out of 884 images
+CODE1393: 0.87, correctly classifying 766 out of 884 images
+Epoch 130
+CODE3290: 0.91, correctly classifying 808 out of 884 images
+CODE1538: 0.48, correctly classifying 428 out of 884 images
+CODE268: 0.69, correctly classifying 613 out of 884 images
+CODE92: 0.57, correctly classifying 507 out of 884 images
+CODE313: 0.67, correctly classifying 519 out of 780 images
+CODE430: 0.77, correctly classifying 678 out of 884 images
+CODE1994: 0.87, correctly classifying 766 out of 884 images
+CODE1393: 0.87, correctly classifying 766 out of 884 images
+Epoch 131
+CODE3290: 0.91, correctly classifying 839 out of 918 images
+CODE1538: 0.48, correctly classifying 444 out of 918 images
+CODE268: 0.69, correctly classifying 637 out of 918 images
+CODE92: 0.57, correctly classifying 527 out of 918 images
+CODE313: 0.67, correctly classifying 539 out of 810 images
+CODE430: 0.77, correctly classifying 705 out of 918 images
+CODE1994: 0.87, correctly classifying 798 out of 918 images
+CODE1393: 0.87, correctly classifying 796 out of 918 images
+Epoch 132
+CODE3290: 0.91, correctly classifying 839 out of 918 images
+CODE1538: 0.48, correctly classifying 444 out of 918 images
+CODE268: 0.69, correctly classifying 637 out of 918 images
+CODE92: 0.57, correctly classifying 527 out of 918 images
+CODE313: 0.67, correctly classifying 539 out of 810 images
+CODE430: 0.77, correctly classifying 705 out of 918 images
+CODE1994: 0.87, correctly classifying 798 out of 918 images
+CODE1393: 0.87, correctly classifying 796 out of 918 images
+Epoch 133
+CODE3290: 0.91, correctly classifying 839 out of 918 images
+CODE1538: 0.48, correctly classifying 444 out of 918 images
+CODE268: 0.69, correctly classifying 637 out of 918 images
+CODE92: 0.57, correctly classifying 527 out of 918 images
+CODE313: 0.67, correctly classifying 539 out of 810 images
+CODE430: 0.77, correctly classifying 705 out of 918 images
+CODE1994: 0.87, correctly classifying 798 out of 918 images
+CODE1393: 0.87, correctly classifying 796 out of 918 images
+Epoch 134
+CODE3290: 0.91, correctly classifying 839 out of 918 images
+CODE1538: 0.48, correctly classifying 444 out of 918 images
+CODE268: 0.69, correctly classifying 637 out of 918 images
+CODE92: 0.57, correctly classifying 527 out of 918 images
+CODE313: 0.67, correctly classifying 539 out of 810 images
+CODE430: 0.77, correctly classifying 705 out of 918 images
+CODE1994: 0.87, correctly classifying 798 out of 918 images
+CODE1393: 0.87, correctly classifying 796 out of 918 images
+Epoch 135
+CODE3290: 0.91, correctly classifying 839 out of 918 images
+CODE1538: 0.48, correctly classifying 444 out of 918 images
+CODE268: 0.69, correctly classifying 637 out of 918 images
+CODE92: 0.57, correctly classifying 527 out of 918 images
+CODE313: 0.67, correctly classifying 539 out of 810 images
+CODE430: 0.77, correctly classifying 705 out of 918 images
+CODE1994: 0.87, correctly classifying 798 out of 918 images
+CODE1393: 0.87, correctly classifying 796 out of 918 images
+Epoch 136
+CODE3290: 0.91, correctly classifying 870 out of 952 images
+CODE1538: 0.48, correctly classifying 460 out of 952 images
+CODE268: 0.69, correctly classifying 661 out of 952 images
+CODE92: 0.57, correctly classifying 547 out of 952 images
+CODE313: 0.67, correctly classifying 559 out of 840 images
+CODE430: 0.77, correctly classifying 732 out of 952 images
+CODE1994: 0.87, correctly classifying 830 out of 952 images
+CODE1393: 0.87, correctly classifying 826 out of 952 images
+Epoch 137
+CODE3290: 0.91, correctly classifying 870 out of 952 images
+CODE1538: 0.48, correctly classifying 460 out of 952 images
+CODE268: 0.69, correctly classifying 661 out of 952 images
+CODE92: 0.57, correctly classifying 547 out of 952 images
+CODE313: 0.67, correctly classifying 559 out of 840 images
+CODE430: 0.77, correctly classifying 732 out of 952 images
+CODE1994: 0.87, correctly classifying 830 out of 952 images
+CODE1393: 0.87, correctly classifying 826 out of 952 images
+Epoch 138
+CODE3290: 0.91, correctly classifying 870 out of 952 images
+CODE1538: 0.48, correctly classifying 460 out of 952 images
+CODE268: 0.69, correctly classifying 661 out of 952 images
+CODE92: 0.57, correctly classifying 547 out of 952 images
+CODE313: 0.67, correctly classifying 559 out of 840 images
+CODE430: 0.77, correctly classifying 732 out of 952 images
+CODE1994: 0.87, correctly classifying 830 out of 952 images
+CODE1393: 0.87, correctly classifying 826 out of 952 images
+Epoch 139
+CODE3290: 0.91, correctly classifying 870 out of 952 images
+CODE1538: 0.48, correctly classifying 460 out of 952 images
+CODE268: 0.69, correctly classifying 661 out of 952 images
+CODE92: 0.57, correctly classifying 547 out of 952 images
+CODE313: 0.67, correctly classifying 559 out of 840 images
+CODE430: 0.77, correctly classifying 732 out of 952 images
+CODE1994: 0.87, correctly classifying 830 out of 952 images
+CODE1393: 0.87, correctly classifying 826 out of 952 images
+Epoch 140
+CODE3290: 0.91, correctly classifying 870 out of 952 images
+CODE1538: 0.48, correctly classifying 460 out of 952 images
+CODE268: 0.69, correctly classifying 661 out of 952 images
+CODE92: 0.57, correctly classifying 547 out of 952 images
+CODE313: 0.67, correctly classifying 559 out of 840 images
+CODE430: 0.77, correctly classifying 732 out of 952 images
+CODE1994: 0.87, correctly classifying 830 out of 952 images
+CODE1393: 0.87, correctly classifying 826 out of 952 images
+Epoch 141
+CODE3290: 0.91, correctly classifying 901 out of 986 images
+CODE1538: 0.48, correctly classifying 476 out of 986 images
+CODE268: 0.69, correctly classifying 685 out of 986 images
+CODE92: 0.58, correctly classifying 567 out of 986 images
+CODE313: 0.67, correctly classifying 579 out of 870 images
+CODE430: 0.77, correctly classifying 759 out of 986 images
+CODE1994: 0.87, correctly classifying 862 out of 986 images
+CODE1393: 0.87, correctly classifying 856 out of 986 images
+Epoch 142
+CODE3290: 0.91, correctly classifying 901 out of 986 images
+CODE1538: 0.48, correctly classifying 476 out of 986 images
+CODE268: 0.69, correctly classifying 685 out of 986 images
+CODE92: 0.58, correctly classifying 567 out of 986 images
+CODE313: 0.67, correctly classifying 579 out of 870 images
+CODE430: 0.77, correctly classifying 759 out of 986 images
+CODE1994: 0.87, correctly classifying 862 out of 986 images
+CODE1393: 0.87, correctly classifying 856 out of 986 images
+Epoch 143
+CODE3290: 0.91, correctly classifying 901 out of 986 images
+CODE1538: 0.48, correctly classifying 476 out of 986 images
+CODE268: 0.69, correctly classifying 685 out of 986 images
+CODE92: 0.58, correctly classifying 567 out of 986 images
+CODE313: 0.67, correctly classifying 579 out of 870 images
+CODE430: 0.77, correctly classifying 759 out of 986 images
+CODE1994: 0.87, correctly classifying 862 out of 986 images
+CODE1393: 0.87, correctly classifying 856 out of 986 images
+Epoch 144
+CODE3290: 0.91, correctly classifying 901 out of 986 images
+CODE1538: 0.48, correctly classifying 476 out of 986 images
+CODE268: 0.69, correctly classifying 685 out of 986 images
+CODE92: 0.58, correctly classifying 567 out of 986 images
+CODE313: 0.67, correctly classifying 579 out of 870 images
+CODE430: 0.77, correctly classifying 759 out of 986 images
+CODE1994: 0.87, correctly classifying 862 out of 986 images
+CODE1393: 0.87, correctly classifying 856 out of 986 images
+Epoch 145
+CODE3290: 0.91, correctly classifying 901 out of 986 images
+CODE1538: 0.48, correctly classifying 476 out of 986 images
+CODE268: 0.69, correctly classifying 685 out of 986 images
+CODE92: 0.58, correctly classifying 567 out of 986 images
+CODE313: 0.67, correctly classifying 579 out of 870 images
+CODE430: 0.77, correctly classifying 759 out of 986 images
+CODE1994: 0.87, correctly classifying 862 out of 986 images
+CODE1393: 0.87, correctly classifying 856 out of 986 images
+Epoch 146
+CODE3290: 0.91, correctly classifying 932 out of 1020 images
+CODE1538: 0.48, correctly classifying 492 out of 1020 images
+CODE268: 0.70, correctly classifying 709 out of 1020 images
+CODE92: 0.58, correctly classifying 587 out of 1020 images
+CODE313: 0.67, correctly classifying 599 out of 900 images
+CODE430: 0.77, correctly classifying 786 out of 1020 images
+CODE1994: 0.88, correctly classifying 894 out of 1020 images
+CODE1393: 0.87, correctly classifying 886 out of 1020 images
+Epoch 147
+CODE3290: 0.91, correctly classifying 932 out of 1020 images
+CODE1538: 0.48, correctly classifying 492 out of 1020 images
+CODE268: 0.70, correctly classifying 709 out of 1020 images
+CODE92: 0.58, correctly classifying 587 out of 1020 images
+CODE313: 0.67, correctly classifying 599 out of 900 images
+CODE430: 0.77, correctly classifying 786 out of 1020 images
+CODE1994: 0.88, correctly classifying 894 out of 1020 images
+CODE1393: 0.87, correctly classifying 886 out of 1020 images
+Epoch 148
+CODE3290: 0.91, correctly classifying 932 out of 1020 images
+CODE1538: 0.48, correctly classifying 492 out of 1020 images
+CODE268: 0.70, correctly classifying 709 out of 1020 images
+CODE92: 0.58, correctly classifying 587 out of 1020 images
+CODE313: 0.67, correctly classifying 599 out of 900 images
+CODE430: 0.77, correctly classifying 786 out of 1020 images
+CODE1994: 0.88, correctly classifying 894 out of 1020 images
+CODE1393: 0.87, correctly classifying 886 out of 1020 images
+Epoch 149
+CODE3290: 0.91, correctly classifying 932 out of 1020 images
+CODE1538: 0.48, correctly classifying 492 out of 1020 images
+CODE268: 0.70, correctly classifying 709 out of 1020 images
+CODE92: 0.58, correctly classifying 587 out of 1020 images
+CODE313: 0.67, correctly classifying 599 out of 900 images
+CODE430: 0.77, correctly classifying 786 out of 1020 images
+CODE1994: 0.88, correctly classifying 894 out of 1020 images
+CODE1393: 0.87, correctly classifying 886 out of 1020 images
+Epoch 150
+CODE3290: 0.91, correctly classifying 932 out of 1020 images
+CODE1538: 0.48, correctly classifying 492 out of 1020 images
+CODE268: 0.70, correctly classifying 709 out of 1020 images
+CODE92: 0.58, correctly classifying 587 out of 1020 images
+CODE313: 0.67, correctly classifying 599 out of 900 images
+CODE430: 0.77, correctly classifying 786 out of 1020 images
+CODE1994: 0.88, correctly classifying 894 out of 1020 images
+CODE1393: 0.87, correctly classifying 886 out of 1020 images
+Epoch 151
+CODE3290: 0.91, correctly classifying 963 out of 1054 images
+CODE1538: 0.48, correctly classifying 508 out of 1054 images
+CODE268: 0.70, correctly classifying 733 out of 1054 images
+CODE92: 0.58, correctly classifying 607 out of 1054 images
+CODE313: 0.67, correctly classifying 619 out of 930 images
+CODE430: 0.77, correctly classifying 813 out of 1054 images
+CODE1994: 0.88, correctly classifying 926 out of 1054 images
+CODE1393: 0.87, correctly classifying 916 out of 1054 images
+Epoch 152
+CODE3290: 0.91, correctly classifying 963 out of 1054 images
+CODE1538: 0.48, correctly classifying 508 out of 1054 images
+CODE268: 0.70, correctly classifying 733 out of 1054 images
+CODE92: 0.58, correctly classifying 607 out of 1054 images
+CODE313: 0.67, correctly classifying 619 out of 930 images
+CODE430: 0.77, correctly classifying 813 out of 1054 images
+CODE1994: 0.88, correctly classifying 926 out of 1054 images
+CODE1393: 0.87, correctly classifying 916 out of 1054 images
+Epoch 153
+CODE3290: 0.91, correctly classifying 963 out of 1054 images
+CODE1538: 0.48, correctly classifying 508 out of 1054 images
+CODE268: 0.70, correctly classifying 733 out of 1054 images
+CODE92: 0.58, correctly classifying 607 out of 1054 images
+CODE313: 0.67, correctly classifying 619 out of 930 images
+CODE430: 0.77, correctly classifying 813 out of 1054 images
+CODE1994: 0.88, correctly classifying 926 out of 1054 images
+CODE1393: 0.87, correctly classifying 916 out of 1054 images
+Epoch 154
+CODE3290: 0.91, correctly classifying 963 out of 1054 images
+CODE1538: 0.48, correctly classifying 508 out of 1054 images
+CODE268: 0.70, correctly classifying 733 out of 1054 images
+CODE92: 0.58, correctly classifying 607 out of 1054 images
+CODE313: 0.67, correctly classifying 619 out of 930 images
+CODE430: 0.77, correctly classifying 813 out of 1054 images
+CODE1994: 0.88, correctly classifying 926 out of 1054 images
+CODE1393: 0.87, correctly classifying 916 out of 1054 images
+Epoch 155
+CODE3290: 0.91, correctly classifying 963 out of 1054 images
+CODE1538: 0.48, correctly classifying 508 out of 1054 images
+CODE268: 0.70, correctly classifying 733 out of 1054 images
+CODE92: 0.58, correctly classifying 607 out of 1054 images
+CODE313: 0.67, correctly classifying 619 out of 930 images
+CODE430: 0.77, correctly classifying 813 out of 1054 images
+CODE1994: 0.88, correctly classifying 926 out of 1054 images
+CODE1393: 0.87, correctly classifying 916 out of 1054 images
+Epoch 156
+CODE3290: 0.91, correctly classifying 994 out of 1088 images
+CODE1538: 0.48, correctly classifying 524 out of 1088 images
+CODE268: 0.70, correctly classifying 757 out of 1088 images
+CODE92: 0.58, correctly classifying 627 out of 1088 images
+CODE313: 0.67, correctly classifying 639 out of 960 images
+CODE430: 0.77, correctly classifying 840 out of 1088 images
+CODE1994: 0.88, correctly classifying 958 out of 1088 images
+CODE1393: 0.87, correctly classifying 946 out of 1088 images
+Epoch 157
+CODE3290: 0.91, correctly classifying 994 out of 1088 images
+CODE1538: 0.48, correctly classifying 524 out of 1088 images
+CODE268: 0.70, correctly classifying 757 out of 1088 images
+CODE92: 0.58, correctly classifying 627 out of 1088 images
+CODE313: 0.67, correctly classifying 639 out of 960 images
+CODE430: 0.77, correctly classifying 840 out of 1088 images
+CODE1994: 0.88, correctly classifying 958 out of 1088 images
+CODE1393: 0.87, correctly classifying 946 out of 1088 images
+Epoch 158
+CODE3290: 0.91, correctly classifying 994 out of 1088 images
+CODE1538: 0.48, correctly classifying 524 out of 1088 images
+CODE268: 0.70, correctly classifying 757 out of 1088 images
+CODE92: 0.58, correctly classifying 627 out of 1088 images
+CODE313: 0.67, correctly classifying 639 out of 960 images
+CODE430: 0.77, correctly classifying 840 out of 1088 images
+CODE1994: 0.88, correctly classifying 958 out of 1088 images
+CODE1393: 0.87, correctly classifying 946 out of 1088 images
+Epoch 159
+CODE3290: 0.91, correctly classifying 994 out of 1088 images
+CODE1538: 0.48, correctly classifying 524 out of 1088 images
+CODE268: 0.70, correctly classifying 757 out of 1088 images
+CODE92: 0.58, correctly classifying 627 out of 1088 images
+CODE313: 0.67, correctly classifying 639 out of 960 images
+CODE430: 0.77, correctly classifying 840 out of 1088 images
+CODE1994: 0.88, correctly classifying 958 out of 1088 images
+CODE1393: 0.87, correctly classifying 946 out of 1088 images
+Epoch 160
+CODE3290: 0.91, correctly classifying 994 out of 1088 images
+CODE1538: 0.48, correctly classifying 524 out of 1088 images
+CODE268: 0.70, correctly classifying 757 out of 1088 images
+CODE92: 0.58, correctly classifying 627 out of 1088 images
+CODE313: 0.67, correctly classifying 639 out of 960 images
+CODE430: 0.77, correctly classifying 840 out of 1088 images
+CODE1994: 0.88, correctly classifying 958 out of 1088 images
+CODE1393: 0.87, correctly classifying 946 out of 1088 images
+Epoch 161
+CODE3290: 0.91, correctly classifying 1025 out of 1122 images
+CODE1538: 0.48, correctly classifying 540 out of 1122 images
+CODE268: 0.70, correctly classifying 781 out of 1122 images
+CODE92: 0.58, correctly classifying 647 out of 1122 images
+CODE313: 0.67, correctly classifying 659 out of 990 images
+CODE430: 0.77, correctly classifying 867 out of 1122 images
+CODE1994: 0.88, correctly classifying 990 out of 1122 images
+CODE1393: 0.87, correctly classifying 976 out of 1122 images
+Epoch 162
+CODE3290: 0.91, correctly classifying 1025 out of 1122 images
+CODE1538: 0.48, correctly classifying 540 out of 1122 images
+CODE268: 0.70, correctly classifying 781 out of 1122 images
+CODE92: 0.58, correctly classifying 647 out of 1122 images
+CODE313: 0.67, correctly classifying 659 out of 990 images
+CODE430: 0.77, correctly classifying 867 out of 1122 images
+CODE1994: 0.88, correctly classifying 990 out of 1122 images
+CODE1393: 0.87, correctly classifying 976 out of 1122 images
+Epoch 163
+CODE3290: 0.91, correctly classifying 1025 out of 1122 images
+CODE1538: 0.48, correctly classifying 540 out of 1122 images
+CODE268: 0.70, correctly classifying 781 out of 1122 images
+CODE92: 0.58, correctly classifying 647 out of 1122 images
+CODE313: 0.67, correctly classifying 659 out of 990 images
+CODE430: 0.77, correctly classifying 867 out of 1122 images
+CODE1994: 0.88, correctly classifying 990 out of 1122 images
+CODE1393: 0.87, correctly classifying 976 out of 1122 images
+Epoch 164
+CODE3290: 0.91, correctly classifying 1025 out of 1122 images
+CODE1538: 0.48, correctly classifying 540 out of 1122 images
+CODE268: 0.70, correctly classifying 781 out of 1122 images
+CODE92: 0.58, correctly classifying 647 out of 1122 images
+CODE313: 0.67, correctly classifying 659 out of 990 images
+CODE430: 0.77, correctly classifying 867 out of 1122 images
+CODE1994: 0.88, correctly classifying 990 out of 1122 images
+CODE1393: 0.87, correctly classifying 976 out of 1122 images
+Epoch 165
+CODE3290: 0.91, correctly classifying 1025 out of 1122 images
+CODE1538: 0.48, correctly classifying 540 out of 1122 images
+CODE268: 0.70, correctly classifying 781 out of 1122 images
+CODE92: 0.58, correctly classifying 647 out of 1122 images
+CODE313: 0.67, correctly classifying 659 out of 990 images
+CODE430: 0.77, correctly classifying 867 out of 1122 images
+CODE1994: 0.88, correctly classifying 990 out of 1122 images
+CODE1393: 0.87, correctly classifying 976 out of 1122 images
+Epoch 166
+CODE3290: 0.91, correctly classifying 1056 out of 1156 images
+CODE1538: 0.48, correctly classifying 556 out of 1156 images
+CODE268: 0.70, correctly classifying 805 out of 1156 images
+CODE92: 0.58, correctly classifying 667 out of 1156 images
+CODE313: 0.67, correctly classifying 679 out of 1020 images
+CODE430: 0.77, correctly classifying 894 out of 1156 images
+CODE1994: 0.88, correctly classifying 1022 out of 1156 images
+CODE1393: 0.87, correctly classifying 1006 out of 1156 images
+Epoch 167
+CODE3290: 0.91, correctly classifying 1056 out of 1156 images
+CODE1538: 0.48, correctly classifying 556 out of 1156 images
+CODE268: 0.70, correctly classifying 805 out of 1156 images
+CODE92: 0.58, correctly classifying 667 out of 1156 images
+CODE313: 0.67, correctly classifying 679 out of 1020 images
+CODE430: 0.77, correctly classifying 894 out of 1156 images
+CODE1994: 0.88, correctly classifying 1022 out of 1156 images
+CODE1393: 0.87, correctly classifying 1006 out of 1156 images
+Epoch 168
+CODE3290: 0.91, correctly classifying 1056 out of 1156 images
+CODE1538: 0.48, correctly classifying 556 out of 1156 images
+CODE268: 0.70, correctly classifying 805 out of 1156 images
+CODE92: 0.58, correctly classifying 667 out of 1156 images
+CODE313: 0.67, correctly classifying 679 out of 1020 images
+CODE430: 0.77, correctly classifying 894 out of 1156 images
+CODE1994: 0.88, correctly classifying 1022 out of 1156 images
+CODE1393: 0.87, correctly classifying 1006 out of 1156 images
+Epoch 169
+CODE3290: 0.91, correctly classifying 1056 out of 1156 images
+CODE1538: 0.48, correctly classifying 556 out of 1156 images
+CODE268: 0.70, correctly classifying 805 out of 1156 images
+CODE92: 0.58, correctly classifying 667 out of 1156 images
+CODE313: 0.67, correctly classifying 679 out of 1020 images
+CODE430: 0.77, correctly classifying 894 out of 1156 images
+CODE1994: 0.88, correctly classifying 1022 out of 1156 images
+CODE1393: 0.87, correctly classifying 1006 out of 1156 images
+Epoch 170
+CODE3290: 0.91, correctly classifying 1056 out of 1156 images
+CODE1538: 0.48, correctly classifying 556 out of 1156 images
+CODE268: 0.70, correctly classifying 805 out of 1156 images
+CODE92: 0.58, correctly classifying 667 out of 1156 images
+CODE313: 0.67, correctly classifying 679 out of 1020 images
+CODE430: 0.77, correctly classifying 894 out of 1156 images
+CODE1994: 0.88, correctly classifying 1022 out of 1156 images
+CODE1393: 0.87, correctly classifying 1006 out of 1156 images
+Epoch 171
+CODE3290: 0.91, correctly classifying 1087 out of 1190 images
+CODE1538: 0.48, correctly classifying 572 out of 1190 images
+CODE268: 0.70, correctly classifying 829 out of 1190 images
+CODE92: 0.58, correctly classifying 687 out of 1190 images
+CODE313: 0.67, correctly classifying 699 out of 1050 images
+CODE430: 0.77, correctly classifying 921 out of 1190 images
+CODE1994: 0.89, correctly classifying 1054 out of 1190 images
+CODE1393: 0.87, correctly classifying 1036 out of 1190 images
+Epoch 172
+CODE3290: 0.91, correctly classifying 1087 out of 1190 images
+CODE1538: 0.48, correctly classifying 572 out of 1190 images
+CODE268: 0.70, correctly classifying 829 out of 1190 images
+CODE92: 0.58, correctly classifying 687 out of 1190 images
+CODE313: 0.67, correctly classifying 699 out of 1050 images
+CODE430: 0.77, correctly classifying 921 out of 1190 images
+CODE1994: 0.89, correctly classifying 1054 out of 1190 images
+CODE1393: 0.87, correctly classifying 1036 out of 1190 images
+Epoch 173
+CODE3290: 0.91, correctly classifying 1087 out of 1190 images
+CODE1538: 0.48, correctly classifying 572 out of 1190 images
+CODE268: 0.70, correctly classifying 829 out of 1190 images
+CODE92: 0.58, correctly classifying 687 out of 1190 images
+CODE313: 0.67, correctly classifying 699 out of 1050 images
+CODE430: 0.77, correctly classifying 921 out of 1190 images
+CODE1994: 0.89, correctly classifying 1054 out of 1190 images
+CODE1393: 0.87, correctly classifying 1036 out of 1190 images
+Epoch 174
+CODE3290: 0.91, correctly classifying 1087 out of 1190 images
+CODE1538: 0.48, correctly classifying 572 out of 1190 images
+CODE268: 0.70, correctly classifying 829 out of 1190 images
+CODE92: 0.58, correctly classifying 687 out of 1190 images
+CODE313: 0.67, correctly classifying 699 out of 1050 images
+CODE430: 0.77, correctly classifying 921 out of 1190 images
+CODE1994: 0.89, correctly classifying 1054 out of 1190 images
+CODE1393: 0.87, correctly classifying 1036 out of 1190 images
+Epoch 175
+CODE3290: 0.91, correctly classifying 1087 out of 1190 images
+CODE1538: 0.48, correctly classifying 572 out of 1190 images
+CODE268: 0.70, correctly classifying 829 out of 1190 images
+CODE92: 0.58, correctly classifying 687 out of 1190 images
+CODE313: 0.67, correctly classifying 699 out of 1050 images
+CODE430: 0.77, correctly classifying 921 out of 1190 images
+CODE1994: 0.89, correctly classifying 1054 out of 1190 images
+CODE1393: 0.87, correctly classifying 1036 out of 1190 images
+Epoch 176
+CODE3290: 0.91, correctly classifying 1118 out of 1224 images
+CODE1538: 0.48, correctly classifying 588 out of 1224 images
+CODE268: 0.70, correctly classifying 853 out of 1224 images
+CODE92: 0.58, correctly classifying 707 out of 1224 images
+CODE313: 0.67, correctly classifying 719 out of 1080 images
+CODE430: 0.77, correctly classifying 948 out of 1224 images
+CODE1994: 0.89, correctly classifying 1086 out of 1224 images
+CODE1393: 0.87, correctly classifying 1066 out of 1224 images
+Epoch 177
+CODE3290: 0.91, correctly classifying 1118 out of 1224 images
+CODE1538: 0.48, correctly classifying 588 out of 1224 images
+CODE268: 0.70, correctly classifying 853 out of 1224 images
+CODE92: 0.58, correctly classifying 707 out of 1224 images
+CODE313: 0.67, correctly classifying 719 out of 1080 images
+CODE430: 0.77, correctly classifying 948 out of 1224 images
+CODE1994: 0.89, correctly classifying 1086 out of 1224 images
+CODE1393: 0.87, correctly classifying 1066 out of 1224 images
+Epoch 178
+CODE3290: 0.91, correctly classifying 1118 out of 1224 images
+CODE1538: 0.48, correctly classifying 588 out of 1224 images
+CODE268: 0.70, correctly classifying 853 out of 1224 images
+CODE92: 0.58, correctly classifying 707 out of 1224 images
+CODE313: 0.67, correctly classifying 719 out of 1080 images
+CODE430: 0.77, correctly classifying 948 out of 1224 images
+CODE1994: 0.89, correctly classifying 1086 out of 1224 images
+CODE1393: 0.87, correctly classifying 1066 out of 1224 images
+Epoch 179
+CODE3290: 0.91, correctly classifying 1118 out of 1224 images
+CODE1538: 0.48, correctly classifying 588 out of 1224 images
+CODE268: 0.70, correctly classifying 853 out of 1224 images
+CODE92: 0.58, correctly classifying 707 out of 1224 images
+CODE313: 0.67, correctly classifying 719 out of 1080 images
+CODE430: 0.77, correctly classifying 948 out of 1224 images
+CODE1994: 0.89, correctly classifying 1086 out of 1224 images
+CODE1393: 0.87, correctly classifying 1066 out of 1224 images
+Epoch 180
+CODE3290: 0.91, correctly classifying 1118 out of 1224 images
+CODE1538: 0.48, correctly classifying 588 out of 1224 images
+CODE268: 0.70, correctly classifying 853 out of 1224 images
+CODE92: 0.58, correctly classifying 707 out of 1224 images
+CODE313: 0.67, correctly classifying 719 out of 1080 images
+CODE430: 0.77, correctly classifying 948 out of 1224 images
+CODE1994: 0.89, correctly classifying 1086 out of 1224 images
+CODE1393: 0.87, correctly classifying 1066 out of 1224 images
+Epoch 181
+CODE3290: 0.91, correctly classifying 1149 out of 1258 images
+CODE1538: 0.48, correctly classifying 604 out of 1258 images
+CODE268: 0.70, correctly classifying 877 out of 1258 images
+CODE92: 0.58, correctly classifying 727 out of 1258 images
+CODE313: 0.67, correctly classifying 739 out of 1110 images
+CODE430: 0.78, correctly classifying 975 out of 1258 images
+CODE1994: 0.89, correctly classifying 1118 out of 1258 images
+CODE1393: 0.87, correctly classifying 1096 out of 1258 images
+Epoch 182
+CODE3290: 0.91, correctly classifying 1149 out of 1258 images
+CODE1538: 0.48, correctly classifying 604 out of 1258 images
+CODE268: 0.70, correctly classifying 877 out of 1258 images
+CODE92: 0.58, correctly classifying 727 out of 1258 images
+CODE313: 0.67, correctly classifying 739 out of 1110 images
+CODE430: 0.78, correctly classifying 975 out of 1258 images
+CODE1994: 0.89, correctly classifying 1118 out of 1258 images
+CODE1393: 0.87, correctly classifying 1096 out of 1258 images
+Epoch 183
+CODE3290: 0.91, correctly classifying 1149 out of 1258 images
+CODE1538: 0.48, correctly classifying 604 out of 1258 images
+CODE268: 0.70, correctly classifying 877 out of 1258 images
+CODE92: 0.58, correctly classifying 727 out of 1258 images
+CODE313: 0.67, correctly classifying 739 out of 1110 images
+CODE430: 0.78, correctly classifying 975 out of 1258 images
+CODE1994: 0.89, correctly classifying 1118 out of 1258 images
+CODE1393: 0.87, correctly classifying 1096 out of 1258 images
+Epoch 184
+CODE3290: 0.91, correctly classifying 1149 out of 1258 images
+CODE1538: 0.48, correctly classifying 604 out of 1258 images
+CODE268: 0.70, correctly classifying 877 out of 1258 images
+CODE92: 0.58, correctly classifying 727 out of 1258 images
+CODE313: 0.67, correctly classifying 739 out of 1110 images
+CODE430: 0.78, correctly classifying 975 out of 1258 images
+CODE1994: 0.89, correctly classifying 1118 out of 1258 images
+CODE1393: 0.87, correctly classifying 1096 out of 1258 images
+Epoch 185
+CODE3290: 0.91, correctly classifying 1149 out of 1258 images
+CODE1538: 0.48, correctly classifying 604 out of 1258 images
+CODE268: 0.70, correctly classifying 877 out of 1258 images
+CODE92: 0.58, correctly classifying 727 out of 1258 images
+CODE313: 0.67, correctly classifying 739 out of 1110 images
+CODE430: 0.78, correctly classifying 975 out of 1258 images
+CODE1994: 0.89, correctly classifying 1118 out of 1258 images
+CODE1393: 0.87, correctly classifying 1096 out of 1258 images
+Epoch 186
+CODE3290: 0.91, correctly classifying 1180 out of 1292 images
+CODE1538: 0.48, correctly classifying 620 out of 1292 images
+CODE268: 0.70, correctly classifying 901 out of 1292 images
+CODE92: 0.58, correctly classifying 747 out of 1292 images
+CODE313: 0.67, correctly classifying 759 out of 1140 images
+CODE430: 0.78, correctly classifying 1002 out of 1292 images
+CODE1994: 0.89, correctly classifying 1150 out of 1292 images
+CODE1393: 0.87, correctly classifying 1126 out of 1292 images
+Epoch 187
+CODE3290: 0.91, correctly classifying 1180 out of 1292 images
+CODE1538: 0.48, correctly classifying 620 out of 1292 images
+CODE268: 0.70, correctly classifying 901 out of 1292 images
+CODE92: 0.58, correctly classifying 747 out of 1292 images
+CODE313: 0.67, correctly classifying 759 out of 1140 images
+CODE430: 0.78, correctly classifying 1002 out of 1292 images
+CODE1994: 0.89, correctly classifying 1150 out of 1292 images
+CODE1393: 0.87, correctly classifying 1126 out of 1292 images
+Epoch 188
+CODE3290: 0.91, correctly classifying 1180 out of 1292 images
+CODE1538: 0.48, correctly classifying 620 out of 1292 images
+CODE268: 0.70, correctly classifying 901 out of 1292 images
+CODE92: 0.58, correctly classifying 747 out of 1292 images
+CODE313: 0.67, correctly classifying 759 out of 1140 images
+CODE430: 0.78, correctly classifying 1002 out of 1292 images
+CODE1994: 0.89, correctly classifying 1150 out of 1292 images
+CODE1393: 0.87, correctly classifying 1126 out of 1292 images
+Epoch 189
+CODE3290: 0.91, correctly classifying 1180 out of 1292 images
+CODE1538: 0.48, correctly classifying 620 out of 1292 images
+CODE268: 0.70, correctly classifying 901 out of 1292 images
+CODE92: 0.58, correctly classifying 747 out of 1292 images
+CODE313: 0.67, correctly classifying 759 out of 1140 images
+CODE430: 0.78, correctly classifying 1002 out of 1292 images
+CODE1994: 0.89, correctly classifying 1150 out of 1292 images
+CODE1393: 0.87, correctly classifying 1126 out of 1292 images
+Epoch 190
+CODE3290: 0.91, correctly classifying 1180 out of 1292 images
+CODE1538: 0.48, correctly classifying 620 out of 1292 images
+CODE268: 0.70, correctly classifying 901 out of 1292 images
+CODE92: 0.58, correctly classifying 747 out of 1292 images
+CODE313: 0.67, correctly classifying 759 out of 1140 images
+CODE430: 0.78, correctly classifying 1002 out of 1292 images
+CODE1994: 0.89, correctly classifying 1150 out of 1292 images
+CODE1393: 0.87, correctly classifying 1126 out of 1292 images
+Epoch 191
+CODE3290: 0.91, correctly classifying 1211 out of 1326 images
+CODE1538: 0.48, correctly classifying 636 out of 1326 images
+CODE268: 0.70, correctly classifying 925 out of 1326 images
+CODE92: 0.58, correctly classifying 767 out of 1326 images
+CODE313: 0.67, correctly classifying 779 out of 1170 images
+CODE430: 0.78, correctly classifying 1029 out of 1326 images
+CODE1994: 0.89, correctly classifying 1182 out of 1326 images
+CODE1393: 0.87, correctly classifying 1156 out of 1326 images
+Epoch 192
+CODE3290: 0.91, correctly classifying 1211 out of 1326 images
+CODE1538: 0.48, correctly classifying 636 out of 1326 images
+CODE268: 0.70, correctly classifying 925 out of 1326 images
+CODE92: 0.58, correctly classifying 767 out of 1326 images
+CODE313: 0.67, correctly classifying 779 out of 1170 images
+CODE430: 0.78, correctly classifying 1029 out of 1326 images
+CODE1994: 0.89, correctly classifying 1182 out of 1326 images
+CODE1393: 0.87, correctly classifying 1156 out of 1326 images
+Epoch 193
+CODE3290: 0.91, correctly classifying 1211 out of 1326 images
+CODE1538: 0.48, correctly classifying 636 out of 1326 images
+CODE268: 0.70, correctly classifying 925 out of 1326 images
+CODE92: 0.58, correctly classifying 767 out of 1326 images
+CODE313: 0.67, correctly classifying 779 out of 1170 images
+CODE430: 0.78, correctly classifying 1029 out of 1326 images
+CODE1994: 0.89, correctly classifying 1182 out of 1326 images
+CODE1393: 0.87, correctly classifying 1156 out of 1326 images
+Epoch 194
+CODE3290: 0.91, correctly classifying 1211 out of 1326 images
+CODE1538: 0.48, correctly classifying 636 out of 1326 images
+CODE268: 0.70, correctly classifying 925 out of 1326 images
+CODE92: 0.58, correctly classifying 767 out of 1326 images
+CODE313: 0.67, correctly classifying 779 out of 1170 images
+CODE430: 0.78, correctly classifying 1029 out of 1326 images
+CODE1994: 0.89, correctly classifying 1182 out of 1326 images
+CODE1393: 0.87, correctly classifying 1156 out of 1326 images
+Epoch 195
+CODE3290: 0.91, correctly classifying 1211 out of 1326 images
+CODE1538: 0.48, correctly classifying 636 out of 1326 images
+CODE268: 0.70, correctly classifying 925 out of 1326 images
+CODE92: 0.58, correctly classifying 767 out of 1326 images
+CODE313: 0.67, correctly classifying 779 out of 1170 images
+CODE430: 0.78, correctly classifying 1029 out of 1326 images
+CODE1994: 0.89, correctly classifying 1182 out of 1326 images
+CODE1393: 0.87, correctly classifying 1156 out of 1326 images
+Epoch 196
+CODE3290: 0.91, correctly classifying 1242 out of 1360 images
+CODE1538: 0.48, correctly classifying 652 out of 1360 images
+CODE268: 0.70, correctly classifying 949 out of 1360 images
+CODE92: 0.58, correctly classifying 787 out of 1360 images
+CODE313: 0.67, correctly classifying 799 out of 1200 images
+CODE430: 0.78, correctly classifying 1056 out of 1360 images
+CODE1994: 0.89, correctly classifying 1214 out of 1360 images
+CODE1393: 0.87, correctly classifying 1186 out of 1360 images
+Epoch 197
+CODE3290: 0.91, correctly classifying 1242 out of 1360 images
+CODE1538: 0.48, correctly classifying 652 out of 1360 images
+CODE268: 0.70, correctly classifying 949 out of 1360 images
+CODE92: 0.58, correctly classifying 787 out of 1360 images
+CODE313: 0.67, correctly classifying 799 out of 1200 images
+CODE430: 0.78, correctly classifying 1056 out of 1360 images
+CODE1994: 0.89, correctly classifying 1214 out of 1360 images
+CODE1393: 0.87, correctly classifying 1186 out of 1360 images
+Epoch 198
+CODE3290: 0.91, correctly classifying 1242 out of 1360 images
+CODE1538: 0.48, correctly classifying 652 out of 1360 images
+CODE268: 0.70, correctly classifying 949 out of 1360 images
+CODE92: 0.58, correctly classifying 787 out of 1360 images
+CODE313: 0.67, correctly classifying 799 out of 1200 images
+CODE430: 0.78, correctly classifying 1056 out of 1360 images
+CODE1994: 0.89, correctly classifying 1214 out of 1360 images
+CODE1393: 0.87, correctly classifying 1186 out of 1360 images
+Epoch 199
+CODE3290: 0.91, correctly classifying 1242 out of 1360 images
+CODE1538: 0.48, correctly classifying 652 out of 1360 images
+CODE268: 0.70, correctly classifying 949 out of 1360 images
+CODE92: 0.58, correctly classifying 787 out of 1360 images
+CODE313: 0.67, correctly classifying 799 out of 1200 images
+CODE430: 0.78, correctly classifying 1056 out of 1360 images
+CODE1994: 0.89, correctly classifying 1214 out of 1360 images
+CODE1393: 0.87, correctly classifying 1186 out of 1360 images
+Epoch 200
+CODE3290: 0.91, correctly classifying 1242 out of 1360 images
+CODE1538: 0.48, correctly classifying 652 out of 1360 images
+CODE268: 0.70, correctly classifying 949 out of 1360 images
+CODE92: 0.58, correctly classifying 787 out of 1360 images
+CODE313: 0.67, correctly classifying 799 out of 1200 images
+CODE430: 0.78, correctly classifying 1056 out of 1360 images
+CODE1994: 0.89, correctly classifying 1214 out of 1360 images
+CODE1393: 0.87, correctly classifying 1186 out of 1360 images
+Epoch 201
+CODE3290: 0.91, correctly classifying 1273 out of 1394 images
+CODE1538: 0.48, correctly classifying 668 out of 1394 images
+CODE268: 0.70, correctly classifying 973 out of 1394 images
+CODE92: 0.58, correctly classifying 807 out of 1394 images
+CODE313: 0.67, correctly classifying 819 out of 1230 images
+CODE430: 0.78, correctly classifying 1083 out of 1394 images
+CODE1994: 0.89, correctly classifying 1246 out of 1394 images
+CODE1393: 0.87, correctly classifying 1216 out of 1394 images
+Epoch 202
+CODE3290: 0.91, correctly classifying 1273 out of 1394 images
+CODE1538: 0.48, correctly classifying 668 out of 1394 images
+CODE268: 0.70, correctly classifying 973 out of 1394 images
+CODE92: 0.58, correctly classifying 807 out of 1394 images
+CODE313: 0.67, correctly classifying 819 out of 1230 images
+CODE430: 0.78, correctly classifying 1083 out of 1394 images
+CODE1994: 0.89, correctly classifying 1246 out of 1394 images
+CODE1393: 0.87, correctly classifying 1216 out of 1394 images
+Epoch 203
+CODE3290: 0.91, correctly classifying 1273 out of 1394 images
+CODE1538: 0.48, correctly classifying 668 out of 1394 images
+CODE268: 0.70, correctly classifying 973 out of 1394 images
+CODE92: 0.58, correctly classifying 807 out of 1394 images
+CODE313: 0.67, correctly classifying 819 out of 1230 images
+CODE430: 0.78, correctly classifying 1083 out of 1394 images
+CODE1994: 0.89, correctly classifying 1246 out of 1394 images
+CODE1393: 0.87, correctly classifying 1216 out of 1394 images
+Epoch 204
+CODE3290: 0.91, correctly classifying 1273 out of 1394 images
+CODE1538: 0.48, correctly classifying 668 out of 1394 images
+CODE268: 0.70, correctly classifying 973 out of 1394 images
+CODE92: 0.58, correctly classifying 807 out of 1394 images
+CODE313: 0.67, correctly classifying 819 out of 1230 images
+CODE430: 0.78, correctly classifying 1083 out of 1394 images
+CODE1994: 0.89, correctly classifying 1246 out of 1394 images
+CODE1393: 0.87, correctly classifying 1216 out of 1394 images
+Epoch 205
+CODE3290: 0.91, correctly classifying 1273 out of 1394 images
+CODE1538: 0.48, correctly classifying 668 out of 1394 images
+CODE268: 0.70, correctly classifying 973 out of 1394 images
+CODE92: 0.58, correctly classifying 807 out of 1394 images
+CODE313: 0.67, correctly classifying 819 out of 1230 images
+CODE430: 0.78, correctly classifying 1083 out of 1394 images
+CODE1994: 0.89, correctly classifying 1246 out of 1394 images
+CODE1393: 0.87, correctly classifying 1216 out of 1394 images
+Epoch 206
+CODE3290: 0.91, correctly classifying 1304 out of 1428 images
+CODE1538: 0.48, correctly classifying 684 out of 1428 images
+CODE268: 0.70, correctly classifying 997 out of 1428 images
+CODE92: 0.58, correctly classifying 827 out of 1428 images
+CODE313: 0.67, correctly classifying 839 out of 1260 images
+CODE430: 0.78, correctly classifying 1110 out of 1428 images
+CODE1994: 0.89, correctly classifying 1278 out of 1428 images
+CODE1393: 0.87, correctly classifying 1246 out of 1428 images
+Epoch 207
+CODE3290: 0.91, correctly classifying 1304 out of 1428 images
+CODE1538: 0.48, correctly classifying 684 out of 1428 images
+CODE268: 0.70, correctly classifying 997 out of 1428 images
+CODE92: 0.58, correctly classifying 827 out of 1428 images
+CODE313: 0.67, correctly classifying 839 out of 1260 images
+CODE430: 0.78, correctly classifying 1110 out of 1428 images
+CODE1994: 0.89, correctly classifying 1278 out of 1428 images
+CODE1393: 0.87, correctly classifying 1246 out of 1428 images
+Epoch 208
+CODE3290: 0.91, correctly classifying 1304 out of 1428 images
+CODE1538: 0.48, correctly classifying 684 out of 1428 images
+CODE268: 0.70, correctly classifying 997 out of 1428 images
+CODE92: 0.58, correctly classifying 827 out of 1428 images
+CODE313: 0.67, correctly classifying 839 out of 1260 images
+CODE430: 0.78, correctly classifying 1110 out of 1428 images
+CODE1994: 0.89, correctly classifying 1278 out of 1428 images
+CODE1393: 0.87, correctly classifying 1246 out of 1428 images
+Epoch 209
+CODE3290: 0.91, correctly classifying 1304 out of 1428 images
+CODE1538: 0.48, correctly classifying 684 out of 1428 images
+CODE268: 0.70, correctly classifying 997 out of 1428 images
+CODE92: 0.58, correctly classifying 827 out of 1428 images
+CODE313: 0.67, correctly classifying 839 out of 1260 images
+CODE430: 0.78, correctly classifying 1110 out of 1428 images
+CODE1994: 0.89, correctly classifying 1278 out of 1428 images
+CODE1393: 0.87, correctly classifying 1246 out of 1428 images
+Epoch 210
+CODE3290: 0.91, correctly classifying 1304 out of 1428 images
+CODE1538: 0.48, correctly classifying 684 out of 1428 images
+CODE268: 0.70, correctly classifying 997 out of 1428 images
+CODE92: 0.58, correctly classifying 827 out of 1428 images
+CODE313: 0.67, correctly classifying 839 out of 1260 images
+CODE430: 0.78, correctly classifying 1110 out of 1428 images
+CODE1994: 0.89, correctly classifying 1278 out of 1428 images
+CODE1393: 0.87, correctly classifying 1246 out of 1428 images
+Epoch 211
+CODE3290: 0.91, correctly classifying 1335 out of 1462 images
+CODE1538: 0.48, correctly classifying 700 out of 1462 images
+CODE268: 0.70, correctly classifying 1021 out of 1462 images
+CODE92: 0.58, correctly classifying 847 out of 1462 images
+CODE313: 0.67, correctly classifying 859 out of 1290 images
+CODE430: 0.78, correctly classifying 1137 out of 1462 images
+CODE1994: 0.90, correctly classifying 1310 out of 1462 images
+CODE1393: 0.87, correctly classifying 1276 out of 1462 images
+Epoch 212
+CODE3290: 0.91, correctly classifying 1335 out of 1462 images
+CODE1538: 0.48, correctly classifying 700 out of 1462 images
+CODE268: 0.70, correctly classifying 1021 out of 1462 images
+CODE92: 0.58, correctly classifying 847 out of 1462 images
+CODE313: 0.67, correctly classifying 859 out of 1290 images
+CODE430: 0.78, correctly classifying 1137 out of 1462 images
+CODE1994: 0.90, correctly classifying 1310 out of 1462 images
+CODE1393: 0.87, correctly classifying 1276 out of 1462 images
+Epoch 213
+CODE3290: 0.91, correctly classifying 1335 out of 1462 images
+CODE1538: 0.48, correctly classifying 700 out of 1462 images
+CODE268: 0.70, correctly classifying 1021 out of 1462 images
+CODE92: 0.58, correctly classifying 847 out of 1462 images
+CODE313: 0.67, correctly classifying 859 out of 1290 images
+CODE430: 0.78, correctly classifying 1137 out of 1462 images
+CODE1994: 0.90, correctly classifying 1310 out of 1462 images
+CODE1393: 0.87, correctly classifying 1276 out of 1462 images
+Epoch 214
+CODE3290: 0.91, correctly classifying 1335 out of 1462 images
+CODE1538: 0.48, correctly classifying 700 out of 1462 images
+CODE268: 0.70, correctly classifying 1021 out of 1462 images
+CODE92: 0.58, correctly classifying 847 out of 1462 images
+CODE313: 0.67, correctly classifying 859 out of 1290 images
+CODE430: 0.78, correctly classifying 1137 out of 1462 images
+CODE1994: 0.90, correctly classifying 1310 out of 1462 images
+CODE1393: 0.87, correctly classifying 1276 out of 1462 images
+Epoch 215
+CODE3290: 0.91, correctly classifying 1335 out of 1462 images
+CODE1538: 0.48, correctly classifying 700 out of 1462 images
+CODE268: 0.70, correctly classifying 1021 out of 1462 images
+CODE92: 0.58, correctly classifying 847 out of 1462 images
+CODE313: 0.67, correctly classifying 859 out of 1290 images
+CODE430: 0.78, correctly classifying 1137 out of 1462 images
+CODE1994: 0.90, correctly classifying 1310 out of 1462 images
+CODE1393: 0.87, correctly classifying 1276 out of 1462 images
+Epoch 216
+CODE3290: 0.91, correctly classifying 1366 out of 1496 images
+CODE1538: 0.48, correctly classifying 716 out of 1496 images
+CODE268: 0.70, correctly classifying 1045 out of 1496 images
+CODE92: 0.58, correctly classifying 867 out of 1496 images
+CODE313: 0.67, correctly classifying 879 out of 1320 images
+CODE430: 0.78, correctly classifying 1164 out of 1496 images
+CODE1994: 0.90, correctly classifying 1342 out of 1496 images
+CODE1393: 0.87, correctly classifying 1306 out of 1496 images
+Epoch 217
+CODE3290: 0.91, correctly classifying 1366 out of 1496 images
+CODE1538: 0.48, correctly classifying 716 out of 1496 images
+CODE268: 0.70, correctly classifying 1045 out of 1496 images
+CODE92: 0.58, correctly classifying 867 out of 1496 images
+CODE313: 0.67, correctly classifying 879 out of 1320 images
+CODE430: 0.78, correctly classifying 1164 out of 1496 images
+CODE1994: 0.90, correctly classifying 1342 out of 1496 images
+CODE1393: 0.87, correctly classifying 1306 out of 1496 images
+Epoch 218
+CODE3290: 0.91, correctly classifying 1366 out of 1496 images
+CODE1538: 0.48, correctly classifying 716 out of 1496 images
+CODE268: 0.70, correctly classifying 1045 out of 1496 images
+CODE92: 0.58, correctly classifying 867 out of 1496 images
+CODE313: 0.67, correctly classifying 879 out of 1320 images
+CODE430: 0.78, correctly classifying 1164 out of 1496 images
+CODE1994: 0.90, correctly classifying 1342 out of 1496 images
+CODE1393: 0.87, correctly classifying 1306 out of 1496 images
+Epoch 219
+CODE3290: 0.91, correctly classifying 1366 out of 1496 images
+CODE1538: 0.48, correctly classifying 716 out of 1496 images
+CODE268: 0.70, correctly classifying 1045 out of 1496 images
+CODE92: 0.58, correctly classifying 867 out of 1496 images
+CODE313: 0.67, correctly classifying 879 out of 1320 images
+CODE430: 0.78, correctly classifying 1164 out of 1496 images
+CODE1994: 0.90, correctly classifying 1342 out of 1496 images
+CODE1393: 0.87, correctly classifying 1306 out of 1496 images
+Epoch 220
+CODE3290: 0.91, correctly classifying 1366 out of 1496 images
+CODE1538: 0.48, correctly classifying 716 out of 1496 images
+CODE268: 0.70, correctly classifying 1045 out of 1496 images
+CODE92: 0.58, correctly classifying 867 out of 1496 images
+CODE313: 0.67, correctly classifying 879 out of 1320 images
+CODE430: 0.78, correctly classifying 1164 out of 1496 images
+CODE1994: 0.90, correctly classifying 1342 out of 1496 images
+CODE1393: 0.87, correctly classifying 1306 out of 1496 images
+Epoch 221
+CODE3290: 0.91, correctly classifying 1397 out of 1530 images
+CODE1538: 0.48, correctly classifying 732 out of 1530 images
+CODE268: 0.70, correctly classifying 1069 out of 1530 images
+CODE92: 0.58, correctly classifying 887 out of 1530 images
+CODE313: 0.67, correctly classifying 899 out of 1350 images
+CODE430: 0.78, correctly classifying 1191 out of 1530 images
+CODE1994: 0.90, correctly classifying 1374 out of 1530 images
+CODE1393: 0.87, correctly classifying 1336 out of 1530 images
+Epoch 222
+CODE3290: 0.91, correctly classifying 1397 out of 1530 images
+CODE1538: 0.48, correctly classifying 732 out of 1530 images
+CODE268: 0.70, correctly classifying 1069 out of 1530 images
+CODE92: 0.58, correctly classifying 887 out of 1530 images
+CODE313: 0.67, correctly classifying 899 out of 1350 images
+CODE430: 0.78, correctly classifying 1191 out of 1530 images
+CODE1994: 0.90, correctly classifying 1374 out of 1530 images
+CODE1393: 0.87, correctly classifying 1336 out of 1530 images
+Epoch 223
+CODE3290: 0.91, correctly classifying 1397 out of 1530 images
+CODE1538: 0.48, correctly classifying 732 out of 1530 images
+CODE268: 0.70, correctly classifying 1069 out of 1530 images
+CODE92: 0.58, correctly classifying 887 out of 1530 images
+CODE313: 0.67, correctly classifying 899 out of 1350 images
+CODE430: 0.78, correctly classifying 1191 out of 1530 images
+CODE1994: 0.90, correctly classifying 1374 out of 1530 images
+CODE1393: 0.87, correctly classifying 1336 out of 1530 images
+Epoch 224
+CODE3290: 0.91, correctly classifying 1397 out of 1530 images
+CODE1538: 0.48, correctly classifying 732 out of 1530 images
+CODE268: 0.70, correctly classifying 1069 out of 1530 images
+CODE92: 0.58, correctly classifying 887 out of 1530 images
+CODE313: 0.67, correctly classifying 899 out of 1350 images
+CODE430: 0.78, correctly classifying 1191 out of 1530 images
+CODE1994: 0.90, correctly classifying 1374 out of 1530 images
+CODE1393: 0.87, correctly classifying 1336 out of 1530 images
+Epoch 225
+CODE3290: 0.91, correctly classifying 1397 out of 1530 images
+CODE1538: 0.48, correctly classifying 732 out of 1530 images
+CODE268: 0.70, correctly classifying 1069 out of 1530 images
+CODE92: 0.58, correctly classifying 887 out of 1530 images
+CODE313: 0.67, correctly classifying 899 out of 1350 images
+CODE430: 0.78, correctly classifying 1191 out of 1530 images
+CODE1994: 0.90, correctly classifying 1374 out of 1530 images
+CODE1393: 0.87, correctly classifying 1336 out of 1530 images
+Epoch 226
+CODE3290: 0.91, correctly classifying 1428 out of 1564 images
+CODE1538: 0.48, correctly classifying 748 out of 1564 images
+CODE268: 0.70, correctly classifying 1093 out of 1564 images
+CODE92: 0.58, correctly classifying 907 out of 1564 images
+CODE313: 0.67, correctly classifying 919 out of 1380 images
+CODE430: 0.78, correctly classifying 1218 out of 1564 images
+CODE1994: 0.90, correctly classifying 1406 out of 1564 images
+CODE1393: 0.87, correctly classifying 1366 out of 1564 images
+Epoch 227
+CODE3290: 0.91, correctly classifying 1428 out of 1564 images
+CODE1538: 0.48, correctly classifying 748 out of 1564 images
+CODE268: 0.70, correctly classifying 1093 out of 1564 images
+CODE92: 0.58, correctly classifying 907 out of 1564 images
+CODE313: 0.67, correctly classifying 919 out of 1380 images
+CODE430: 0.78, correctly classifying 1218 out of 1564 images
+CODE1994: 0.90, correctly classifying 1406 out of 1564 images
+CODE1393: 0.87, correctly classifying 1366 out of 1564 images
+Epoch 228
+CODE3290: 0.91, correctly classifying 1428 out of 1564 images
+CODE1538: 0.48, correctly classifying 748 out of 1564 images
+CODE268: 0.70, correctly classifying 1093 out of 1564 images
+CODE92: 0.58, correctly classifying 907 out of 1564 images
+CODE313: 0.67, correctly classifying 919 out of 1380 images
+CODE430: 0.78, correctly classifying 1218 out of 1564 images
+CODE1994: 0.90, correctly classifying 1406 out of 1564 images
+CODE1393: 0.87, correctly classifying 1366 out of 1564 images
+Epoch 229
+CODE3290: 0.91, correctly classifying 1428 out of 1564 images
+CODE1538: 0.48, correctly classifying 748 out of 1564 images
+CODE268: 0.70, correctly classifying 1093 out of 1564 images
+CODE92: 0.58, correctly classifying 907 out of 1564 images
+CODE313: 0.67, correctly classifying 919 out of 1380 images
+CODE430: 0.78, correctly classifying 1218 out of 1564 images
+CODE1994: 0.90, correctly classifying 1406 out of 1564 images
+CODE1393: 0.87, correctly classifying 1366 out of 1564 images
+Epoch 230
+CODE3290: 0.91, correctly classifying 1428 out of 1564 images
+CODE1538: 0.48, correctly classifying 748 out of 1564 images
+CODE268: 0.70, correctly classifying 1093 out of 1564 images
+CODE92: 0.58, correctly classifying 907 out of 1564 images
+CODE313: 0.67, correctly classifying 919 out of 1380 images
+CODE430: 0.78, correctly classifying 1218 out of 1564 images
+CODE1994: 0.90, correctly classifying 1406 out of 1564 images
+CODE1393: 0.87, correctly classifying 1366 out of 1564 images
+Epoch 231
+CODE3290: 0.91, correctly classifying 1459 out of 1598 images
+CODE1538: 0.48, correctly classifying 764 out of 1598 images
+CODE268: 0.70, correctly classifying 1117 out of 1598 images
+CODE92: 0.58, correctly classifying 927 out of 1598 images
+CODE313: 0.67, correctly classifying 939 out of 1410 images
+CODE430: 0.78, correctly classifying 1245 out of 1598 images
+CODE1994: 0.90, correctly classifying 1438 out of 1598 images
+CODE1393: 0.87, correctly classifying 1396 out of 1598 images
+Epoch 232
+CODE3290: 0.91, correctly classifying 1459 out of 1598 images
+CODE1538: 0.48, correctly classifying 764 out of 1598 images
+CODE268: 0.70, correctly classifying 1117 out of 1598 images
+CODE92: 0.58, correctly classifying 927 out of 1598 images
+CODE313: 0.67, correctly classifying 939 out of 1410 images
+CODE430: 0.78, correctly classifying 1245 out of 1598 images
+CODE1994: 0.90, correctly classifying 1438 out of 1598 images
+CODE1393: 0.87, correctly classifying 1396 out of 1598 images
+Epoch 233
+CODE3290: 0.91, correctly classifying 1459 out of 1598 images
+CODE1538: 0.48, correctly classifying 764 out of 1598 images
+CODE268: 0.70, correctly classifying 1117 out of 1598 images
+CODE92: 0.58, correctly classifying 927 out of 1598 images
+CODE313: 0.67, correctly classifying 939 out of 1410 images
+CODE430: 0.78, correctly classifying 1245 out of 1598 images
+CODE1994: 0.90, correctly classifying 1438 out of 1598 images
+CODE1393: 0.87, correctly classifying 1396 out of 1598 images
+Epoch 234
+CODE3290: 0.91, correctly classifying 1459 out of 1598 images
+CODE1538: 0.48, correctly classifying 764 out of 1598 images
+CODE268: 0.70, correctly classifying 1117 out of 1598 images
+CODE92: 0.58, correctly classifying 927 out of 1598 images
+CODE313: 0.67, correctly classifying 939 out of 1410 images
+CODE430: 0.78, correctly classifying 1245 out of 1598 images
+CODE1994: 0.90, correctly classifying 1438 out of 1598 images
+CODE1393: 0.87, correctly classifying 1396 out of 1598 images
+Epoch 235
+CODE3290: 0.91, correctly classifying 1459 out of 1598 images
+CODE1538: 0.48, correctly classifying 764 out of 1598 images
+CODE268: 0.70, correctly classifying 1117 out of 1598 images
+CODE92: 0.58, correctly classifying 927 out of 1598 images
+CODE313: 0.67, correctly classifying 939 out of 1410 images
+CODE430: 0.78, correctly classifying 1245 out of 1598 images
+CODE1994: 0.90, correctly classifying 1438 out of 1598 images
+CODE1393: 0.87, correctly classifying 1396 out of 1598 images
+Epoch 236
+CODE3290: 0.91, correctly classifying 1490 out of 1632 images
+CODE1538: 0.48, correctly classifying 780 out of 1632 images
+CODE268: 0.70, correctly classifying 1141 out of 1632 images
+CODE92: 0.58, correctly classifying 947 out of 1632 images
+CODE313: 0.67, correctly classifying 959 out of 1440 images
+CODE430: 0.78, correctly classifying 1272 out of 1632 images
+CODE1994: 0.90, correctly classifying 1470 out of 1632 images
+CODE1393: 0.87, correctly classifying 1426 out of 1632 images
+Epoch 237
+CODE3290: 0.91, correctly classifying 1490 out of 1632 images
+CODE1538: 0.48, correctly classifying 780 out of 1632 images
+CODE268: 0.70, correctly classifying 1141 out of 1632 images
+CODE92: 0.58, correctly classifying 947 out of 1632 images
+CODE313: 0.67, correctly classifying 959 out of 1440 images
+CODE430: 0.78, correctly classifying 1272 out of 1632 images
+CODE1994: 0.90, correctly classifying 1470 out of 1632 images
+CODE1393: 0.87, correctly classifying 1426 out of 1632 images
+Epoch 238
+CODE3290: 0.91, correctly classifying 1490 out of 1632 images
+CODE1538: 0.48, correctly classifying 780 out of 1632 images
+CODE268: 0.70, correctly classifying 1141 out of 1632 images
+CODE92: 0.58, correctly classifying 947 out of 1632 images
+CODE313: 0.67, correctly classifying 959 out of 1440 images
+CODE430: 0.78, correctly classifying 1272 out of 1632 images
+CODE1994: 0.90, correctly classifying 1470 out of 1632 images
+CODE1393: 0.87, correctly classifying 1426 out of 1632 images
+Epoch 239
+CODE3290: 0.91, correctly classifying 1490 out of 1632 images
+CODE1538: 0.48, correctly classifying 780 out of 1632 images
+CODE268: 0.70, correctly classifying 1141 out of 1632 images
+CODE92: 0.58, correctly classifying 947 out of 1632 images
+CODE313: 0.67, correctly classifying 959 out of 1440 images
+CODE430: 0.78, correctly classifying 1272 out of 1632 images
+CODE1994: 0.90, correctly classifying 1470 out of 1632 images
+CODE1393: 0.87, correctly classifying 1426 out of 1632 images
+Epoch 240
+CODE3290: 0.91, correctly classifying 1490 out of 1632 images
+CODE1538: 0.48, correctly classifying 780 out of 1632 images
+CODE268: 0.70, correctly classifying 1141 out of 1632 images
+CODE92: 0.58, correctly classifying 947 out of 1632 images
+CODE313: 0.67, correctly classifying 959 out of 1440 images
+CODE430: 0.78, correctly classifying 1272 out of 1632 images
+CODE1994: 0.90, correctly classifying 1470 out of 1632 images
+CODE1393: 0.87, correctly classifying 1426 out of 1632 images
+Epoch 241
+CODE3290: 0.91, correctly classifying 1521 out of 1666 images
+CODE1538: 0.48, correctly classifying 796 out of 1666 images
+CODE268: 0.70, correctly classifying 1165 out of 1666 images
+CODE92: 0.58, correctly classifying 967 out of 1666 images
+CODE313: 0.67, correctly classifying 979 out of 1470 images
+CODE430: 0.78, correctly classifying 1299 out of 1666 images
+CODE1994: 0.90, correctly classifying 1502 out of 1666 images
+CODE1393: 0.87, correctly classifying 1456 out of 1666 images
+Epoch 242
+CODE3290: 0.91, correctly classifying 1521 out of 1666 images
+CODE1538: 0.48, correctly classifying 796 out of 1666 images
+CODE268: 0.70, correctly classifying 1165 out of 1666 images
+CODE92: 0.58, correctly classifying 967 out of 1666 images
+CODE313: 0.67, correctly classifying 979 out of 1470 images
+CODE430: 0.78, correctly classifying 1299 out of 1666 images
+CODE1994: 0.90, correctly classifying 1502 out of 1666 images
+CODE1393: 0.87, correctly classifying 1456 out of 1666 images
+Epoch 243
+CODE3290: 0.91, correctly classifying 1521 out of 1666 images
+CODE1538: 0.48, correctly classifying 796 out of 1666 images
+CODE268: 0.70, correctly classifying 1165 out of 1666 images
+CODE92: 0.58, correctly classifying 967 out of 1666 images
+CODE313: 0.67, correctly classifying 979 out of 1470 images
+CODE430: 0.78, correctly classifying 1299 out of 1666 images
+CODE1994: 0.90, correctly classifying 1502 out of 1666 images
+CODE1393: 0.87, correctly classifying 1456 out of 1666 images
+Epoch 244
+CODE3290: 0.91, correctly classifying 1521 out of 1666 images
+CODE1538: 0.48, correctly classifying 796 out of 1666 images
+CODE268: 0.70, correctly classifying 1165 out of 1666 images
+CODE92: 0.58, correctly classifying 967 out of 1666 images
+CODE313: 0.67, correctly classifying 979 out of 1470 images
+CODE430: 0.78, correctly classifying 1299 out of 1666 images
+CODE1994: 0.90, correctly classifying 1502 out of 1666 images
+CODE1393: 0.87, correctly classifying 1456 out of 1666 images
+Epoch 245
+CODE3290: 0.91, correctly classifying 1521 out of 1666 images
+CODE1538: 0.48, correctly classifying 796 out of 1666 images
+CODE268: 0.70, correctly classifying 1165 out of 1666 images
+CODE92: 0.58, correctly classifying 967 out of 1666 images
+CODE313: 0.67, correctly classifying 979 out of 1470 images
+CODE430: 0.78, correctly classifying 1299 out of 1666 images
+CODE1994: 0.90, correctly classifying 1502 out of 1666 images
+CODE1393: 0.87, correctly classifying 1456 out of 1666 images
+Epoch 246
+CODE3290: 0.91, correctly classifying 1552 out of 1700 images
+CODE1538: 0.48, correctly classifying 812 out of 1700 images
+CODE268: 0.70, correctly classifying 1189 out of 1700 images
+CODE92: 0.58, correctly classifying 987 out of 1700 images
+CODE313: 0.67, correctly classifying 999 out of 1500 images
+CODE430: 0.78, correctly classifying 1326 out of 1700 images
+CODE1994: 0.90, correctly classifying 1534 out of 1700 images
+CODE1393: 0.87, correctly classifying 1486 out of 1700 images
+Epoch 247
+CODE3290: 0.91, correctly classifying 1552 out of 1700 images
+CODE1538: 0.48, correctly classifying 812 out of 1700 images
+CODE268: 0.70, correctly classifying 1189 out of 1700 images
+CODE92: 0.58, correctly classifying 987 out of 1700 images
+CODE313: 0.67, correctly classifying 999 out of 1500 images
+CODE430: 0.78, correctly classifying 1326 out of 1700 images
+CODE1994: 0.90, correctly classifying 1534 out of 1700 images
+CODE1393: 0.87, correctly classifying 1486 out of 1700 images
+Epoch 248
+CODE3290: 0.91, correctly classifying 1552 out of 1700 images
+CODE1538: 0.48, correctly classifying 812 out of 1700 images
+CODE268: 0.70, correctly classifying 1189 out of 1700 images
+CODE92: 0.58, correctly classifying 987 out of 1700 images
+CODE313: 0.67, correctly classifying 999 out of 1500 images
+CODE430: 0.78, correctly classifying 1326 out of 1700 images
+CODE1994: 0.90, correctly classifying 1534 out of 1700 images
+CODE1393: 0.87, correctly classifying 1486 out of 1700 images
+Epoch 249
+CODE3290: 0.91, correctly classifying 1552 out of 1700 images
+CODE1538: 0.48, correctly classifying 812 out of 1700 images
+CODE268: 0.70, correctly classifying 1189 out of 1700 images
+CODE92: 0.58, correctly classifying 987 out of 1700 images
+CODE313: 0.67, correctly classifying 999 out of 1500 images
+CODE430: 0.78, correctly classifying 1326 out of 1700 images
+CODE1994: 0.90, correctly classifying 1534 out of 1700 images
+CODE1393: 0.87, correctly classifying 1486 out of 1700 images
+Epoch 250
+CODE3290: 0.91, correctly classifying 1552 out of 1700 images
+CODE1538: 0.48, correctly classifying 812 out of 1700 images
+CODE268: 0.70, correctly classifying 1189 out of 1700 images
+CODE92: 0.58, correctly classifying 987 out of 1700 images
+CODE313: 0.67, correctly classifying 999 out of 1500 images
+CODE430: 0.78, correctly classifying 1326 out of 1700 images
+CODE1994: 0.90, correctly classifying 1534 out of 1700 images
+CODE1393: 0.87, correctly classifying 1486 out of 1700 images

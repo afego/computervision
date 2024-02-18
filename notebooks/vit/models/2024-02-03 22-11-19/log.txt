@@ -1,8 +1,0 @@
-==========
-
-Dataset E:/Datasets/cor-splits/sgkf-8-1-1-even
-Learning Rate Epoch Schedule = 10
-Learning Rate Gamma = 0.1
-==========
-Training complete in 0m 0s
-Best val Acc: 0.000000

@@ -1,0 +1,201 @@
+==========
+
+Model VisionTransformer b32
+Fully Trained = True
+Dataset E:/Datasets/cor-splits/imbalanced_train
+Learning Rate Epoch Schedule = 10
+Learning Rate Gamma = 0.1
+Optimizer = SGD
+Batch Size = 32
+==========
+
+Epoch 1/50
+----------
+train Loss: 0.2868 Acc: 0.8870
+val Loss: 1.2012 Acc: 0.5536
+Epoch duration: 0 m 37s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 2/50
+----------
+train Loss: 0.1694 Acc: 0.9441
+val Loss: 1.3156 Acc: 0.6000
+Epoch duration: 0 m 39s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 3/50
+----------
+train Loss: 0.1117 Acc: 0.9681
+val Loss: 1.4432 Acc: 0.6029
+Epoch duration: 0 m 38s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 4/50
+----------
+train Loss: 0.0772 Acc: 0.9825
+val Loss: 1.4975 Acc: 0.5768
+Epoch duration: 0 m 38s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 5/50
+----------
+train Loss: 0.0568 Acc: 0.9893
+val Loss: 1.6751 Acc: 0.5681
+Epoch duration: 0 m 37s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 6/50
+----------
+train Loss: 0.0417 Acc: 0.9928
+val Loss: 1.8414 Acc: 0.6000
+Epoch duration: 0 m 38s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 7/50
+----------
+train Loss: 0.0316 Acc: 0.9940
+val Loss: 1.8578 Acc: 0.5652
+Epoch duration: 0 m 37s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 8/50
+----------
+train Loss: 0.0249 Acc: 0.9955
+val Loss: 1.9778 Acc: 0.5884
+Epoch duration: 0 m 38s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 9/50
+----------
+train Loss: 0.0193 Acc: 0.9965
+val Loss: 2.0657 Acc: 0.5884
+Epoch duration: 0 m 37s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 10/50
+----------
+train Loss: 0.0155 Acc: 0.9975
+val Loss: 1.9976 Acc: 0.5797
+Epoch duration: 0 m 38s
+Learning Rate = 0.0001
+
+---------------
+
+Epoch 11/50
+----------
+train Loss: 0.0134 Acc: 0.9990
+val Loss: 2.0835 Acc: 0.5884
+Epoch duration: 0 m 37s
+Learning Rate = 0.0001
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 12/50
+----------
+train Loss: 0.0122 Acc: 0.9990
+val Loss: 2.0926 Acc: 0.5884
+Epoch duration: 0 m 38s
+Learning Rate = 0.0001
+Loss didnt decrease from 2.0835. Increasing patience counter
+---------------
+
+Epoch 13/50
+----------
+train Loss: 0.0126 Acc: 0.9993
+val Loss: 2.0990 Acc: 0.5884
+Epoch duration: 0 m 37s
+Learning Rate = 0.0001
+Loss didnt decrease from 2.0835. Increasing patience counter
+---------------
+
+Epoch 14/50
+----------
+train Loss: 0.0119 Acc: 0.9995
+val Loss: 2.1128 Acc: 0.5884
+Epoch duration: 0 m 38s
+Learning Rate = 0.0001
+Loss didnt decrease from 2.0835. Increasing patience counter
+---------------
+
+Epoch 15/50
+----------
+train Loss: 0.0122 Acc: 0.9993
+val Loss: 2.1141 Acc: 0.5884
+Epoch duration: 0 m 38s
+Learning Rate = 0.0001
+Loss didnt decrease from 2.0835. Increasing patience counter
+---------------
+
+Epoch 16/50
+----------
+train Loss: 0.0115 Acc: 0.9995
+val Loss: 2.1299 Acc: 0.5884
+Epoch duration: 0 m 38s
+Learning Rate = 0.0001
+Loss didnt decrease from 2.0835. Increasing patience counter
+---------------
+
+Epoch 17/50
+----------
+train Loss: 0.0104 Acc: 0.9995
+val Loss: 2.1262 Acc: 0.5884
+Epoch duration: 0 m 37s
+Learning Rate = 0.0001
+Loss didnt decrease from 2.0835. Increasing patience counter
+---------------
+
+Epoch 18/50
+----------
+train Loss: 0.0105 Acc: 0.9995
+val Loss: 2.1316 Acc: 0.5884
+Epoch duration: 0 m 38s
+Learning Rate = 0.0001
+Loss didnt decrease from 2.0835. Increasing patience counter
+---------------
+
+Epoch 19/50
+----------
+train Loss: 0.0100 Acc: 0.9995
+val Loss: 2.1309 Acc: 0.5884
+Epoch duration: 0 m 37s
+Learning Rate = 0.0001
+Loss didnt decrease from 2.0835. Increasing patience counter
+---------------
+
+Epoch 20/50
+----------
+train Loss: 0.0095 Acc: 0.9998
+val Loss: 2.1457 Acc: 0.5884
+Epoch duration: 0 m 38s
+Learning Rate = 1e-05
+Loss didnt decrease from 2.0835. Increasing patience counter
+---------------
+
+Epoch 21/50
+----------
+train Loss: 0.0097 Acc: 0.9998
+val Loss: 2.1456 Acc: 0.5855
+Epoch duration: 0 m 38s
+Learning Rate = 1e-05
+Early stopping after 10 epochs
+---------------
+Training complete in 13m 15s
+Best val Acc: 0.602899

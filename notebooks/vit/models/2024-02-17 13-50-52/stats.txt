@@ -1,0 +1,17 @@
+Confusion matrix
+2719 1421
+1763 2032
+
+Accuracy per class
+65.676329 53.544137 
+
+Overall accuracy by camera during validation
+CODE326: 0.90
+CODE1147: 0.50
+CODE1538: 0.53
+CODE38: 0.52
+CODE94: 0.64
+CODE313: 0.48
+
+Overall accuracy by camera per class during validation
+CODE326: Class 0: 0.99 Class 1: 0.83
