@@ -4,6 +4,7 @@ import torch
 import torch.nn as nn
 from torchvision import models, transforms
 from PIL import Image
+from enum import Enum
 
 class Erase(object):
     '''
@@ -24,12 +25,13 @@ class Erase(object):
         
 class PytorchModel():
     
-    def __init__(self, mean, std, data_transforms, model_func, model_weigths):
+    def __init__(self, mean, std, data_transforms, model_func, model_weigths, device='cuda'):
         self.mean = mean
         self.std = std
         self.data_transforms = data_transforms
         self.model_function = model_func
         self.model_args = model_weigths
+        self.device = device
         
     def _grad_and_load_weights(self, model, weights_path:str=None, fully_trainable=True):
         if fully_trainable:
@@ -37,7 +39,7 @@ class PytorchModel():
                 param.requires_grad = True
             print(f"All parameters for model {model._get_name()} requires grad.")         
         if weights_path is not None:
-            model.load_state_dict(torch.load(weights_path))
+            model.load_state_dict(torch.load(weights_path, map_location=torch.device(self.device)))
             print(f"Weights for model {model._get_name()} loaded from {weights_path}")
         return model
     
@@ -50,10 +52,10 @@ class PytorchModel():
         return self._grad_and_load_weights(model, weights_path, fully_trainable)
 
 class EfficientNet(PytorchModel):
-    def __init__(self):
-        mean = np.array([0.485, 0.456, 0.406])
-        std = np.array([0.229, 0.224, 0.225])
-        data_transforms = {
+    
+    mean = np.array([0.485, 0.456, 0.406])
+    std = np.array([0.229, 0.224, 0.225])
+    data_transforms = {
         'train': transforms.Compose([
             Erase(),
             transforms.RandomHorizontalFlip(),
@@ -76,8 +78,10 @@ class EfficientNet(PytorchModel):
             transforms.ToTensor(),
             transforms.Normalize(mean, std)
         ])
-        }
-        super().__init__(mean, std, data_transforms, models.efficientnet_b0, models.EfficientNet_B0_Weights.DEFAULT)
+    }
+    def __init__(self):
+        self.arch = 'b0'
+        super().__init__(EfficientNet.mean, EfficientNet.std, EfficientNet.data_transforms, models.efficientnet_b0, models.EfficientNet_B0_Weights.DEFAULT)
     
     def _change_fc_layer(self, model):
         model.classifier = nn.Sequential(
@@ -87,38 +91,54 @@ class EfficientNet(PytorchModel):
         return model
 
 class ViT(PytorchModel):
-    def __init__(self):
-        mean = np.array([0.485, 0.456, 0.406])
-        std = np.array([0.229, 0.224, 0.225])
-        data_transforms = {
-            'train': transforms.Compose([
-                Erase(),
-                transforms.RandomHorizontalFlip(),
-                transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
-                transforms.CenterCrop(224),
-                transforms.ToTensor(),
-                transforms.Normalize(mean, std)
-            ]),
-            'val': transforms.Compose([
-                Erase(),
-                transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
-                transforms.CenterCrop(224),
-                transforms.ToTensor(),
-                transforms.Normalize(mean, std)
-            ]),
-            'test': transforms.Compose([
-                Erase(),
-                transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
-                transforms.CenterCrop(224),
-                transforms.ToTensor(),
-                transforms.Normalize(mean, std)
-            ])
-        }
-        super().__init__(mean, std, data_transforms, models.vit_b_16, models.ViT_B_16_Weights.DEFAULT)
+    mean = np.array([0.485, 0.456, 0.406])
+    std = np.array([0.229, 0.224, 0.225])
+    data_transforms = {
+        'train': transforms.Compose([
+            Erase(),
+            transforms.RandomHorizontalFlip(),
+            transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(mean, std)
+        ]),
+        'val': transforms.Compose([
+            Erase(),
+            transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(mean, std)
+        ]),
+        'test': transforms.Compose([
+            Erase(),
+            transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(mean, std)
+        ])
+    }
+    
+    arch_opts = {
+        'base': [models.vit_b_16, models.ViT_B_16_Weights.DEFAULT],
+        'b32': [models.vit_b_32, models.ViT_B_32_Weights.DEFAULT],
+        'large': [models.vit_l_16, models.ViT_L_16_Weights.IMAGENET1K_V1],
+        'huge': [models.vit_h_14, models.ViT_H_14_Weights.DEFAULT]
+        }    
+    
+    def __init__(self, device='cuda', architecture:str='base'):
+        self.arch = architecture.lower()
+        
+        if self.arch not in ViT.arch_opts.keys():
+            self.arch = 'base'
+            print(f"\nChosen architecture {architecture} not in allowed options: {ViT.arch_opts.keys()}.\nUsing base architecture.\n")
+        
+        model, weights = ViT.arch_opts[self.arch]
+         
+        super().__init__(ViT.mean, ViT.std, ViT.data_transforms, model, weights, device)
         
     def _change_fc_layer(self, model):
         model.heads = nn.Sequential(
-            nn.Linear(in_features=768, out_features=2)
+            nn.Linear(in_features=model.heads.head.in_features, out_features=2)
             )
         return model
     
