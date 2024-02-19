@@ -22,7 +22,18 @@ class Erase(object):
         img_array[self.i:self.i+self.h, self.j:self.j+self.w, :] = 0
         return Image.fromarray(img_array)
             
-        
+class LowerBrightness(object):
+    
+    def __init__(self, brigthness_factor:float=0.5):
+        self.bf = brigthness_factor
+    
+    def __call__(self, img:Image):
+        image = img.convert("YCbCr")
+        y, cb, cr = image.split()
+        y = y.point(lambda b: b*self.bf)
+        image = Image.merge("YCbCr",(y, cb, cr))
+        return image.convert("RGB")
+    
 class PytorchModel():
     
     def __init__(self, mean, std, data_transforms, model_func, model_weigths, device='cuda'):
@@ -96,6 +107,7 @@ class ViT(PytorchModel):
     data_transforms = {
         'train': transforms.Compose([
             Erase(),
+            LowerBrightness(),
             transforms.RandomHorizontalFlip(),
             transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
             transforms.CenterCrop(224),
@@ -104,6 +116,7 @@ class ViT(PytorchModel):
         ]),
         'val': transforms.Compose([
             Erase(),
+            LowerBrightness(),
             transforms.Resize(256, transforms.InterpolationMode.BICUBIC),
             transforms.CenterCrop(224),
             transforms.ToTensor(),
