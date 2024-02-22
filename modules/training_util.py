@@ -43,7 +43,7 @@ class EarlyStopping:
             self.message = f'Lower loss found, resetting patience counter'
         elif val_loss > (self.min_val_loss + self.delta):
             self.epoch_counter += 1
-            self.message = 'Loss didnt decrease from {:.4f}. Increasing patience counter'.format(self.min_val_loss)
+            self.message = 'Loss didnt decrease from {:.4f}. Increasing patience counter to {}'.format(self.min_val_loss, self.epoch_counter)
             if self.epoch_counter >= self.patience:
                 self.message = f'Early stopping after {self.patience} epochs'
                 if self.restore_best_weights:
@@ -61,7 +61,7 @@ class PytorchTraining:
         self.output_directory = output_directory    # 
         self.dataset = pytorch_dataset
            
-    def train_pytorch_model(self, model, criterion, optimizer, scheduler, early_stopper, start_epoch=1, num_epochs=25, epoch_save_interval=2):
+    def train_pytorch_model(self, model, criterion, optimizer, scheduler, early_stopper, start_epoch=1, num_epochs:int=25, epoch_save_interval:int=2, model_info:str=''):
 
         best_model_wts = deepcopy(model.state_dict())
         best_acc = 0.0
@@ -72,8 +72,8 @@ class PytorchTraining:
                 fully_trainable = False
         log_path = f"{self.output_directory}/log.txt"
         
-        run_info = 'Model {} Fully Trained = {}\nDataset {}\nLearning Rate Epoch Schedule = {}\nLearning Rate Gamma = {}\nOptimizer = {}\nBatch Size = {}'.format(
-            model._get_name(), fully_trainable, self.dataset.directory, scheduler.step_size, scheduler.gamma, type (optimizer).__name__, self.dataset.batch_size
+        run_info = 'Model {} {}\nFully Trained = {}\nDataset {}\nLearning Rate Epoch Schedule = {}\nLearning Rate Gamma = {}\nOptimizer = {}\nBatch Size = {}'.format(
+            model._get_name(), model_info, fully_trainable, self.dataset.directory, scheduler.step_size, scheduler.gamma, type (optimizer).__name__, self.dataset.batch_size
             )
         
         if not os.path.exists(log_path): 
@@ -83,6 +83,7 @@ class PytorchTraining:
             log.writelines('=' * 10+'\n')
             log.close() 
         
+        print(f'Saving model to folder {self.output_directory}')
         print('\n'+run_info+'\n')
         
         # Overall accuracy per camera
@@ -256,8 +257,17 @@ class PytorchTraining:
             
             stats.write(f"\n\nOverall accuracy by camera per class during validation")
             for key,value in code_class.items():
-                stats.write(f"\n{key}: Class 0: {(value[0][0]/value[0][1]):.2f} Class 1: {(value[1][0]/value[1][1]):.2f}")
+                if value[0][1] == 0:
+                    cls_0_acc = 0
+                else:
+                    cls_0_acc = value[0][0]/value[0][1]
                 
+                if value[1][1] == 0:
+                    cls_1_acc = 0
+                else:
+                    cls_1_acc = value[1][0]/value[1][1]
+                stats.write(f"\n{key}: Class 0: {cls_0_acc:.2f} Class 1: {cls_1_acc:.2f}")
+                    
             stats.write(f"\n\nCamera accuracy per epoch")
             for i in range(len(code_epoch)):
                 stats.write(f"\nEpoch {i+1}")
