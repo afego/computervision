@@ -1,5 +1,0 @@
-Confusion matrix
-858 264
-88 1034
-Accuracy per class
-76.470588 92.156863 
