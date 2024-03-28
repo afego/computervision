@@ -2,10 +2,11 @@ import time
 import torch
 import os
 import numpy as np
+import pandas as pd
 
 from copy import deepcopy
 from torch import utils
-from torchvision import datasets, models, transforms
+from torchvision import datasets
 from sklearn.metrics import confusion_matrix
 from modules.dataset_util import PytorchDataset
 
@@ -23,10 +24,10 @@ def makeDataloader(dataset_dir, data_transforms, batch_size=64):
 class EarlyStopping:
     # https://stackoverflow.com/questions/71998978/early-stopping-in-pytorch
     # https://www.youtube.com/watch?v=lS0vvIWiahU
-    def __init__(self, patience, delta=0, min_epoch=10, restore_best_weights=True):
+    def __init__(self, patience, delta=0, min_epoch=10, starting_patience_counter=0,restore_best_weights=True):
         self.patience = patience
         self.delta = delta
-        self.epoch_counter = 0
+        self.epoch_counter = starting_patience_counter
         self.min_val_loss = float('inf')
         self.restore_best_weights = restore_best_weights
         self.best_model = None
@@ -70,11 +71,16 @@ class PytorchTraining:
         for param in model.parameters():
             if param.requires_grad == False:
                 fully_trainable = False
+        
         log_path = f"{self.output_directory}/log.txt"
+        stats_dir = f"{self.output_directory}/stats"
         
         run_info = 'Model {} {}\nFully Trained = {}\nDataset {}\nLearning Rate Epoch Schedule = {}\nLearning Rate Gamma = {}\nOptimizer = {}\nBatch Size = {}'.format(
             model._get_name(), model_info, fully_trainable, self.dataset.directory, scheduler.step_size, scheduler.gamma, type (optimizer).__name__, self.dataset.batch_size
             )
+        
+        if not os.path.exists(stats_dir):
+            os.makedirs(stats_dir)
         
         if not os.path.exists(log_path): 
             log = open(log_path,'x')
@@ -83,40 +89,49 @@ class PytorchTraining:
             log.writelines('=' * 10+'\n')
             log.close() 
         
+        conf_mat_file = os.path.join(stats_dir,'conf_mat.csv')  
+        if not os.path.exists(conf_mat_file):
+            log = open(conf_mat_file,'x')
+            log.writelines(f"epoch,TP,FN,FP,TN\n")
+            log.close()
+        
+        camera_acc_file = os.path.join(stats_dir,'cam_acc.csv')
+        if not os.path.exists(camera_acc_file):
+            log = open(camera_acc_file,'x')
+            log.writelines(f"epoch,code,cls_0_corr,cls_0_total,cls_1_corr,cls_1_total\n")
+            log.close()
+            
+            
         print(f'Saving model to folder {self.output_directory}')
         print('\n'+run_info+'\n')
-        
-        # Overall accuracy per camera
-        codelist = {x:[0,0] for x in self.dataset.codes['val']}
-        # Accuracy per epoch
-        code_epoch = []
-        # Overall accuracy per class per camera
-        code_class = {
-            x:[
-            [0,0],  # Class 0 correct classification, Class 0 total labels
-            [0,0]   # Class 1 correct classification, Class 1 total labels
-            ] for x in self.dataset.codes['val']}
         
         since = time.time()
         early_stop = False
         epoch = start_epoch
-        
-        ## https://stackoverflow.com/questions/53290306/confusion-matrix-and-test-accuracy-for-pytorch-transfer-learning-tutorial
-        # Initialize the prediction and label lists(tensors)
-        predlist=torch.zeros(0,dtype=torch.long, device='cpu')
-        lbllist=torch.zeros(0,dtype=torch.long, device='cpu')
     
         while epoch < num_epochs+1 and not early_stop:
         # for epoch in range(start_epoch, num_epochs+1):
-        
-            epoch_start = time.time()
+
+            ## https://stackoverflow.com/questions/53290306/confusion-matrix-and-test-accuracy-for-pytorch-transfer-learning-tutorial
+            # Initialize the prediction and label lists(tensors)
+            predlist=torch.zeros(0,dtype=torch.long, device='cpu')
+            lbllist=torch.zeros(0,dtype=torch.long, device='cpu')
+            
+            cam_acc = {
+                x:[
+                    [0,0],  # Class 0 correct classification, Class 0 total labels
+                    [0,0]   # Class 1 correct classification, Class 1 total labels
+                    ] for x in self.dataset.codes['val']
+                }
             
             epoch_info = '\nEpoch {}/{}\n----------\n'.format(epoch, num_epochs)
             with open(log_path,'a') as log:
                 log.writelines(epoch_info)
             print(epoch_info)
             
-            temp_dict = {}
+            # temp_dict = {}
+            
+            epoch_start = time.time()
             
             # Each epoch has a training and validation phase
             for phase in self.dataset.training_phases:
@@ -152,28 +167,23 @@ class PytorchTraining:
                             # Calculating overall accuracy by camera per epoch
                             for j, path in enumerate(paths):
                                 code = os.path.basename(path).split(' ')[0]
-                                correct_class = (preds[j] == labels[j]).sum().item()
                                 
                                 # Accuracy per camera per class                
                                 for idx in self.dataset.dataloaders[phase].dataset.class_to_idx.values():  
                                     if preds[j].item() == idx:
                                         if (preds[j] == labels[j]).item():
-                                            code_class[code][idx][0] += 1 
-                                        code_class[code][idx][1] += 1
-                                
-                                codelist[code][0] += correct_class 
-                                codelist[code][1] += 1 # Total images evaluated
-                                temp_dict[code] = [codelist[code][0], codelist[code][1]] # maybe rewrite this line, so it doesnt do this for every file with each code
-                            code_epoch.append(temp_dict)
+                                            cam_acc[code][idx][0] += 1
+                                    cam_acc[code][idx][1] += 1
+                                        
                                 
                             # Append batch prediction results
-                            predlist=torch.cat([predlist, preds.view(-1).cpu()])
-                            lbllist=torch.cat([lbllist, labels.view(-1).cpu()])
+                            predlist=torch.cat([predlist,preds.view(-1).cpu()])
+                            lbllist=torch.cat([lbllist,labels.view(-1).cpu()])
                                             
                     # statistics
                     running_loss += loss.item() * inputs.size(0)
                     running_corrects += torch.sum(preds == labels.data)
-
+                
                 if phase == 'train':
                     scheduler.step()
 
@@ -187,7 +197,13 @@ class PytorchTraining:
                 print(loss_acc_info)
                 
                 if epoch % epoch_save_interval == 0:
-                    torch.save(model.state_dict(), f'{self.output_directory}/epoch_{epoch}.pth')
+                    epoch_weight_path = f'{self.output_directory}/epoch_{epoch}.pth'
+                    torch.save(model.state_dict(), epoch_weight_path)
+                    
+                    text = f"Model saved at {epoch_weight_path}"
+                    with open(log_path,'a') as log:
+                        log.writelines(text+'\n')      
+                    print(text)
                 
                 if phase == 'val' and early_stopper(model, epoch_loss, epoch):
                     early_stop = True
@@ -199,6 +215,12 @@ class PytorchTraining:
             
             epoch_end = time.time() - epoch_start
             
+            cm = confusion_matrix(labels.cpu().numpy(), preds.cpu().numpy())     
+            tp = cm[0][0]
+            fn = cm[0][1]
+            fp = cm[1][0]
+            tn = cm[1][1]
+                
             # Logging Epoch info
             epoch_duration_info = 'Epoch duration: {:.0f} m {:.0f}s'.format(epoch_end//60, epoch_end%60)
             lr_info = 'Learning Rate = {}'.format(scheduler.get_last_lr()[0])
@@ -211,10 +233,25 @@ class PytorchTraining:
             print(lr_info)
             print(early_stopper.message)
             print()
-
+            
+            with open(conf_mat_file, 'a') as fl:
+                fl.writelines(f'{epoch},{tp},{fn},{fp},{tn}\n')
+                
+            # with open(camera_acc_file, 'a') as fl:
+            #     for key, value in codelist.items():
+            #         fl.writelines(f"{epoch},{key},{value[0]}{value[1]}\n")
+            
+            # with open(class_acc_file, 'a') as fl:
+            #     for key,value in code_class.items():
+            #         fl.writelines(f"{epoch},{key},{value[0][0]},{value[0][1]},{value[1][0]},{value[1][1]}\n")
+            
+            with open(camera_acc_file, 'a') as fl:
+                for key,value in cam_acc.items():
+                    fl.writelines(f"{epoch},{key},{value[0][0]},{value[0][1]},{value[1][0]},{value[1][1]}\n")
+                    
             epoch += 1
             
-        torch.save(model.state_dict(), f'{self.output_directory}/last.pth')
+        torch.save(model.state_dict(), f'{self.output_directory}/last.pth') # With early stopping, this should be the last weight before the counter started
         
         time_elapsed = time.time() - since
         
@@ -236,44 +273,48 @@ class PytorchTraining:
         print("\nAccuracy by class")
         print(class_accuracy)
         
-        statistics_path = f"{self.output_directory}/stats.txt"
+        # statistics_path = f"{self.output_directory}/stats.txt"
         
-        conf_mat = conf_mat.tolist()
-        class_accuracy = class_accuracy.tolist()
+        # conf_mat = conf_mat.tolist()
+        # class_accuracy = class_accuracy.tolist()
         
-        with open(statistics_path,'x') as stats:
-            stats.writelines("Confusion matrix")
-            for row in conf_mat:
-                stats.writelines("\n{} {}".format(row[0],row[1]))
-            stats.writelines('\n\nAccuracy per class')
-            cls_acc = '\n'
-            for i in class_accuracy:
-                cls_acc += "{:4f} ".format(i)
-            stats.writelines(cls_acc)
+        # with open(statistics_path,'x') as stats:
+        #     stats.writelines("Confusion matrix")
+        #     for row in conf_mat:
+        #         stats.writelines("\n{} {}".format(row[0],row[1]))
+        #     stats.writelines('\n\nAccuracy per class')
+        #     cls_acc = '\n'
+        #     for i in class_accuracy:
+        #         cls_acc += "{:4f} ".format(i)
+        #     stats.writelines(cls_acc)
             
-            stats.write(f"\n\nOverall accuracy by camera during validation")
-            for key, value in codelist.items():
-                stats.write(f"\n{key}: {(value[0]/value[1]):.2f}")
+        #     stats.write(f"\n\nOverall accuracy by camera during validation")
+        #     for key, value in codelist.items():
+        #         if value[1] == 0:
+        #             res = 0
+        #         else:
+        #             res = value[0]/value[1]
+        #         stats.write(f"\n{key}: {res:.2f}")
             
-            stats.write(f"\n\nOverall accuracy by camera per class during validation")
-            for key,value in code_class.items():
-                if value[0][1] == 0:
-                    cls_0_acc = 0
-                else:
-                    cls_0_acc = value[0][0]/value[0][1]
+        #     stats.write(f"\n\nOverall accuracy by camera per class during validation")
+        #     for key,value in code_class.items():
+        #         if value[0][1] == 0:
+        #             cls_0_acc = 0
+        #         else:
+        #             cls_0_acc = value[0][0]/value[0][1]
                 
-                if value[1][1] == 0:
-                    cls_1_acc = 0
-                else:
-                    cls_1_acc = value[1][0]/value[1][1]
-                stats.write(f"\n{key}: Class 0: {cls_0_acc:.2f} Class 1: {cls_1_acc:.2f}")
+        #         if value[1][1] == 0:
+        #             cls_1_acc = 0
+        #         else:
+        #             cls_1_acc = value[1][0]/value[1][1]
+        #         stats.write(f"\n{key}: Class 0: {cls_0_acc:.2f} Class 1: {cls_1_acc:.2f}")
                     
-            stats.write(f"\n\nCamera accuracy per epoch")
-            for i in range(len(code_epoch)):
-                stats.write(f"\nEpoch {i+1}")
-                for code in self.dataset.codes['val']:
-                    values = code_epoch[i][code]
-                    stats.write(f"\n{code}: {(values[0]/values[1]):.2f}, correctly classifying {values[0]} out of {values[1]} images")
+        #     stats.write(f"\n\nCamera accuracy per epoch")
+        #     for i in range(len(code_epoch)):
+        #         stats.write(f"\nEpoch {i+1}")
+        #         for code in self.dataset.codes['val']:
+        #             values = code_epoch[i][code]
+        #             stats.write(f"\n{code}: {(values[0]/values[1]):.2f}, correctly classifying {values[0]} out of {values[1]} images")
 
         # load best model weights
         model.load_state_dict(best_model_wts)
