@@ -1,0 +1,8 @@
+Confusion matrix
+54026 4780
+29326 20174
+
+Accuracy per class
+91.871578 40.755556 
+
+Overall accuracy by camera during validation

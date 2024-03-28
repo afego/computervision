@@ -1,0 +1,68 @@
+Confusion matrix
+79344 14211
+36185 42565
+
+Accuracy per class
+84.810005 54.050794 
+
+Overall accuracy by camera during validation
+CODE310: 0.00
+CODE1538: 0.00
+CODE3221: 0.00
+CODE3254: 0.00
+CODE1907: 0.00
+CODE1119: 0.00
+CODE3594: 0.00
+CODE2270: 0.00
+CODE1882: 0.00
+CODE77: 0.00
+CODE367: 0.00
+CODE267: 0.00
+CODE278: 0.00
+CODE572: 0.00
+CODE1390: 0.00
+CODE1431: 0.00
+CODE1515: 0.00
+CODE345: 0.00
+CODE1132: 0.00
+CODE1018: 0.00
+CODE365: 0.00
+CODE3134: 0.00
+CODE1635: 0.00
+CODE1475: 0.00
+CODE1535: 0.00
+CODE1128: 0.00
+CODE2216: 0.00
+CODE3206: 0.00
+CODE2233: 0.00
+
+Overall accuracy by camera per class during validation
+CODE310: Class 0: 0.58 Class 1: 0.97
+CODE1538: Class 0: 0.51 Class 1: 1.00
+CODE3221: Class 0: 0.76 Class 1: 0.80
+CODE3254: Class 0: 1.00 Class 1: 0.98
+CODE1907: Class 0: 0.16 Class 1: 0.90
+CODE1119: Class 0: 0.50 Class 1: 1.00
+CODE3594: Class 0: 0.55 Class 1: 0.98
+CODE2270: Class 0: 0.51 Class 1: 0.89
+CODE1882: Class 0: 0.73 Class 1: 0.43
+CODE77: Class 0: 0.87 Class 1: 0.71
+CODE367: Class 0: 0.88 Class 1: 0.92
+CODE267: Class 0: 0.87 Class 1: 0.84
+CODE278: Class 0: 0.52 Class 1: 1.00
+CODE572: Class 0: 0.68 Class 1: 0.76
+CODE1390: Class 0: 0.64 Class 1: 1.00
+CODE1431: Class 0: 0.75 Class 1: 0.57
+CODE1515: Class 0: 0.53 Class 1: 1.00
+CODE345: Class 0: 0.66 Class 1: 1.00
+CODE1132: Class 0: 0.87 Class 1: 0.71
+CODE1018: Class 0: 0.95 Class 1: 0.00
+CODE365: Class 0: 1.00 Class 1: 0.99
+CODE3134: Class 0: 0.66 Class 1: 0.75
+CODE1635: Class 0: 0.74 Class 1: 0.86
+CODE1475: Class 0: 0.95 Class 1: 0.81
+CODE1535: Class 0: 0.70 Class 1: 0.62
+CODE1128: Class 0: 0.88 Class 1: 0.00
+CODE2216: Class 0: 0.61 Class 1: 0.31
+CODE3206: Class 0: 1.00 Class 1: 0.99
+CODE2233: Class 0: 0.83 Class 1: 0.00

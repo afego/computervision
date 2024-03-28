@@ -1,0 +1,714 @@
+==========
+
+Model VisionTransformer b32
+Fully Trained = True
+Dataset E:/Datasets/cor-splits\balanced_positive
+Learning Rate Epoch Schedule = 10
+Learning Rate Gamma = 0.1
+Optimizer = SGD
+Batch Size = 16
+==========
+
+Epoch 1/100
+----------
+train Loss: 0.7170 Acc: 0.5009
+val Loss: 0.7267 Acc: 0.5080
+Epoch duration: 5 m 55s
+Learning Rate = 1e-05
+
+---------------
+
+Epoch 2/100
+----------
+train Loss: 0.6667 Acc: 0.5925
+val Loss: 0.6919 Acc: 0.5621
+Epoch duration: 2 m 44s
+Learning Rate = 1e-05
+
+---------------
+
+Epoch 3/100
+----------
+train Loss: 0.6347 Acc: 0.6470
+val Loss: 0.6670 Acc: 0.6137
+Epoch duration: 2 m 43s
+Learning Rate = 1e-05
+
+---------------
+
+Epoch 4/100
+----------
+train Loss: 0.6090 Acc: 0.6840
+val Loss: 0.6470 Acc: 0.6443
+Epoch duration: 2 m 46s
+Learning Rate = 1e-05
+
+---------------
+
+Epoch 5/100
+----------
+train Loss: 0.5875 Acc: 0.7063
+val Loss: 0.6298 Acc: 0.6689
+Epoch duration: 2 m 45s
+Learning Rate = 1e-05
+
+---------------
+
+Epoch 6/100
+----------
+train Loss: 0.5689 Acc: 0.7220
+val Loss: 0.6179 Acc: 0.6878
+Epoch duration: 2 m 45s
+Learning Rate = 1e-05
+
+---------------
+
+Epoch 7/100
+----------
+train Loss: 0.5526 Acc: 0.7345
+val Loss: 0.6050 Acc: 0.7063
+Epoch duration: 2 m 48s
+Learning Rate = 1e-05
+
+---------------
+
+Epoch 8/100
+----------
+train Loss: 0.5380 Acc: 0.7429
+val Loss: 0.5970 Acc: 0.7187
+Epoch duration: 2 m 51s
+Learning Rate = 1e-05
+
+---------------
+
+Epoch 9/100
+----------
+train Loss: 0.5248 Acc: 0.7511
+val Loss: 0.5901 Acc: 0.7250
+Epoch duration: 2 m 49s
+Learning Rate = 1e-05
+
+---------------
+
+Epoch 10/100
+----------
+train Loss: 0.5118 Acc: 0.7589
+val Loss: 0.5828 Acc: 0.7292
+Epoch duration: 2 m 49s
+Learning Rate = 1.0000000000000002e-06
+
+---------------
+
+Epoch 11/100
+----------
+train Loss: 0.5044 Acc: 0.7655
+val Loss: 0.5825 Acc: 0.7290
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000002e-06
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 12/100
+----------
+train Loss: 0.5032 Acc: 0.7653
+val Loss: 0.5819 Acc: 0.7286
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000002e-06
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 13/100
+----------
+train Loss: 0.5021 Acc: 0.7664
+val Loss: 0.5815 Acc: 0.7292
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000002e-06
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 14/100
+----------
+train Loss: 0.5010 Acc: 0.7663
+val Loss: 0.5809 Acc: 0.7296
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000002e-06
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 15/100
+----------
+train Loss: 0.4994 Acc: 0.7680
+val Loss: 0.5803 Acc: 0.7292
+Epoch duration: 2 m 53s
+Learning Rate = 1.0000000000000002e-06
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 16/100
+----------
+train Loss: 0.4988 Acc: 0.7678
+val Loss: 0.5797 Acc: 0.7288
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000002e-06
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 17/100
+----------
+train Loss: 0.4980 Acc: 0.7689
+val Loss: 0.5790 Acc: 0.7292
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000002e-06
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 18/100
+----------
+train Loss: 0.4960 Acc: 0.7715
+val Loss: 0.5787 Acc: 0.7292
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000002e-06
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 19/100
+----------
+train Loss: 0.4950 Acc: 0.7713
+val Loss: 0.5779 Acc: 0.7302
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000002e-06
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 20/100
+----------
+train Loss: 0.4939 Acc: 0.7717
+val Loss: 0.5774 Acc: 0.7300
+Epoch duration: 2 m 53s
+Learning Rate = 1.0000000000000002e-07
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 21/100
+----------
+train Loss: 0.4938 Acc: 0.7716
+val Loss: 0.5774 Acc: 0.7300
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000002e-07
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 22/100
+----------
+train Loss: 0.4933 Acc: 0.7711
+val Loss: 0.5774 Acc: 0.7300
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000002e-07
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 23/100
+----------
+train Loss: 0.4933 Acc: 0.7706
+val Loss: 0.5773 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000002e-07
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 24/100
+----------
+train Loss: 0.4927 Acc: 0.7728
+val Loss: 0.5773 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000002e-07
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 25/100
+----------
+train Loss: 0.4926 Acc: 0.7718
+val Loss: 0.5773 Acc: 0.7298
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000002e-07
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 26/100
+----------
+train Loss: 0.4933 Acc: 0.7725
+val Loss: 0.5772 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000002e-07
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 27/100
+----------
+train Loss: 0.4935 Acc: 0.7739
+val Loss: 0.5772 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000002e-07
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 28/100
+----------
+train Loss: 0.4929 Acc: 0.7715
+val Loss: 0.5772 Acc: 0.7298
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000002e-07
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 29/100
+----------
+train Loss: 0.4934 Acc: 0.7717
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000002e-07
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 30/100
+----------
+train Loss: 0.4928 Acc: 0.7728
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000004e-08
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 31/100
+----------
+train Loss: 0.4926 Acc: 0.7710
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000004e-08
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 32/100
+----------
+train Loss: 0.4930 Acc: 0.7715
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000004e-08
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 33/100
+----------
+train Loss: 0.4923 Acc: 0.7723
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 53s
+Learning Rate = 1.0000000000000004e-08
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 34/100
+----------
+train Loss: 0.4930 Acc: 0.7713
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000004e-08
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 35/100
+----------
+train Loss: 0.4927 Acc: 0.7709
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000004e-08
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 36/100
+----------
+train Loss: 0.4931 Acc: 0.7709
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 53s
+Learning Rate = 1.0000000000000004e-08
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 37/100
+----------
+train Loss: 0.4925 Acc: 0.7709
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000004e-08
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 38/100
+----------
+train Loss: 0.4925 Acc: 0.7730
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000004e-08
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 39/100
+----------
+train Loss: 0.4928 Acc: 0.7698
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000004e-08
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 40/100
+----------
+train Loss: 0.4929 Acc: 0.7711
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000005e-09
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 41/100
+----------
+train Loss: 0.4926 Acc: 0.7729
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 48s
+Learning Rate = 1.0000000000000005e-09
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 42/100
+----------
+train Loss: 0.4922 Acc: 0.7745
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000005e-09
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 43/100
+----------
+train Loss: 0.4918 Acc: 0.7725
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 49s
+Learning Rate = 1.0000000000000005e-09
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 44/100
+----------
+train Loss: 0.4925 Acc: 0.7721
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000005e-09
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 45/100
+----------
+train Loss: 0.4932 Acc: 0.7709
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 48s
+Learning Rate = 1.0000000000000005e-09
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 46/100
+----------
+train Loss: 0.4927 Acc: 0.7719
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 49s
+Learning Rate = 1.0000000000000005e-09
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 47/100
+----------
+train Loss: 0.4923 Acc: 0.7724
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 48s
+Learning Rate = 1.0000000000000005e-09
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 48/100
+----------
+train Loss: 0.4922 Acc: 0.7707
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 48s
+Learning Rate = 1.0000000000000005e-09
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 49/100
+----------
+train Loss: 0.4933 Acc: 0.7710
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000005e-09
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 50/100
+----------
+train Loss: 0.4935 Acc: 0.7712
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 47s
+Learning Rate = 1.0000000000000006e-10
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 51/100
+----------
+train Loss: 0.4924 Acc: 0.7737
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 48s
+Learning Rate = 1.0000000000000006e-10
+Loss didnt decrease from 0.5771. Increasing patience counter to 1
+---------------
+
+Epoch 52/100
+----------
+train Loss: 0.4923 Acc: 0.7719
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000006e-10
+Loss didnt decrease from 0.5771. Increasing patience counter to 2
+---------------
+
+Epoch 53/100
+----------
+train Loss: 0.4921 Acc: 0.7724
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 49s
+Learning Rate = 1.0000000000000006e-10
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 54/100
+----------
+train Loss: 0.4925 Acc: 0.7715
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 49s
+Learning Rate = 1.0000000000000006e-10
+Loss didnt decrease from 0.5771. Increasing patience counter to 1
+---------------
+
+Epoch 55/100
+----------
+train Loss: 0.4927 Acc: 0.7719
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 49s
+Learning Rate = 1.0000000000000006e-10
+Loss didnt decrease from 0.5771. Increasing patience counter to 2
+---------------
+
+Epoch 56/100
+----------
+train Loss: 0.4928 Acc: 0.7704
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000006e-10
+Loss didnt decrease from 0.5771. Increasing patience counter to 3
+---------------
+
+Epoch 57/100
+----------
+train Loss: 0.4926 Acc: 0.7719
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000006e-10
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 58/100
+----------
+train Loss: 0.4928 Acc: 0.7722
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 49s
+Learning Rate = 1.0000000000000006e-10
+Loss didnt decrease from 0.5771. Increasing patience counter to 1
+---------------
+
+Epoch 59/100
+----------
+train Loss: 0.4921 Acc: 0.7713
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 48s
+Learning Rate = 1.0000000000000006e-10
+Loss didnt decrease from 0.5771. Increasing patience counter to 2
+---------------
+
+Epoch 60/100
+----------
+train Loss: 0.4928 Acc: 0.7748
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 53s
+Learning Rate = 1.0000000000000006e-11
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 61/100
+----------
+train Loss: 0.4925 Acc: 0.7723
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000006e-11
+Loss didnt decrease from 0.5771. Increasing patience counter to 1
+---------------
+
+Epoch 62/100
+----------
+train Loss: 0.4925 Acc: 0.7714
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 48s
+Learning Rate = 1.0000000000000006e-11
+Loss didnt decrease from 0.5771. Increasing patience counter to 2
+---------------
+
+Epoch 63/100
+----------
+train Loss: 0.4932 Acc: 0.7704
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 48s
+Learning Rate = 1.0000000000000006e-11
+Loss didnt decrease from 0.5771. Increasing patience counter to 3
+---------------
+
+Epoch 64/100
+----------
+train Loss: 0.4928 Acc: 0.7723
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000006e-11
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 65/100
+----------
+train Loss: 0.4927 Acc: 0.7725
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000006e-11
+Loss didnt decrease from 0.5771. Increasing patience counter to 1
+---------------
+
+Epoch 66/100
+----------
+train Loss: 0.4925 Acc: 0.7710
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000006e-11
+Loss didnt decrease from 0.5771. Increasing patience counter to 2
+---------------
+
+Epoch 67/100
+----------
+train Loss: 0.4930 Acc: 0.7723
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000006e-11
+Lower loss found, resetting patience counter
+---------------
+
+Epoch 68/100
+----------
+train Loss: 0.4925 Acc: 0.7739
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000006e-11
+Loss didnt decrease from 0.5771. Increasing patience counter to 1
+---------------
+
+Epoch 69/100
+----------
+train Loss: 0.4931 Acc: 0.7728
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000006e-11
+Loss didnt decrease from 0.5771. Increasing patience counter to 2
+---------------
+
+Epoch 70/100
+----------
+train Loss: 0.4926 Acc: 0.7732
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000006e-12
+Loss didnt decrease from 0.5771. Increasing patience counter to 3
+---------------
+
+Epoch 71/100
+----------
+train Loss: 0.4923 Acc: 0.7725
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000006e-12
+Loss didnt decrease from 0.5771. Increasing patience counter to 4
+---------------
+
+Epoch 72/100
+----------
+train Loss: 0.4922 Acc: 0.7731
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000006e-12
+Loss didnt decrease from 0.5771. Increasing patience counter to 5
+---------------
+
+Epoch 73/100
+----------
+train Loss: 0.4924 Acc: 0.7721
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000006e-12
+Loss didnt decrease from 0.5771. Increasing patience counter to 6
+---------------
+
+Epoch 74/100
+----------
+train Loss: 0.4922 Acc: 0.7723
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000006e-12
+Loss didnt decrease from 0.5771. Increasing patience counter to 7
+---------------
+
+Epoch 75/100
+----------
+train Loss: 0.4929 Acc: 0.7705
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000006e-12
+Loss didnt decrease from 0.5771. Increasing patience counter to 8
+---------------
+
+Epoch 76/100
+----------
+train Loss: 0.4922 Acc: 0.7719
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 50s
+Learning Rate = 1.0000000000000006e-12
+Loss didnt decrease from 0.5771. Increasing patience counter to 9
+---------------
+
+Epoch 77/100
+----------
+train Loss: 0.4930 Acc: 0.7708
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 52s
+Learning Rate = 1.0000000000000006e-12
+Loss didnt decrease from 0.5771. Increasing patience counter to 10
+---------------
+
+Epoch 78/100
+----------
+train Loss: 0.4922 Acc: 0.7736
+val Loss: 0.5771 Acc: 0.7298
+Epoch duration: 2 m 51s
+Learning Rate = 1.0000000000000006e-12
+Early stopping after 11 epochs
+---------------
+Training complete in 224m 15s
+Best val Acc: 0.730246

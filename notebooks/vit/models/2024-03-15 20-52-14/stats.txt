@@ -1,0 +1,36 @@
+Confusion matrix
+21184 8846
+5448 24582
+
+Accuracy per class
+70.542791 81.858142 
+
+Overall accuracy by camera during validation
+CODE1635: 0.00
+CODE1525: 0.00
+CODE1648: 0.00
+CODE1403: 0.00
+CODE1881: 0.00
+CODE1138: 0.00
+CODE1404: 0.00
+CODE310: 0.00
+CODE1649: 0.00
+CODE1405: 0.00
+CODE1644: 0.00
+CODE1461: 0.00
+CODE365: 0.00
+
+Overall accuracy by camera per class during validation
+CODE1635: Class 0: 0.99 Class 1: 0.75
+CODE1525: Class 0: 0.99 Class 1: 0.70
+CODE1648: Class 0: 1.00 Class 1: 0.90
+CODE1403: Class 0: 0.73 Class 1: 0.83
+CODE1881: Class 0: 0.59 Class 1: 0.71
+CODE1138: Class 0: 0.69 Class 1: 0.90
+CODE1404: Class 0: 0.86 Class 1: 0.68
+CODE310: Class 0: 0.69 Class 1: 0.90
+CODE1649: Class 0: 0.97 Class 1: 0.95
+CODE1405: Class 0: 0.86 Class 1: 0.61
+CODE1644: Class 0: 0.83 Class 1: 0.63
+CODE1461: Class 0: 0.85 Class 1: 0.81
+CODE365: Class 0: 0.62 Class 1: 0.53

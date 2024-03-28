@@ -1,0 +1,13 @@
+==========
+
+Model VisionTransformer b32
+Fully Trained = True
+Dataset E:/Datasets/cor-splits\underperforming_cameras_96
+Learning Rate Epoch Schedule = 10
+Learning Rate Gamma = 0.1
+Optimizer = SGD
+Batch Size = 16
+==========
+
+Epoch 1/100
+----------

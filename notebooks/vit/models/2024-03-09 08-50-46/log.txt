@@ -1,0 +1,40 @@
+==========
+
+Model VisionTransformer b32
+Fully Trained = True
+Dataset E:/Datasets/cor-splits\natural
+Learning Rate Epoch Schedule = 10
+Learning Rate Gamma = 0.1
+Optimizer = SGD
+Batch Size = 16
+==========
+
+Epoch 1/100
+----------
+train Loss: 0.2552 Acc: 0.8961
+val Loss: 0.7294 Acc: 0.7250
+Epoch duration: 3 m 5s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 2/100
+----------
+train Loss: 0.1167 Acc: 0.9560
+val Loss: 1.1011 Acc: 0.6742
+Epoch duration: 2 m 32s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 3/100
+----------
+train Loss: 0.0725 Acc: 0.9743
+val Loss: 1.0673 Acc: 0.6849
+Epoch duration: 2 m 32s
+Learning Rate = 0.001
+
+---------------
+
+Epoch 4/100
+----------
