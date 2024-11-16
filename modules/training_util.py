@@ -7,6 +7,7 @@ import pandas as pd
 from copy import deepcopy
 from torch import utils
 from torchvision import datasets
+from torch.nn import BCELoss
 from sklearn.metrics import confusion_matrix
 from modules.dataset_util import PytorchDataset
 
@@ -54,7 +55,7 @@ class EarlyStopping:
     
 class PytorchTraining:
     '''
-    Generic training class for any pytorch model
+    Generic training class for any pytorch classification model
     Requires a PytorchDataset object already instantiated
     '''
     def __init__(self, device, pytorch_dataset:PytorchDataset, output_directory):
@@ -79,9 +80,6 @@ class PytorchTraining:
             model._get_name(), model_info, fully_trainable, self.dataset.directory, scheduler.step_size, scheduler.gamma, type (optimizer).__name__, self.dataset.batch_size
             )
         
-        if not os.path.exists(stats_dir):
-            os.makedirs(stats_dir)
-        
         if not os.path.exists(log_path): 
             log = open(log_path,'x')
             log.writelines('=' * 10+'\n')
@@ -89,6 +87,9 @@ class PytorchTraining:
             log.writelines('=' * 10+'\n')
             log.close() 
         
+        if not os.path.exists(stats_dir):
+            os.makedirs(stats_dir)
+            
         conf_mat_file = os.path.join(stats_dir,'conf_mat.csv')  
         if not os.path.exists(conf_mat_file):
             log = open(conf_mat_file,'x')
@@ -101,7 +102,21 @@ class PytorchTraining:
             log.writelines(f"epoch,code,cls_0_corr,cls_0_total,cls_1_corr,cls_1_total\n")
             log.close()
             
-            
+        acc_loss_file = os.path.join(stats_dir,'acc_loss.csv')
+        if not os.path.exists(acc_loss_file):
+            log = open(acc_loss_file,'x')
+            header = "epoch"
+            for phase in self.dataset.training_phases:
+                header += f",{phase}_acc,{phase}_loss"
+            log.writelines(header+"\n")
+            log.close()
+        
+        daynight_acc_file = os.path.join(stats_dir,'day_night_acc.csv')
+        if not os.path.exists(daynight_acc_file):
+            log = open(daynight_acc_file, 'x')
+            log.writelines(f"epoch,time,cls_0_corr,cls_0_total,cls_1_corr,cls_1_total\n")
+            log.close()
+        
         print(f'Saving model to folder {self.output_directory}')
         print('\n'+run_info+'\n')
         
@@ -124,12 +139,21 @@ class PytorchTraining:
                     ] for x in self.dataset.codes['val']
                 }
             
+            acc_loss = {
+                x:[0,0] for x in self.dataset.training_phases
+            }
+            
+            daynight_acc = {
+                x:[
+                    [0,0],
+                    [0,0]
+                ] for x in ['day','night']
+            }
+            
             epoch_info = '\nEpoch {}/{}\n----------\n'.format(epoch, num_epochs)
             with open(log_path,'a') as log:
                 log.writelines(epoch_info)
             print(epoch_info)
-            
-            # temp_dict = {}
             
             epoch_start = time.time()
             
@@ -154,27 +178,42 @@ class PytorchTraining:
                     # forward
                     # track history if only in train
                     with torch.set_grad_enabled(phase == 'train'):
+                        
                         outputs = model(inputs)
                         _, preds = torch.max(outputs, 1)
                         loss = criterion(outputs, labels)
-
+                            
                         if phase == 'train':  
                             loss.backward()
-                            torch.nn.utils.clip_grad.clip_grad_value_(model.parameters(), clip_value=1) # gradient clipping
+                            torch.nn.utils.clip_grad.clip_grad_value_(model.parameters(), clip_value=1)
                             optimizer.step()
                             
                         else:
-                            # Calculating overall accuracy by camera per epoch
+                            # Calculating overall accuracy by camera and time of day per epoch
                             for j, path in enumerate(paths):
                                 code = os.path.basename(path).split(' ')[0]
                                 
-                                # Accuracy per camera per class                
+                                timeofday = os.path.basename(path).split(' ')[2]
+                                timeofday = os.path.splitext(timeofday)[0]
+                                timeofday = int(timeofday.split('-')[0])
+                                
+                                if timeofday >= 5 and timeofday <= 18:
+                                    daynight = 'day'
+                                else:
+                                    daynight = 'night'
+                                
+                                # Accuracy per class                
                                 for idx in self.dataset.dataloaders[phase].dataset.class_to_idx.values():  
-                                    if preds[j].item() == idx:
-                                        if (preds[j] == labels[j]).item():
-                                            cam_acc[code][idx][0] += 1
-                                    cam_acc[code][idx][1] += 1
-                                        
+                                    #if preds[j].item() == idx:
+                                    if (preds[j] == labels[j]).item():
+                                        # cam_acc[code][idx][0] += 1
+                                        cam_acc[code][preds[j].item()][0] += 1 # increasing counter for correct classification in 'preds[j].item()' class
+
+                                        daynight_acc[daynight][preds[j].item()][0] += 1
+                                    
+                                    # cam_acc[code][idx][1] += 1
+                                    cam_acc[code][preds[j].item()][1] += 1 # increasing counter for total 'preds[j].item()' class objects evaluated
+                                    daynight_acc[daynight][preds[j].item()][1] += 1   
                                 
                             # Append batch prediction results
                             predlist=torch.cat([predlist,preds.view(-1).cpu()])
@@ -190,13 +229,16 @@ class PytorchTraining:
                 epoch_loss = running_loss / self.dataset.dataset_sizes[phase]
                 epoch_acc = running_corrects.double() / self.dataset.dataset_sizes[phase]
 
+                acc_loss[phase][0] = epoch_acc
+                acc_loss[phase][1] = epoch_loss
+                
                 # Logging Loss
                 loss_acc_info = '{} Loss: {:.4f} Acc: {:.4f}'.format(phase, epoch_loss, epoch_acc)
                 with open(log_path,'a') as log:
                     log.writelines(loss_acc_info+'\n')      
                 print(loss_acc_info)
                 
-                if epoch % epoch_save_interval == 0:
+                if epoch % epoch_save_interval == 0 and epoch > 10:
                     epoch_weight_path = f'{self.output_directory}/epoch_{epoch}.pth'
                     torch.save(model.state_dict(), epoch_weight_path)
                     
@@ -208,20 +250,22 @@ class PytorchTraining:
                 if phase == 'val' and early_stopper(model, epoch_loss, epoch):
                     early_stop = True
                 
-                # deep copy the model
                 if phase == 'val' and epoch_acc > best_acc:
                     best_acc = epoch_acc
                     best_model_wts = deepcopy(model.state_dict())
             
+            # Logging Epoch info
+            
             epoch_end = time.time() - epoch_start
             
-            cm = confusion_matrix(labels.cpu().numpy(), preds.cpu().numpy())     
+            # cm = confusion_matrix(labels.cpu().numpy(), preds.cpu().numpy())
+            cm = confusion_matrix(lbllist.numpy(), predlist.numpy())
+                 
             tp = cm[0][0]
             fn = cm[0][1]
             fp = cm[1][0]
             tn = cm[1][1]
                 
-            # Logging Epoch info
             epoch_duration_info = 'Epoch duration: {:.0f} m {:.0f}s'.format(epoch_end//60, epoch_end%60)
             lr_info = 'Learning Rate = {}'.format(scheduler.get_last_lr()[0])
             with open(log_path,'a') as log:
@@ -236,21 +280,25 @@ class PytorchTraining:
             
             with open(conf_mat_file, 'a') as fl:
                 fl.writelines(f'{epoch},{tp},{fn},{fp},{tn}\n')
-                
-            # with open(camera_acc_file, 'a') as fl:
-            #     for key, value in codelist.items():
-            #         fl.writelines(f"{epoch},{key},{value[0]}{value[1]}\n")
-            
-            # with open(class_acc_file, 'a') as fl:
-            #     for key,value in code_class.items():
-            #         fl.writelines(f"{epoch},{key},{value[0][0]},{value[0][1]},{value[1][0]},{value[1][1]}\n")
             
             with open(camera_acc_file, 'a') as fl:
                 for key,value in cam_acc.items():
                     fl.writelines(f"{epoch},{key},{value[0][0]},{value[0][1]},{value[1][0]},{value[1][1]}\n")
-                    
-            epoch += 1
             
+            with open(daynight_acc_file, 'a') as fl:
+                for key,value in daynight_acc.items():
+                    fl.writelines(f"{epoch},{key},{value[0][0]},{value[0][1]},{value[1][0]},{value[1][1]}\n")
+                    
+            with open(acc_loss_file, 'a') as fl:
+                line = f"{epoch}"
+                for phase in self.dataset.training_phases:
+                    line += f",{acc_loss[phase][0]},{acc_loss[phase][1]}"
+                fl.writelines(line+"\n")
+            
+            # torch.save(model.state_dict(), f'{self.output_directory}/last.pth')
+            epoch += 1
+        
+        # Training finished
         torch.save(model.state_dict(), f'{self.output_directory}/last.pth') # With early stopping, this should be the last weight before the counter started
         
         time_elapsed = time.time() - since
@@ -272,49 +320,6 @@ class PytorchTraining:
         print(conf_mat)
         print("\nAccuracy by class")
         print(class_accuracy)
-        
-        # statistics_path = f"{self.output_directory}/stats.txt"
-        
-        # conf_mat = conf_mat.tolist()
-        # class_accuracy = class_accuracy.tolist()
-        
-        # with open(statistics_path,'x') as stats:
-        #     stats.writelines("Confusion matrix")
-        #     for row in conf_mat:
-        #         stats.writelines("\n{} {}".format(row[0],row[1]))
-        #     stats.writelines('\n\nAccuracy per class')
-        #     cls_acc = '\n'
-        #     for i in class_accuracy:
-        #         cls_acc += "{:4f} ".format(i)
-        #     stats.writelines(cls_acc)
-            
-        #     stats.write(f"\n\nOverall accuracy by camera during validation")
-        #     for key, value in codelist.items():
-        #         if value[1] == 0:
-        #             res = 0
-        #         else:
-        #             res = value[0]/value[1]
-        #         stats.write(f"\n{key}: {res:.2f}")
-            
-        #     stats.write(f"\n\nOverall accuracy by camera per class during validation")
-        #     for key,value in code_class.items():
-        #         if value[0][1] == 0:
-        #             cls_0_acc = 0
-        #         else:
-        #             cls_0_acc = value[0][0]/value[0][1]
-                
-        #         if value[1][1] == 0:
-        #             cls_1_acc = 0
-        #         else:
-        #             cls_1_acc = value[1][0]/value[1][1]
-        #         stats.write(f"\n{key}: Class 0: {cls_0_acc:.2f} Class 1: {cls_1_acc:.2f}")
-                    
-        #     stats.write(f"\n\nCamera accuracy per epoch")
-        #     for i in range(len(code_epoch)):
-        #         stats.write(f"\nEpoch {i+1}")
-        #         for code in self.dataset.codes['val']:
-        #             values = code_epoch[i][code]
-        #             stats.write(f"\n{code}: {(values[0]/values[1]):.2f}, correctly classifying {values[0]} out of {values[1]} images")
 
         # load best model weights
         model.load_state_dict(best_model_wts)
