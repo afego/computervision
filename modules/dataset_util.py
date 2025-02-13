@@ -3,8 +3,9 @@ import os
 from typing import Tuple, Any
 from torch.utils.data import Dataset, DataLoader
 from torchvision import datasets
+from torchvision.datasets.folder import default_loader
 
-class FloodDataset(datasets.ImageFolder):    
+class ClassificationDataset(datasets.ImageFolder):    
     def __getitem__(self, index: int) -> Tuple[Any, Any, Any]:
         """
         Args:
@@ -21,7 +22,20 @@ class FloodDataset(datasets.ImageFolder):
             target = self.target_transform(target)
         
         return sample, target, path
-    
+ 
+class DetectionDataset(datasets.ImageFolder):
+    '''
+    COCO-like
+    '''
+    # def __init__(self, root: str, transforms):
+    #     self.root = root
+    #     self.transforms = transforms
+        
+    def __getitem__(self, index: int) -> Tuple[Any]:
+        path, target = self.samples[index]
+        
+        return
+   
 class PytorchDataset:
     '''
     directory: path to dataset directory with 'train', 'val' folders by default
@@ -34,7 +48,7 @@ class PytorchDataset:
         self.data_transforms = data_transforms
         self.batch_size = batch_size
         
-        image_datasets = {x: FloodDataset(os.path.join(self.directory, x), self.data_transforms[x])
+        image_datasets = {x: ClassificationDataset(os.path.join(self.directory, x), self.data_transforms[x])
                         for x in self.training_phases}
         
         self.dataloaders = {x: DataLoader(image_datasets[x], batch_size=batch_size, shuffle=True, num_workers=num_workers)

@@ -50,6 +50,7 @@ class EarlyStopping:
                 self.message = f'Early stopping after {self.patience} epochs'
                 if self.restore_best_weights:
                     model.load_state_dict(self.best_model)
+                    self.message += f'\nLower loss model restored'
                 return True
         return False
     
@@ -63,21 +64,31 @@ class PytorchTraining:
         self.output_directory = output_directory    # 
         self.dataset = pytorch_dataset
            
-    def train_pytorch_model(self, model, criterion, optimizer, scheduler, early_stopper, start_epoch=1, num_epochs:int=25, epoch_save_interval:int=2, model_info:str=''):
-
+    def train_pytorch_model(self, model, criterion, optimizer, arch, scheduler=None, early_stopper=None, start_epoch=1, num_epochs:int=25, epoch_save_interval:int=2, save_weights=True):
+        
+        if not epoch_save_interval:
+            epoch_save_interval = 2
+            
         best_model_wts = deepcopy(model.state_dict())
         best_acc = 0.0
-
+        lower_loss = 0.0
+        
         fully_trainable = True
         for param in model.parameters():
             if param.requires_grad == False:
                 fully_trainable = False
         
+        #=====================
+        # Initializing Log
+        #=====================
+        
         log_path = f"{self.output_directory}/log.txt"
         stats_dir = f"{self.output_directory}/stats"
         
-        run_info = 'Model {} {}\nFully Trained = {}\nDataset {}\nLearning Rate Epoch Schedule = {}\nLearning Rate Gamma = {}\nOptimizer = {}\nBatch Size = {}'.format(
-            model._get_name(), model_info, fully_trainable, self.dataset.directory, scheduler.step_size, scheduler.gamma, type (optimizer).__name__, self.dataset.batch_size
+        run_info =  'Model {} {}\nFully Trained = {}\nDataset {}\nLearning Rate Epoch Schedule = {}\
+                    \nLearning Rate Gamma = {}\nOptimizer = {}\nBatch Size = {}\nTransforms = {}\n'.format(
+                    model._get_name(), arch.arch, fully_trainable, self.dataset.directory, scheduler.step_size, 
+                    scheduler.gamma, type (optimizer).__name__, self.dataset.batch_size, arch.data_transforms['train']
             )
         
         if not os.path.exists(log_path): 
@@ -120,6 +131,10 @@ class PytorchTraining:
         print(f'Saving model to folder {self.output_directory}')
         print('\n'+run_info+'\n')
         
+        #=====================
+        # Starting training
+        #=====================
+        
         since = time.time()
         early_stop = False
         epoch = start_epoch
@@ -131,7 +146,9 @@ class PytorchTraining:
             # Initialize the prediction and label lists(tensors)
             predlist=torch.zeros(0,dtype=torch.long, device='cpu')
             lbllist=torch.zeros(0,dtype=torch.long, device='cpu')
-            
+            #=====================
+            # Epoch Metrics
+            #=====================
             cam_acc = {
                 x:[
                     [0,0],  # Class 0 correct classification, Class 0 total labels
@@ -151,9 +168,14 @@ class PytorchTraining:
             }
             
             epoch_info = '\nEpoch {}/{}\n----------\n'.format(epoch, num_epochs)
+            
             with open(log_path,'a') as log:
                 log.writelines(epoch_info)
             print(epoch_info)
+            
+            #=====================
+            # Starting Epoch
+            #=====================
             
             epoch_start = time.time()
             
@@ -208,7 +230,6 @@ class PytorchTraining:
                                     if (preds[j] == labels[j]).item():
                                         # cam_acc[code][idx][0] += 1
                                         cam_acc[code][preds[j].item()][0] += 1 # increasing counter for correct classification in 'preds[j].item()' class
-
                                         daynight_acc[daynight][preds[j].item()][0] += 1
                                     
                                     # cam_acc[code][idx][1] += 1
@@ -223,7 +244,7 @@ class PytorchTraining:
                     running_loss += loss.item() * inputs.size(0)
                     running_corrects += torch.sum(preds == labels.data)
                 
-                if phase == 'train':
+                if phase == 'train' and scheduler is not None:
                     scheduler.step()
 
                 epoch_loss = running_loss / self.dataset.dataset_sizes[phase]
@@ -238,23 +259,32 @@ class PytorchTraining:
                     log.writelines(loss_acc_info+'\n')      
                 print(loss_acc_info)
                 
-                if epoch % epoch_save_interval == 0 and epoch > 10:
-                    epoch_weight_path = f'{self.output_directory}/epoch_{epoch}.pth'
-                    torch.save(model.state_dict(), epoch_weight_path)
-                    
-                    text = f"Model saved at {epoch_weight_path}"
-                    with open(log_path,'a') as log:
-                        log.writelines(text+'\n')      
-                    print(text)
+                #=====================
+                # Saving model
+                #=====================
+                
+                if save_weights:
+                    if epoch % epoch_save_interval == 0 and epoch > 10:
+                        epoch_weight_path = f'{self.output_directory}/epoch_{epoch}.pth'
+                        torch.save(model.state_dict(), epoch_weight_path)
+                        
+                        text = f"Model saved at {epoch_weight_path}"
+                        with open(log_path,'a') as log:
+                            log.writelines(text+'\n')      
+                        print(text)
                 
                 if phase == 'val' and early_stopper(model, epoch_loss, epoch):
                     early_stop = True
                 
-                if phase == 'val' and epoch_acc > best_acc:
-                    best_acc = epoch_acc
+                # if phase == 'val' and epoch_acc > best_acc and epoch >= early_stopper.min_epoch:
+                if phase == 'val' and epoch_loss < lower_loss and epoch >= early_stopper.min_epoch:
+                    # best_acc = epoch_acc
+                    lower_loss = epoch_loss
                     best_model_wts = deepcopy(model.state_dict())
             
+            #=====================
             # Logging Epoch info
+            #=====================
             
             epoch_end = time.time() - epoch_start
             
@@ -295,34 +325,36 @@ class PytorchTraining:
                     line += f",{acc_loss[phase][0]},{acc_loss[phase][1]}"
                 fl.writelines(line+"\n")
             
-            # torch.save(model.state_dict(), f'{self.output_directory}/last.pth')
             epoch += 1
         
         # Training finished
-        torch.save(model.state_dict(), f'{self.output_directory}/last.pth') # With early stopping, this should be the last weight before the counter started
-        
         time_elapsed = time.time() - since
+        if save_weights:
+            torch.save(model.state_dict(), f'{self.output_directory}/last.pth') # With early stopping, this should be the last weight before the counter started
+            model.load_state_dict(best_model_wts)
+            torch.save(model.state_dict(), f'{self.output_directory}/best.pth')
         
-        # Logging complete statistics info
+        #=====================
+        # Logging complete 
+        # statistics info
+        #=====================
+        
         complete_text = 'Training complete in {:.0f}m {:.0f}s'.format(time_elapsed // 60, time_elapsed % 60)
         print(complete_text)
-        best_acc_text = 'Best val Acc: {:4f}'.format(best_acc)
-        print(best_acc_text)
+        # best_acc_text = 'Best val Acc: {:4f}'.format(best_acc)
+        lower_loss_text = 'Lower val Loss: {:4f}'.format(lower_loss)
+        print(lower_loss_text)
         
         conf_mat=confusion_matrix(lbllist.numpy(), predlist.numpy())
         class_accuracy=100*conf_mat.diagonal()/conf_mat.sum(1)
         
         with open(log_path,'a') as log:
             log.writelines(complete_text+'\n')
-            log.writelines(best_acc_text+'\n')
+            log.writelines(lower_loss_text+'\n')
             
         print("\nConfusion Matrix")
         print(conf_mat)
         print("\nAccuracy by class")
         print(class_accuracy)
-
-        # load best model weights
-        model.load_state_dict(best_model_wts)
-        torch.save(model.state_dict(), f'{self.output_directory}/best.pth')
         
         return model
